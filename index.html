@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>StonePharm V1.4 | Kidney Stone Metabolic Assessment & Pharmacotherapy Support</title>
+<title>StonePharm V2.0 | Kidney Stone Assessment & Treatment Pathways</title>
 <style>
 :root{--navy:#12304a;--blue:#176b87;--teal:#168477;--ink:#203244;--muted:#667789;--line:#dce5eb;--bg:#f3f7fa;--white:#fff;--soft:#eaf3f7;--warn:#fff4df;--danger:#fdecec;--ok:#e9f6ef;--shadow:0 8px 28px rgba(22,48,70,.08)}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,Segoe UI,Arial,sans-serif}
@@ -14,7 +14,7 @@ button,.btn{border:0;border-radius:9px;padding:10px 14px;font-weight:650;cursor:
 main{max-width:1180px;margin:24px auto;padding:0 18px 40px}.notice{background:#fff;border:1px solid #d9e6ed;border-left:4px solid var(--teal);padding:13px 16px;border-radius:10px;margin-bottom:18px;font-size:13px;color:#41576a}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);min-width:0}.wide{grid-column:1/-1}.card h2{font-size:17px;color:var(--navy);margin:0 0 14px;display:flex;align-items:center;gap:9px}.step{background:var(--soft);color:var(--blue);border-radius:7px;padding:3px 8px;font-size:11px}
 .fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.fields.three{grid-template-columns:repeat(3,minmax(0,1fr))}.field{min-width:0}.field label{display:block;font-size:12px;color:var(--muted);font-weight:650;margin-bottom:5px}input,select,textarea{width:100%;border:1px solid #cbd8e1;border-radius:8px;padding:9px 10px;font:inherit;font-size:13px;color:var(--ink);background:#fff;min-width:0}input:focus,select:focus,textarea:focus{outline:2px solid #9ed4d0;border-color:var(--teal)}textarea{min-height:74px;resize:vertical}.unit{font-size:11px;color:#8795a1;margin-top:3px}.checkrow{display:flex;gap:8px;align-items:center;font-size:13px;margin-top:9px}.checkrow input{width:auto}
-.section-note{font-size:12px;color:var(--muted);margin:-5px 0 12px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:17px 0}.actions button{padding:11px 17px}.secondary{background:#e8eff4;color:var(--navy)}.result{display:none}.result.show{display:block}.result-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}.result-head h2{margin:0}.count{font-size:12px;color:var(--muted)}.finding{padding:12px 13px;border-radius:10px;margin:9px 0;border:1px solid var(--line);background:#f8fafb}.finding h3{font-size:13px;margin:0 0 4px}.finding p{font-size:13px;margin:0;color:#42576a}.finding.warn{background:var(--warn);border-color:#f0d8a7}.finding.danger{background:var(--danger);border-color:#efc4c4}.finding.ok{background:var(--ok);border-color:#c8e6d3}.advisor{margin-top:14px;padding:14px;border:1px solid #cbdce6;border-radius:11px;background:#f5f9fb}.advisor h3{margin:0 0 8px;color:var(--navy);font-size:15px}.advisor .option{padding:11px;margin:9px 0;background:#fff;border:1px solid var(--line);border-radius:9px}.advisor .option h4{margin:0 0 5px;font-size:13px;color:var(--navy)}.advisor .option p{margin:4px 0;font-size:12px;color:#42576a}.advisor .caution{background:#fff4df;border-color:#f0d8a7}.advisor .blocked{background:#fdecec;border-color:#efc4c4}.advisor .small{font-size:11px;color:#607384}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.05em;font-weight:800;color:#637789;margin-bottom:4px}.empty{padding:20px;text-align:center;color:var(--muted);background:#f8fafb;border-radius:10px;font-size:13px}
+.section-note{font-size:12px;color:var(--muted);margin:-5px 0 12px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:17px 0}.actions button{padding:11px 17px}.secondary{background:#e8eff4;color:var(--navy)}.result{display:none}.result.show{display:block}.result-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}.result-head h2{margin:0}.count{font-size:12px;color:var(--muted)}.finding{padding:12px 13px;border-radius:10px;margin:9px 0;border:1px solid var(--line);background:#f8fafb}.finding h3{font-size:13px;margin:0 0 4px}.finding p{font-size:13px;margin:0;color:#42576a}.finding.warn{background:var(--warn);border-color:#f0d8a7}.finding.danger{background:var(--danger);border-color:#efc4c4}.finding.ok{background:var(--ok);border-color:#c8e6d3}.advisor{margin-top:14px;padding:14px;border:1px solid #cbdce6;border-radius:11px;background:#f5f9fb}.advisor h3{margin:0 0 8px;color:var(--navy);font-size:15px}.advisor .option{padding:11px;margin:9px 0;background:#fff;border:1px solid var(--line);border-radius:9px}.advisor .option h4{margin:0 0 5px;font-size:13px;color:var(--navy)}.advisor .option p{margin:4px 0;font-size:12px;color:#42576a}.advisor .caution{background:#fff4df;border-color:#f0d8a7}.advisor .blocked{background:#fdecec;border-color:#efc4c4}.advisor .small{font-size:11px;color:#607384}.treatment-pathway{margin-top:16px;background:#f7fafc;border-color:#b9d1df}.treatment-pathway .pathway-section{padding:12px;margin:10px 0;background:#fff;border:1px solid var(--line);border-radius:10px}.treatment-pathway .pathway-section h4{margin:0 0 7px;color:var(--navy);font-size:14px}.treatment-pathway ul{margin:5px 0 0;padding-inline-start:22px}.treatment-pathway li{font-size:12px;color:#42576a;margin:5px 0;line-height:1.55}.treatment-pathway .urgent{background:#fff0ef;border-color:#efb9b5}.treatment-pathway .caution{background:#fff7e8;border-color:#efd59e}.treatment-pathway .specialist{background:#eef5ff;border-color:#c7d9ef}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.05em;font-weight:800;color:#637789;margin-bottom:4px}.empty{padding:20px;text-align:center;color:var(--muted);background:#f8fafb;border-radius:10px;font-size:13px}
 .disclaimer{font-size:12px;color:#5e6f7d;background:#f7f9fb;border:1px solid var(--line);padding:13px;border-radius:10px;margin-top:16px}.refs{font-size:12px;color:#536779}.refs li{margin:5px 0}footer{text-align:center;color:#8493a0;font-size:11px;padding:20px}
 [dir=rtl] body,[dir=rtl] input,[dir=rtl] select,[dir=rtl] textarea{font-family:Tahoma,Arial,sans-serif}[dir=rtl] .card h2{flex-direction:row}[dir=rtl] .notice{border-left:1px solid #d9e6ed;border-right:4px solid var(--teal)}[dir=rtl] .finding{text-align:right}
 @media(max-width:760px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}.fields.three{grid-template-columns:repeat(2,minmax(0,1fr))}header{padding:20px}.head{align-items:flex-start}h1{font-size:23px}}
@@ -39,6 +39,11 @@ p,li,.finding,.option{font-size:calc(13px * var(--app-font-scale))}
 body[data-theme="dark"]{--bg:#101923;--panel:#172431;--card:#1c2b39;--text:#e7eef5;--muted:#a9bac9;--line:#34495b;--navy:#d5e8f7;--accent:#55c6c4;--ok:#18372d;color-scheme:dark}
 body[data-theme="dark"] .advisor{background:#182b39;border-color:#3b566b}
 body[data-theme="dark"] .advisor .option{background:#1c2b39;border-color:#405466}
+body[data-theme="dark"] .treatment-pathway .pathway-section{background:#1c2b39;border-color:#405466}
+body[data-theme="dark"] .treatment-pathway li{color:#e7eef5}
+body[data-theme="dark"] .treatment-pathway .urgent{background:#3b2428;border-color:#75444a}
+body[data-theme="dark"] .treatment-pathway .caution{background:#3a3020;border-color:#796239}
+body[data-theme="dark"] .treatment-pathway .specialist{background:#1c3043;border-color:#45627e}
 body[data-theme="dark"] .advisor .option.caution{background:#3a3020;border-color:#796239}
 body[data-theme="dark"] .advisor .option.blocked{background:#3b2428;border-color:#75444a}
 body[data-theme="dark"] .advisor p,body[data-theme="dark"] .advisor .small{color:#c0d0dc}
@@ -74,10 +79,10 @@ textarea{min-height:84px}
 .secondary{background:#e4edf3;color:#17384f;border:1px solid #c2d2de}
 .display-tools{padding:10px 12px}
 .display-tools select{background:var(--panel);color:var(--text);border-color:var(--line)}
-.brand-logo-wrap{position:absolute;top:15px;right:max(20px,calc((100% - 1180px)/2));z-index:3;max-width:none}
+.brand-logo-wrap{position:static;flex:0 0 auto;max-width:25%;display:flex;justify-content:flex-end;margin-inline-start:12px}
 .brand-logo{width:174px;max-width:22vw;height:auto;filter:drop-shadow(0 3px 8px rgba(0,0,0,.12))}
 header{position:relative;padding-top:22px}
-.brand-header{padding-right:190px;min-height:72px}
+.brand{flex:1;min-width:0}.brand-header{padding-right:0;min-height:72px;display:flex;align-items:center;gap:14px;flex:1;width:auto;min-width:0}
 .brand-copy{flex:1}
 .credit-footer{color:var(--muted);font-size:calc(13px * var(--app-font-scale))}
 .credit-footer a{color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:3px}
@@ -116,24 +121,38 @@ body[data-theme="dark"] .light{background:#edf3f8;color:#12304a}
 body[data-theme="dark"] .credit-footer a{color:#75ddd5}
 body[data-theme="dark"] .step{background:#29485a;color:#b9e7ee}
 @media(max-width:760px){
- .brand-logo-wrap{top:12px;right:18px}
- .brand-logo{width:132px;max-width:30vw}
- .brand-header{padding-right:140px;min-height:60px}
+ .brand-logo-wrap{position:static;top:auto;right:auto;max-width:32%;margin-inline-start:8px}
+ .brand-logo{width:132px;max-width:100%}
+ .brand-header{padding-right:0;min-height:60px;flex-wrap:wrap}
  .head-actions{padding-top:8px}
 }
 @media(max-width:430px){
- .brand-logo{width:105px;max-width:29vw}
- .brand-header{padding-right:112px;min-height:54px}
+ .brand-logo{width:105px;max-width:100%}
+ .brand-header{padding-right:0;min-height:54px}
  .display-tools label{width:auto;justify-content:flex-start}
 }
 @media print{
- .brand-logo-wrap{position:absolute;top:8px;right:12px}
+ .brand-logo-wrap{position:static;top:auto;right:auto}
  body[data-theme="dark"]{color:#172b3b!important;background:#fff!important}
  body[data-theme="dark"] .card,body[data-theme="dark"] .notice,
  body[data-theme="dark"] .finding,body[data-theme="dark"] .advisor{background:#fff!important;color:#172b3b!important}
 }
 
+
+#passwordOverlay{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.62);display:flex;align-items:center;justify-content:center;padding:18px}#passwordOverlay[hidden]{display:none!important}.password-dialog{background:var(--card,#fff);color:var(--text,#172033);width:min(520px,100%);border-radius:16px;padding:22px;box-shadow:0 18px 60px rgba(0,0,0,.3);border:1px solid var(--border,#ddd)}.password-dialog h2{margin:0 0 12px;font-size:1.2rem}.password-dialog .warning{padding:12px;border-radius:10px;background:rgba(190,80,30,.10);border:1px solid rgba(190,80,30,.3);line-height:1.65;margin-bottom:14px}.password-dialog label{display:block;margin:10px 0 5px;font-weight:600}.password-dialog input{width:100%;padding:11px;border:1px solid var(--border,#aaa);border-radius:8px;background:var(--input-bg,transparent);color:inherit;font:inherit}.password-dialog .password-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}.password-dialog .error{color:#b42318;min-height:1.4em;margin-top:8px}.password-dialog [hidden]{display:none!important}
+
+/* V2.0 — paired professional credit boxes */
+.credit-footer{margin-top:28px;padding:18px 0 8px;border-top:1px solid var(--line);text-align:initial}
+.credit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:900px;margin:0 auto;direction:ltr}
+.credit-box{box-sizing:border-box;min-width:0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--text);text-align:left;line-height:1.75;font-size:calc(13px * var(--app-font-scale));box-shadow:var(--shadow)}
+.credit-name{margin-bottom:3px;color:var(--navy);font-size:calc(15px * var(--app-font-scale));font-weight:700}
+.credit-links{display:flex;align-items:center;gap:9px;margin-top:4px;flex-wrap:wrap}
+.credit-links a{margin:0;color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+body[data-theme="dark"] .credit-box{background:var(--panel);color:var(--text);border-color:var(--line)}
+body[data-theme="dark"] .credit-name{color:var(--navy)}
+@media(max-width:620px){.credit-grid{grid-template-columns:1fr;gap:12px}.credit-box{padding:14px 16px}}
 </style>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 </head>
 <body>
 <header>
@@ -155,19 +174,57 @@ body[data-theme="dark"] .step{background:#29485a;color:#b9e7ee}
    <h2><span class="step">01</span><span data-i18n="patient">Patient profile</span></h2>
    <div class="fields">
     <div class="field"><label data-i18n="patientId">Patient ID / code</label><input id="patientId" placeholder="e.g. SP-001"></div>
+     <div class="field"><label data-i18n="patientName">Patient name (optional)</label><input id="patientName" autocomplete="off" placeholder="Optional"></div>
+     <div class="field"><label data-i18n="height">Height (cm)</label><input id="height" type="number" min="50" max="250" step="0.1"></div>
+     <div class="field"><label data-i18n="weight">Weight (kg)</label><input id="weight" type="number" min="10" max="400" step="0.1"></div>
+     <div class="field"><label data-i18n="bmi">BMI (kg/m², calculated)</label><input id="bmi" type="number" readonly aria-readonly="true"></div>
     <div class="field"><label data-i18n="date">Assessment date</label><input id="date" type="date"></div>
     <div class="field"><label data-i18n="age">Age (years)</label><input id="age" type="number" min="18" max="120"></div>
+    <div class="field"><label data-i18n="ageAtFirstStone">Age at first stone episode (years, if known)</label><input id="ageAtFirstStone" type="number" min="0" max="120" step="1"></div>
     <div class="field"><label data-i18n="sex">Sex</label><select id="sex"><option value="">—</option><option value="female" data-i18n="female">Female</option><option value="male" data-i18n="male">Male</option></select></div>
-    <div class="field"><label data-i18n="stoneType">Stone composition</label><select id="stoneType"><option value="calcium_oxalate" data-i18n="caox">Calcium oxalate</option><option value="calcium_phosphate" data-i18n="cap">Calcium phosphate</option><option value="uric_acid" data-i18n="uric">Uric acid</option><option value="struvite" data-i18n="struvite">Struvite / infection</option><option value="cystine" data-i18n="cystine">Cystine</option><option value="unknown" data-i18n="unknown">Unknown / not analyzed</option></select></div>
+    <div class="field"><label data-i18n="pregnancyStatus">Pregnancy status</label><select id="pregnancyStatus"><option value="unknown" data-i18n="statusUnknown">Unknown</option><option value="no" data-i18n="statusNo">No</option><option value="yes" data-i18n="statusYes">Yes</option><option value="na" data-i18n="notApplicable">Not applicable</option></select></div>
+    <div class="field"><label data-i18n="breastfeedingStatus">Breastfeeding status</label><select id="breastfeedingStatus"><option value="unknown" data-i18n="statusUnknown">Unknown</option><option value="no" data-i18n="statusNo">No</option><option value="yes" data-i18n="statusYes">Yes</option><option value="na" data-i18n="notApplicable">Not applicable</option></select></div>
+    <div class="field"><label data-i18n="stoneType">Stone composition</label><select id="stoneType"><option value="calcium_oxalate" data-i18n="caox">Calcium oxalate</option><option value="calcium_phosphate" data-i18n="cap">Calcium phosphate (unspecified)</option><option value="brushite" data-i18n="brushite">Brushite</option><option value="carbonate_apatite" data-i18n="carbonateApatite">Carbonate apatite</option><option value="uric_acid" data-i18n="uric">Uric acid</option><option value="struvite" data-i18n="struvite">Struvite / infection</option><option value="cystine" data-i18n="cystine">Cystine</option><option value="ammonium_urate" data-i18n="ammoniumUrate">Ammonium urate</option><option value="dha" data-i18n="dha">2,8-Dihydroxyadenine (2,8-DHA)</option><option value="xanthine" data-i18n="xanthine">Xanthine</option><option value="matrix" data-i18n="matrixStone">Matrix stone</option><option value="drug_induced" data-i18n="drugStoneType">Drug-induced</option><option value="mixed" data-i18n="mixed">Mixed composition</option><option value="other" data-i18n="otherStone">Other</option><option value="unknown" data-i18n="unknown">Unknown / not analyzed</option></select></div>
     <div class="field"><label data-i18n="episodes">Stone episodes</label><select id="episodes"><option value="first" data-i18n="first">First episode</option><option value="recurrent" data-i18n="recurrent">Recurrent (2 or more)</option></select></div>
+     <div class="field"><label data-i18n="familyHistory">Family history of kidney stones</label><select id="familyHistory"><option value="unknown" data-i18n="unknownStatus">Unknown</option><option value="no" data-i18n="no">No</option><option value="yes" data-i18n="yes">Yes</option></select></div>
+     <label class="checkrow"><input id="singleKidney" type="checkbox"><span data-i18n="singleKidney">Solitary kidney</span></label>
+     <div class="field"><label data-i18n="intervention">Previous stone-related intervention</label><select id="intervention"><option value="none" data-i18n="none">None known</option><option value="eswl">ESWL</option><option value="urs">Ureteroscopy (URS)</option><option value="pcnl">PCNL</option><option value="surgery" data-i18n="otherSurgery">Other surgery</option><option value="other" data-i18n="other">Other</option></select></div>
    </div>
-   <div class="field" style="margin-top:12px"><label data-i18n="history">Relevant history / comorbidities</label><textarea id="history" data-ph="historyPh" placeholder="e.g. gout, diabetes, bowel disease, bariatric surgery, CKD..."></textarea></div>
-  </section>
+     <div class="field" style="margin-top:12px"><label data-i18n="history">Relevant history / comorbidities</label><textarea id="history" data-ph="historyPh" placeholder="e.g. gout, diabetes, bowel disease, bariatric surgery, CKD..."></textarea></div>
+    <div class="fields" style="margin-top:10px"><div class="field"><label data-i18n="familyDetails">Family history details (optional)</label><input id="familyDetails"></div><div class="field"><label data-i18n="interventionDetails">Intervention details (date / side / outcome)</label><input id="interventionDetails"></div></div>
+    <div class="field" style="margin-top:12px"><label data-i18n="giHistory">Gastrointestinal disease / surgery / malabsorption</label><select id="giHistory"><option value="none" data-i18n="none">None known</option><option value="ibd" data-i18n="ibd">Inflammatory bowel disease</option><option value="chronic_diarrhea" data-i18n="chronicDiarrhea">Chronic diarrhea</option><option value="bariatric" data-i18n="bariatric">Bariatric surgery</option><option value="bowel_resection" data-i18n="bowelResection">Bowel resection</option><option value="malabsorption" data-i18n="malabsorption">Fat malabsorption / other malabsorption</option><option value="other" data-i18n="other">Other / details in notes</option><option value="unknown" data-i18n="unknownStatus">Unknown</option></select></div>
+    <div class="fields" style="margin-top:12px"><div class="field"><label data-i18n="cultureStatus">Urine culture status</label><select id="cultureStatus"><option value="unknown" data-i18n="unknownStatus">Unknown / not available</option><option value="pending" data-i18n="culturePending">Pending</option><option value="negative" data-i18n="cultureNegative">Negative</option><option value="positive" data-i18n="culturePositive">Positive</option></select></div><div class="field"><label data-i18n="cultureDetails">Culture organism / notes (optional)</label><input id="cultureDetails"></div></div>
+    <div class="field" style="margin-top:12px"><label data-i18n="giDetails">GI history details (optional)</label><textarea id="giDetails"></textarea></div>
+   </section>
+
+   <section class="card wide">
+    <h2><span class="step">IMAGING</span><span data-i18n="imagingTitle">Imaging and stone burden</span></h2>
+    <p class="section-note" data-i18n="imagingNote">Record reported imaging findings; do not infer stone composition from imaging alone.</p>
+    <div class="fields three">
+     <div class="field"><label data-i18n="imagingDate">Imaging date</label><input id="imagingDate" type="date"></div>
+     <div class="field"><label data-i18n="imagingModality">Modality</label><select id="imagingModality"><option value="">—</option><option value="ultrasound" data-i18n="ultrasound">Ultrasound</option><option value="ct" data-i18n="ct">CT</option><option value="xray" data-i18n="xray">KUB X-ray</option><option value="other" data-i18n="other">Other</option></select></div>
+     <div class="field"><label data-i18n="stoneCount">Number of stones</label><input id="stoneCount" type="number" min="0" step="1"></div>
+     <div class="field"><label data-i18n="largestStone">Largest stone diameter (mm)</label><input id="largestStone" type="number" min="0" step="0.1"></div>
+     <div class="field"><label data-i18n="stoneLocation">Location</label><input id="stoneLocation" data-ph="stoneLocationPh" placeholder="e.g. renal pelvis, lower pole, ureter"></div>
+     <div class="field"><label data-i18n="laterality">Laterality</label><select id="laterality"><option value="">—</option><option value="right" data-i18n="right">Right</option><option value="left" data-i18n="left">Left</option><option value="bilateral" data-i18n="bilateral">Bilateral</option><option value="unknown" data-i18n="unknownStatus">Unknown</option></select></div>
+    </div>
+    <div class="fields" style="margin-top:10px">
+     <label class="checkrow"><input id="nephrocalcinosis" type="checkbox"><span data-i18n="nephrocalcinosis">Nephrocalcinosis reported</span></label>
+     <label class="checkrow"><input id="residualFragments" type="checkbox"><span data-i18n="residualFragments">Residual fragments after intervention</span></label>
+    </div>
+   </section>
 
   <section class="card">
    <h2><span class="step">02</span><span data-i18n="meds">Current medicines & supplements</span></h2>
    <p class="section-note" data-i18n="medsNote">Enter generic names separated by commas. Include OTC products and supplements.</p>
    <div class="field"><label data-i18n="medList">Medication list</label><textarea id="meds" data-ph="medsPh" placeholder="e.g. losartan, spironolactone, topiramate, calcium supplement..."></textarea></div>
+   <div class="fields">
+    <div class="field"><label data-i18n="medDose">Relevant medicine dose(s)</label><input id="medDose"></div>
+    <div class="field"><label data-i18n="medRoute">Route(s)</label><input id="medRoute"></div>
+    <div class="field"><label data-i18n="medFrequency">Frequency</label><input id="medFrequency"></div>
+    <div class="field"><label data-i18n="medIndication">Indication(s)</label><input id="medIndication"></div>
+   </div>
+
    <div class="field" style="margin-top:12px"><label data-i18n="allergies">Drug allergies / previous adverse reactions</label><textarea id="allergies"></textarea></div>
    <div class="field" style="margin-top:12px"><label data-i18n="notes">Additional clinical notes</label><textarea id="notes"></textarea></div>
   </section>
@@ -178,124 +235,348 @@ body[data-theme="dark"] .step{background:#29485a;color:#b9e7ee}
    <div class="fields">
     <div class="field"><label data-i18n="volume">Urine volume (L/day)</label><input id="volume" type="number" step="0.01" min="0"></div>
     <div class="field"><label data-i18n="ph">Urine pH</label><input id="ph" type="number" step="0.1" min="4" max="9"></div>
-    <div class="field"><label data-i18n="calcium">Calcium (mg/day)</label><input id="calcium" type="number" step="1" min="0"></div>
-    <div class="field"><label data-i18n="oxalate">Oxalate (mg/day)</label><input id="oxalate" type="number" step="1" min="0"></div>
-    <div class="field"><label data-i18n="citrate">Citrate (mg/day)</label><input id="citrate" type="number" step="1" min="0"></div>
-    <div class="field"><label data-i18n="uricAcid">Uric acid (mg/day)</label><input id="uricAcid" type="number" step="1" min="0"></div>
+    <div class="field"><label data-i18n="calcium">Calcium (mg/day)</label><div class="fields"><input id="calcium" type="number" step="0.1" min="0"><select id="calciumUnit"><option value="mg">mg/day</option><option value="mmol">mmol/day</option></select></div></div>
+    <div class="field"><label data-i18n="oxalate">Oxalate (mg/day)</label><div class="fields"><input id="oxalate" type="number" step="0.1" min="0"><select id="oxalateUnit"><option value="mg">mg/day</option><option value="mmol">mmol/day</option></select></div></div>
+    <div class="field"><label data-i18n="citrate">Citrate (mg/day)</label><div class="fields"><input id="citrate" type="number" step="0.1" min="0"><select id="citrateUnit"><option value="mg">mg/day</option><option value="mmol">mmol/day</option></select></div></div>
+    <div class="field"><label data-i18n="uricAcid">Uric acid (mg/day)</label><div class="fields"><input id="uricAcid" type="number" step="0.1" min="0"><select id="uricAcidUnit"><option value="mg">mg/day</option><option value="mmol">mmol/day</option></select></div></div>
     <div class="field"><label data-i18n="sodium">Sodium (mmol/day)</label><input id="sodium" type="number" step="1" min="0"></div>
     <div class="field"><label data-i18n="urineCreat">Creatinine (mg/day)</label><input id="urineCreat" type="number" step="1" min="0"></div>
+    <div class="field"><label data-i18n="collectionDuration">Collection duration (hours)</label><input id="collectionDuration" type="number" step="0.5" min="1" max="72" placeholder="24"></div>
+    <div class="field"><label data-i18n="collectionDate1">Sample 1 collection date</label><input id="collectionDate1" type="date"></div>
+    <div class="field"><label data-i18n="urinePhosphate">Phosphate (mmol/day, optional)</label><input id="urinePhosphate" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urineAmmonium">Ammonium (mmol/day, optional)</label><input id="urineAmmonium" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urineCystine">Cystine (mg/day, if indicated)</label><input id="urineCystine" type="number" step="1" min="0"></div>
+    <div class="field"><label data-i18n="urineChloride">Chloride (mmol/day, optional)</label><input id="urineChloride" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urineSulfate">Sulfate (mmol/day, optional)</label><input id="urineSulfate" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urineUreaNitrogen">Urea nitrogen (g/day, optional)</label><input id="urineUreaNitrogen" type="number" step="0.1" min="0"></div>
+
+     <div class="field"><label data-i18n="urinePotassium">Potassium (mmol/day)</label><input id="urinePotassium" type="number" step="0.1" min="0"></div>
+     <div class="field"><label data-i18n="urineMagnesium">Magnesium (mmol/day)</label><input id="urineMagnesium" type="number" step="0.1" min="0"></div>
+     <div class="field"><label data-i18n="urineProtein">Total protein (g/day, optional)</label><input id="urineProtein" type="number" step="0.01" min="0"></div>
+     <div class="field"><label data-i18n="specificGravity">Urine specific gravity</label><input id="specificGravity" type="number" step="0.001" min="1" max="1.1"></div>
    </div>
   </section>
 
   <section class="card">
+   <h2><span class="step">03B</span><span data-i18n="urineSample2Title">Second 24-hour urine collection (consecutive sample)</span></h2>
+   <p class="section-note" data-i18n="urineSample2Note">Optional where clinically appropriate. Record separately; do not automatically average discordant collections.</p>
+   <div class="fields">
+    <div class="field"><label data-i18n="collectionDate2">Sample 2 collection date</label><input id="collectionDate2" type="date"></div>
+    <div class="field"><label data-i18n="collectionDuration2">Collection duration (hours)</label><input id="collectionDuration2" type="number" step="0.5" min="1" max="72"></div>
+    <div class="field"><label data-i18n="volume2">Urine volume (L/day)</label><input id="volume2" type="number" step="0.01" min="0"></div>
+    <div class="field"><label data-i18n="ph2">Urine pH</label><input id="ph2" type="number" step="0.1" min="4" max="9"></div>
+    <div class="field"><label data-i18n="calcium2">Calcium (mg/day)</label><div class="fields"><input id="calcium2" type="number" step="0.1" min="0"><select id="calcium2Unit"><option value="mg">mg/day</option><option value="mmol">mmol/day</option></select></div></div>
+    <div class="field"><label data-i18n="oxalate2">Oxalate (mg/day)</label><div class="fields"><input id="oxalate2" type="number" step="0.1" min="0"><select id="oxalate2Unit"><option value="mg">mg/day</option><option value="mmol">mmol/day</option></select></div></div>
+    <div class="field"><label data-i18n="citrate2">Citrate (mg/day)</label><div class="fields"><input id="citrate2" type="number" step="0.1" min="0"><select id="citrate2Unit"><option value="mg">mg/day</option><option value="mmol">mmol/day</option></select></div></div>
+    <div class="field"><label data-i18n="uricAcid2">Uric acid (mg/day)</label><div class="fields"><input id="uricAcid2" type="number" step="0.1" min="0"><select id="uricAcid2Unit"><option value="mg">mg/day</option><option value="mmol">mmol/day</option></select></div></div>
+    <div class="field"><label data-i18n="sodium2">Sodium (mmol/day)</label><input id="sodium2" type="number" step="1" min="0"></div>
+    <div class="field"><label data-i18n="urineCreat2">Creatinine (mg/day)</label><input id="urineCreat2" type="number" step="1" min="0"></div>
+    <div class="field"><label data-i18n="urinePotassium2">Potassium (mmol/day)</label><input id="urinePotassium2" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urineMagnesium2">Magnesium (mmol/day)</label><input id="urineMagnesium2" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urinePhosphate2">Phosphate (mmol/day)</label><input id="urinePhosphate2" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urineAmmonium2">Ammonium (mmol/day)</label><input id="urineAmmonium2" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urineCystine2">Cystine (mg/day)</label><input id="urineCystine2" type="number" step="1" min="0"></div>
+    <div class="field"><label data-i18n="urineChloride2">Chloride (mmol/day)</label><input id="urineChloride2" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urineSulfate2">Sulfate (mmol/day)</label><input id="urineSulfate2" type="number" step="0.1" min="0"></div>
+    <div class="field"><label data-i18n="urineUreaNitrogen2">Urea nitrogen (g/day)</label><input id="urineUreaNitrogen2" type="number" step="0.1" min="0"></div>
+   </div>
+   <div id="urineComparison" class="small" aria-live="polite"></div>
+  </section>
+  <section class="card">
    <h2><span class="step">04</span><span data-i18n="serum">Serum safety profile</span></h2>
    <p class="section-note" data-i18n="serumNote">Use local laboratory reference ranges; values below are screening prompts, not diagnostic cutoffs.</p>
    <div class="fields">
-    <div class="field"><label data-i18n="egfr">eGFR (mL/min/1.73m²)</label><input id="egfr" type="number" step="1" min="0"></div>
+    <div class="field"><label data-i18n="serumCreatinine">Serum creatinine</label><div class="fields"><input id="serumCreatinine" type="number" step="0.01" min="0"><select id="serumCreatinineUnit" aria-label="Creatinine unit"><option value="mgdl">mg/dL</option><option value="umol">µmol/L</option></select></div><small class="small">IDMS-standardized creatinine required for CKD-EPI 2021.</small></div>
+     <div class="field"><label data-i18n="egfr">eGFR (2021 CKD-EPI, mL/min/1.73m²)</label><input id="egfr" type="number" step="1" min="0" readonly aria-readonly="true"></div>
     <div class="field"><label data-i18n="potassium">Potassium (mmol/L)</label><input id="potassium" type="number" step="0.1" min="0"></div>
     <div class="field"><label data-i18n="serumCalcium">Calcium (mg/dL)</label><input id="serumCalcium" type="number" step="0.1" min="0"></div>
     <div class="field"><label data-i18n="serumUric">Uric acid (mg/dL)</label><input id="serumUric" type="number" step="0.1" min="0"></div>
     <div class="field"><label data-i18n="bicarb">Bicarbonate (mmol/L)</label><input id="bicarb" type="number" step="0.1" min="0"></div>
+     <div class="field"><label data-i18n="serumSodium">Sodium (mmol/L)</label><input id="serumSodium" type="number" step="0.1" min="0"></div>
+     <div class="field"><label data-i18n="serumMagnesium">Magnesium (mmol/L)</label><input id="serumMagnesium" type="number" step="0.01" min="0"></div>
+     <div class="field"><label data-i18n="serumPhosphate">Phosphate (mmol/L)</label><input id="serumPhosphate" type="number" step="0.01" min="0"></div>
+     <div class="field"><label data-i18n="fastingGlucose">Fasting glucose (mg/dL)</label><input id="fastingGlucose" type="number" step="1" min="0"></div>
+     <div class="field"><label data-i18n="serumAlbumin">Albumin (g/dL)</label><input id="serumAlbumin" type="number" step="0.1" min="0"></div>
+     <div class="field"><label data-i18n="serumPTH">Intact PTH (pg/mL, if indicated)</label><input id="serumPTH" type="number" step="0.1" min="0"></div>
+     <div class="field"><label data-i18n="serumChloride">Chloride (mmol/L)</label><input id="serumChloride" type="number" step="0.1" min="0"></div>
+     <div class="field"><label data-i18n="serumIonizedCalcium">Ionized calcium (mmol/L, optional)</label><input id="serumIonizedCalcium" type="number" step="0.01" min="0"></div>
+     <div class="field"><label data-i18n="vitaminD25">25-OH vitamin D (ng/mL, if indicated)</label><input id="vitaminD25" type="number" step="0.1" min="0"></div>
+
    </div>
+   <details class="wide" style="margin-top:12px"><summary><strong data-i18n="labRangesTitle">Local laboratory reference intervals (optional)</strong></summary>
+    <p class="section-note" data-i18n="labRangesNote">Enter the lower and upper limits exactly as reported by the performing laboratory, using the units shown. Blank limits are not interpreted as normal. These intervals are separate from stone-guideline thresholds and medication safety rules [6].</p>
+    <div class="fields three"><div class="field"><label data-i18n="labProfileSex">Reference profile applies to sex</label><select id="labRefSex"><option value="all">All / not sex-specific</option><option value="female">Female</option><option value="male">Male</option></select></div><div class="field"><label data-i18n="labAgeMin">Applicable age from (years)</label><input id="labRefAgeMin" type="number" min="0" placeholder="No lower limit"></div><div class="field"><label data-i18n="labAgeMax">Applicable age to (years)</label><input id="labRefAgeMax" type="number" min="0" placeholder="No upper limit"></div></div>
+    <div class="fields three" id="labReferenceFields">
+     <div class="field"><label data-i18n="labCreatinine">Creatinine (mg/dL after conversion) — low / high</label><div class="fields"><input id="ref_serumCreatinine_low" type="number" step="0.01" placeholder="Low"><input id="ref_serumCreatinine_high" type="number" step="0.01" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labPotassium">Potassium (mmol/L) — low / high</label><div class="fields"><input id="ref_potassium_low" type="number" step="0.1" placeholder="Low"><input id="ref_potassium_high" type="number" step="0.1" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labCalcium">Total calcium (mg/dL) — low / high</label><div class="fields"><input id="ref_serumCalcium_low" type="number" step="0.1" placeholder="Low"><input id="ref_serumCalcium_high" type="number" step="0.1" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labUric">Uric acid (mg/dL) — low / high</label><div class="fields"><input id="ref_serumUric_low" type="number" step="0.1" placeholder="Low"><input id="ref_serumUric_high" type="number" step="0.1" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labBicarbonate">Bicarbonate (mmol/L) — low / high</label><div class="fields"><input id="ref_bicarb_low" type="number" step="0.1" placeholder="Low"><input id="ref_bicarb_high" type="number" step="0.1" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labSodium">Sodium (mmol/L) — low / high</label><div class="fields"><input id="ref_serumSodium_low" type="number" step="0.1" placeholder="Low"><input id="ref_serumSodium_high" type="number" step="0.1" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labMagnesium">Magnesium (mmol/L) — low / high</label><div class="fields"><input id="ref_serumMagnesium_low" type="number" step="0.01" placeholder="Low"><input id="ref_serumMagnesium_high" type="number" step="0.01" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labPhosphate">Phosphate (mmol/L) — low / high</label><div class="fields"><input id="ref_serumPhosphate_low" type="number" step="0.01" placeholder="Low"><input id="ref_serumPhosphate_high" type="number" step="0.01" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labGlucose">Fasting glucose (mg/dL) — low / high</label><div class="fields"><input id="ref_fastingGlucose_low" type="number" step="1" placeholder="Low"><input id="ref_fastingGlucose_high" type="number" step="1" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labAlbumin">Albumin (g/dL) — low / high</label><div class="fields"><input id="ref_serumAlbumin_low" type="number" step="0.1" placeholder="Low"><input id="ref_serumAlbumin_high" type="number" step="0.1" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labPTH">Intact PTH (pg/mL) — low / high</label><div class="fields"><input id="ref_serumPTH_low" type="number" step="0.1" placeholder="Low"><input id="ref_serumPTH_high" type="number" step="0.1" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labChloride">Chloride (mmol/L) — low / high</label><div class="fields"><input id="ref_serumChloride_low" type="number" step="0.1" placeholder="Low"><input id="ref_serumChloride_high" type="number" step="0.1" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labIonizedCalcium">Ionized calcium (mmol/L) — low / high</label><div class="fields"><input id="ref_serumIonizedCalcium_low" type="number" step="0.01" placeholder="Low"><input id="ref_serumIonizedCalcium_high" type="number" step="0.01" placeholder="High"></div></div>
+     <div class="field"><label data-i18n="labVitaminD">25-OH vitamin D (ng/mL) — low / high</label><div class="fields"><input id="ref_vitaminD25_low" type="number" step="0.1" placeholder="Low"><input id="ref_vitaminD25_high" type="number" step="0.1" placeholder="High"></div></div>
+    </div>
+   </details>
   </section>
 
-  <section class="card wide">
-   <h2><span class="step">05</span><span data-i18n="thresholds">Screening thresholds (editable)</span></h2>
+   <section class="card wide">
+    <h2><span class="step">FOLLOW-UP</span><span data-i18n="followTitle">Longitudinal follow-up</span></h2>
+    <p class="section-note" data-i18n="followNote">Record planned or completed reassessment. Suggested intervals are prompts, not automatic orders.</p>
+    <div class="fields three">
+     <div class="field"><label data-i18n="treatmentChangeDate">Date of treatment / lifestyle change</label><input id="treatmentChangeDate" type="date"></div>
+     <div class="field"><label data-i18n="repeatUrineDate">Repeat 24-hour urine date</label><input id="repeatUrineDate" type="date"></div>
+     <div class="field"><label data-i18n="followImagingDate">Follow-up imaging date</label><input id="followImagingDate" type="date"></div>
+    </div>
+    <div class="field" style="margin-top:10px"><label data-i18n="followNotes">Follow-up findings / treatment changes</label><textarea id="followNotes"></textarea></div>
+    <div class="fields">
+     <div class="field"><label data-i18n="followAgent">Preventive treatment / agent</label><input id="followAgent"></div>
+     <div class="field"><label data-i18n="followDose">Dose and regimen</label><input id="followDose"></div>
+     <div class="field"><label data-i18n="followAdherence">Adherence</label><select id="followAdherence"><option value="">—</option><option value="good">Good</option><option value="partial">Partial</option><option value="poor">Poor</option><option value="unknown">Unknown</option></select></div>
+     <div class="field"><label data-i18n="followAdverse">Adverse effects / reason stopped</label><input id="followAdverse"></div>
+    </div>
+
+   </section>
+
+   <section class="card wide">
+    <h2><span class="step">05</span><span data-i18n="thresholds">Screening thresholds (editable)</span></h2>
    <p class="section-note" data-i18n="thresholdNote">These defaults are pragmatic flags for this prototype. Interpret against sex, body size, collection quality, laboratory methods and local guidelines.</p>
    <div class="fields three">
-    <div class="field"><label data-i18n="citrateLow">Low citrate (mg/day)</label><input id="tCitrate" type="number" value="320"></div>
+    <div class="field"><label>Low citrate – female (mg/day; EAU 1.9 mmol/day)</label><input id="tCitrateF" type="number" value="365"></div><div class="field"><label>Low citrate – male (mg/day; EAU 1.7 mmol/day)</label><input id="tCitrateM" type="number" value="327"></div>
     <div class="field"><label data-i18n="oxalateHigh">High oxalate (mg/day)</label><input id="tOxalate" type="number" value="40"></div>
     <div class="field"><label data-i18n="sodiumHigh">High sodium (mmol/day)</label><input id="tSodium" type="number" value="100"></div>
-    <div class="field"><label data-i18n="calciumFemale">High calcium – female (mg/day)</label><input id="tCaF" type="number" value="200"></div>
-    <div class="field"><label data-i18n="calciumMale">High calcium – male (mg/day)</label><input id="tCaM" type="number" value="250"></div>
+    <div class="field"><label>Urinary calcium attention threshold (mg/day; 5 mmol/day)</label><input id="tCa" type="number" value="200"></div><div class="field"><label>Marked hypercalciuria attention level (mg/day; 8 mmol/day)</label><input id="tCaSevere" type="number" value="321"></div>
     <div class="field"><label data-i18n="volumeTarget">Urine volume target (L/day)</label><input id="tVolume" type="number" step="0.1" value="2.5"></div>
    </div>
   </section>
  </div>
  <div class="actions no-print">
   <button class="primary" id="analyze" type="button" data-i18n="analyze">Generate assessment</button>
-  <button class="secondary" id="export" type="button" data-i18n="export">Export data (JSON)</button>
-  <button class="secondary" id="importJsonBtn" type="button">Import JSON</button>
-  <button class="secondary" id="importCsvBtn" type="button">Import test CSV</button>
+  <button class="secondary" id="export" type="button" data-i18n="export">Save patient record</button>
+  <button class="secondary" id="importJsonBtn" type="button">Open patient record (.stn)</button>
   <button class="secondary" id="reset" type="button" data-i18n="reset">Clear form</button>
-  <input id="jsonFile" type="file" accept=".json,application/json" hidden>
-  <input id="csvFile" type="file" accept=".csv,text/csv" hidden>
+  <input id="stnFile" type="file" accept=".stn,application/octet-stream" hidden>
  </div>
  <section class="card result" id="result">
   <div class="result-head"><h2 data-i18n="report">Assessment report</h2><span class="count" id="reportMeta"></span></div>
   <div id="findings"></div>
   <div id="medicationAdvisor" class="advisor"></div>
+  <div id="treatmentPathway" class="advisor treatment-pathway"></div>
   <div class="disclaimer" data-i18n="reportDisclaimer">Medication options are prompts for clinician review, not patient-specific prescriptions. Confirm stone composition, repeat/validate abnormal urine findings, assess contraindications and interactions, and monitor response after any treatment change.</div>
  </section>
  <section class="card" style="margin-top:16px">
   <h2><span class="step">INFO</span><span data-i18n="scope">Scope, limitations & clinical references</span></h2>
   <div class="refs">
-   <p data-i18n="scopeText">V1 is a focused educational prototype for adult stone-formers, primarily calcium stone metabolic assessment. It is not validated medical software. It does not calculate doses, predict recurrence, interpret imaging, or replace specialist assessment. Pediatric patients, pregnancy, cystinuria, infection stones, primary hyperoxaluria and complex renal disease require dedicated pathways.</p>
+   <p data-i18n="scopeText">V2.0 is a clinical decision-support tool for adult patients with different kidney-stone types. It organizes clinical history, selected laboratory findings, imaging burden and follow-up information. It is not validated medical software, does not calculate individualized doses or predict recurrence, and does not replace specialist assessment. Pediatric patients, pregnancy, primary hyperoxaluria and complex renal disease require dedicated specialist pathways.</p>
    <ul>
     <li>European Association of Urology (EAU). Guidelines on Urolithiasis – metabolic evaluation and recurrence prevention. Use the current edition at point of care.</li>
     <li>American Urological Association (AUA). Medical Management of Kidney Stones guideline. Confirm current recommendations and updates.</li>
-    <li>National Kidney Foundation. Kidney stone prevention and patient education resources.</li>
+    <li>AUA. Medical Management of Kidney Stones: 2026 Guideline, Parts I–II. EAU. Guidelines on Urolithiasis, 2026.</li>
    </ul>
-   <p data-i18n="privacy">Privacy: all data remain in this browser session unless you export them. Avoid entering directly identifying patient information on shared devices.</p>
+   <p data-i18n="privacy">Privacy: clinical data are processed in temporary page memory only; they are not saved in browser storage or transmitted to a server. Saving creates an encrypted .stn file. Reset the form or close the page when finished. Avoid shared devices.</p>
   </div>
  </section>
- <footer>StonePharm V1.4 · Offline single-file prototype · Clinical review required</footer>
+ <footer>StonePharm V2.0 · Single-file client-side application · Clinical review required</footer>
 </main>
 <script>
 const $=id=>document.getElementById(id);
 const translations={
 en:{
 subtitle:"Kidney Stone Metabolic Assessment & Pharmacotherapy Support",print:"Print / Save PDF",notice:"Clinical decision-support prototype for clinician use. It organizes selected risk factors and prompts consideration of options; it does not diagnose, prescribe, or replace current guidelines or clinical judgment.",
-patient:"Patient profile",patientId:"Patient ID / code",date:"Assessment date",age:"Age (years)",sex:"Sex",female:"Female",male:"Male",stoneType:"Stone composition",caox:"Calcium oxalate",cap:"Calcium phosphate",uric:"Uric acid",struvite:"Struvite / infection",cystine:"Cystine",unknown:"Unknown / not analyzed",episodes:"Stone episodes",first:"First episode",recurrent:"Recurrent (2 or more)",history:"Relevant history / comorbidities",historyPh:"e.g. gout, diabetes, bowel disease, bariatric surgery, CKD...",
-meds:"Current medicines & supplements",medsNote:"Enter generic names separated by commas. Include OTC products and supplements.",medList:"Medication list",medsPh:"e.g. losartan, spironolactone, topiramate, calcium supplement...",allergies:"Drug allergies / previous adverse reactions",notes:"Additional clinical notes",urine:"24-hour urine profile",urineNote:"Enter values from a valid 24-hour collection. Units are shown beside each parameter.",volume:"Urine volume (L/day)",ph:"Urine pH",calcium:"Calcium (mg/day)",oxalate:"Oxalate (mg/day)",citrate:"Citrate (mg/day)",uricAcid:"Uric acid (mg/day)",sodium:"Sodium (mmol/day)",urineCreat:"Creatinine (mg/day)",serum:"Serum safety profile",serumNote:"Use local laboratory reference ranges; values below are screening prompts, not diagnostic cutoffs.",egfr:"eGFR (mL/min/1.73m²)",potassium:"Potassium (mmol/L)",serumCalcium:"Calcium (mg/dL)",serumUric:"Uric acid (mg/dL)",bicarb:"Bicarbonate (mmol/L)",thresholds:"Screening thresholds (editable)",thresholdNote:"These defaults are pragmatic flags for this prototype. Interpret against sex, body size, collection quality, laboratory methods and local guidelines.",citrateLow:"Low citrate (mg/day)",oxalateHigh:"High oxalate (mg/day)",sodiumHigh:"High sodium (mmol/day)",calciumFemale:"High calcium – female (mg/day)",calciumMale:"High calcium – male (mg/day)",volumeTarget:"Urine volume target (L/day)",analyze:"Generate assessment",export:"Export data (JSON)",reset:"Clear form",report:"Assessment report",reportDisclaimer:"Medication options are prompts for clinician review, not patient-specific prescriptions. Confirm stone composition, repeat/validate abnormal urine findings, assess contraindications and interactions, and monitor response after any treatment change.",scope:"Scope, limitations & clinical references",scopeText:"V1 is a focused educational prototype for adult stone-formers, primarily calcium stone metabolic assessment. It is not validated medical software. It does not calculate doses, predict recurrence, interpret imaging, or replace specialist assessment. Pediatric patients, pregnancy, cystinuria, infection stones, primary hyperoxaluria and complex renal disease require dedicated pathways.",privacy:"Privacy: all data remain in this browser session unless you export them. Avoid entering directly identifying patient information on shared devices.",
-missing:"No interpretable findings yet. Enter available laboratory values and generate the assessment.",meta:"Generated",hydration:"Urine volume is below the selected target. Discuss fluid intake distributed throughout the day and repeat 24-hour urine to confirm response.",lowpH:"Urine pH is low. Review dietary pattern, uric-acid stone risk and clinical context; alkali therapy may be considered when indicated, with urine pH monitoring.",highpH:"Urine pH is relatively high. Review calcium-phosphate risk and avoid empiric alkalinization without considering stone composition and supersaturation.",hypercal:"Urinary calcium exceeds the selected screening threshold. Review sodium intake, dietary calcium adequacy, collection quality and secondary causes. A thiazide/thiazide-like agent may be considered for selected recurrent calcium-stone formers; monitor BP, electrolytes, glucose and uric acid.",oxalateHighFinding:"Urinary oxalate is elevated by the selected threshold. Review high-oxalate foods, vitamin C supplements, enteric disease/malabsorption and collection validity. Maintain normal dietary calcium with meals; investigate marked/persistent elevation.",lowCitrate:"Urinary citrate is low. Consider dietary contributors and potassium citrate/alkali therapy in appropriate patients. Check potassium and renal function; monitor urine pH, particularly with calcium-phosphate stones.",highUric:"Urinary uric acid is elevated. Review purine intake and gout/metabolic context. Allopurinol is generally considered in selected recurrent calcium oxalate stone formers with hyperuricosuria after dietary measures, or for a separate urate indication; check renal dosing and interactions.",highSodium:"Urinary sodium is high. Counsel sodium reduction; high sodium intake can increase urinary calcium. Reassess on a repeat collection.",serumK:"Serum potassium is elevated. Do not initiate potassium-containing alkali without prompt clinical evaluation and review of renal function/medications.",lowGFR:"eGFR is reduced. Use caution with potassium citrate and other pharmacotherapy; assess chronicity, potassium and specialist input before treatment.",lowBicarb:"Serum bicarbonate is low. Evaluate acid-base status and possible renal tubular or systemic causes before selecting therapy.",highCa:"Serum calcium is outside the illustrative screening interval. Confirm with albumin-corrected or ionized calcium as appropriate and evaluate for causes such as hyperparathyroidism.",drugK:"Medication list contains a potential hyperkalemia interaction (e.g. ACE inhibitor/ARB, potassium-sparing diuretic, trimethoprim, tacrolimus/cyclosporine). Review before potassium citrate; interaction risk depends on patient and dose.",drugLithium:"Lithium is listed. Thiazide therapy can increase lithium concentrations; avoid or closely coordinate monitoring and dose review if considered.",drugAllo:"Azathioprine or mercaptopurine is listed. Allopurinol can markedly increase exposure; specialist dose adjustment/alternative and close monitoring are essential.",drugStone:"A carbonic anhydrase inhibitor or related medicine is listed (e.g. topiramate, acetazolamide, zonisamide). These can alter urine chemistry and increase stone risk; review indication and prevention strategy.",notAdult:"This prototype is intended for adults. Do not use its prompts for patients under 18.",notCa:"This V1 pathway is primarily designed for calcium stones. Use a dedicated pathway for this stone type; the current flags may not apply.",recurrentOnly:"Pharmacotherapy prevention prompts are most relevant after recurrent stones or selected high-risk first episodes; individualize decisions.",noData:"No abnormal screening flag was triggered by the values entered. This does not rule out stone risk or replace full metabolic evaluation.",titleDanger:"Safety alert",titleWarn:"Review / consider",titleInfo:"Clinical context",titleOk:"No flag detected",unknownSex:"Sex is needed to apply the sex-specific calcium screening threshold.",collection:"Consider whether 24-hour urine creatinine and collection duration support a complete collection.",saved:"JSON file exported.",confirmReset:"Clear all entered data and the report?",reportPatient:"Patient code",notEntered:"Not entered"
+patient:"Patient profile",patientId:"Patient ID / code",patientName:"Patient name (optional)",date:"Assessment date",age:"Age (years)",ageAtFirstStone:"Age at first stone episode (years, if known)",sex:"Sex",singleKidney:"Solitary kidney",pregnancyStatus:"Pregnancy status",breastfeedingStatus:"Breastfeeding status",statusUnknown:"Unknown",statusNo:"No",statusYes:"Yes",notApplicable:"Not applicable",female:"Female",male:"Male",stoneType:"Stone composition",caox:"Calcium oxalate",cap:"Calcium phosphate (unspecified)",brushite:"Brushite",carbonateApatite:"Carbonate apatite",uric:"Uric acid",struvite:"Struvite / infection",cystine:"Cystine",drugStoneType:"Drug-induced",mixed:"Mixed composition",otherStone:"Other composition",unknown:"Unknown / not analyzed",ammoniumUrate:"Ammonium urate",dha:"2,8-Dihydroxyadenine (2,8-DHA)",xanthine:"Xanthine",matrixStone:"Matrix stone",cultureStatus:"Urine culture status",culturePending:"Pending",cultureNegative:"Negative",culturePositive:"Positive",cultureDetails:"Culture organism / notes (optional)",episodes:"Stone episodes",first:"First episode",recurrent:"Recurrent (2 or more)",history:"Relevant history / comorbidities",historyPh:"e.g. gout, diabetes, bowel disease, bariatric surgery, CKD...",
+meds:"Current medicines & supplements",medsNote:"Enter generic names separated by commas. Include OTC products and supplements.",medList:"Medication list",medsPh:"e.g. losartan, spironolactone, topiramate, calcium supplement...",allergies:"Drug allergies / previous adverse reactions",notes:"Additional clinical notes",urine:"24-hour urine profile",urineNote:"Enter values from a valid 24-hour collection. Units are shown beside each parameter.",volume:"Urine volume (L/day)",ph:"Urine pH",calcium:"Calcium (mg/day)",oxalate:"Oxalate (mg/day)",citrate:"Citrate (mg/day)",uricAcid:"Uric acid (mg/day)",sodium:"Sodium (mmol/day)",urineCreat:"Creatinine (mg/day)",collectionDuration:"Collection duration (hours)",collectionDurationUnknown:"Collection duration not recorded; verify that this was a complete 24-hour collection before interpreting daily excretion values.",serum:"Serum Chemistry and Metabolic Evaluation",serumNote:"Use local laboratory reference ranges; values below are screening prompts, not diagnostic cutoffs.",egfr:"eGFR (mL/min/1.73m²) [4]",potassium:"Potassium (mmol/L)",serumCalcium:"Calcium (mg/dL)",serumUric:"Uric acid (mg/dL)",bicarb:"Bicarbonate (mmol/L)",thresholds:"Screening thresholds (editable)",thresholdNote:"These defaults are pragmatic flags for this prototype. Interpret against sex, body size, collection quality, laboratory methods and local guidelines.",citrateLow:"Urinary citrate below threshold (mg/day)",oxalateHigh:"Urinary oxalate above threshold (mg/day)",sodiumHigh:"Urinary sodium above threshold (mmol/day)",calciumFemale:"Urinary calcium above threshold – female (mg/day)",calciumMale:"Urinary calcium above threshold – male (mg/day)",volumeTarget:"Urine volume target (L/day)",analyze:"Generate assessment",export:"Save patient record",reset:"Clear form",report:"Assessment report",reportDisclaimer:"Medication options are prompts for clinician review, not patient-specific prescriptions. Confirm stone composition, repeat/validate abnormal urine findings, assess contraindications and interactions, and monitor response after any treatment change.",scope:"Scope, limitations & clinical references",scopeText:"V2.0 is a clinical decision-support tool for adult patients with different kidney-stone types. It organizes clinical history, selected laboratory findings, imaging burden and follow-up information. It is not validated medical software, does not calculate individualized doses or predict recurrence, and does not replace specialist assessment. Pediatric patients, pregnancy, primary hyperoxaluria and complex renal disease require dedicated specialist pathways.",privacy:"Privacy: clinical data are processed in temporary page memory only; they are not saved in browser storage or transmitted to a server. Saving creates an encrypted .stn file. Reset the form or close the page when finished. Avoid shared devices.",
+collectionDate1:"Sample 1 collection date",urinePhosphate:"Phosphate (mmol/day, optional)",urineAmmonium:"Ammonium (mmol/day, optional)",urineCystine:"Cystine (mg/day, if indicated)",urineChloride:"Chloride (mmol/day, optional)",urineSulfate:"Sulfate (mmol/day, optional)",urineUreaNitrogen:"Urea nitrogen (g/day, optional)",urineSample2Title:"Second 24-hour urine collection (consecutive sample)",urineSample2Note:"Optional where clinically appropriate. Record separately; do not automatically average discordant collections.",collectionDate2:"Sample 2 collection date",collectionDuration2:"Collection duration (hours)",volume2:"Urine volume (L/day)",ph2:"Urine pH",calcium2:"Calcium (mg/day)",oxalate2:"Oxalate (mg/day)",citrate2:"Citrate (mg/day)",uricAcid2:"Uric acid (mg/day)",sodium2:"Sodium (mmol/day)",urineCreat2:"Creatinine (mg/day)",urinePotassium2:"Potassium (mmol/day)",urineMagnesium2:"Magnesium (mmol/day)",urinePhosphate2:"Phosphate (mmol/day)",urineAmmonium2:"Ammonium (mmol/day)",urineCystine2:"Cystine (mg/day)",urineChloride2:"Chloride (mmol/day)",urineSulfate2:"Sulfate (mmol/day)",urineUreaNitrogen2:"Urea nitrogen (g/day)",serumChloride:"Chloride (mmol/L)",serumIonizedCalcium:"Ionized calcium (mmol/L, optional)",vitaminD25:"25-OH vitamin D (ng/mL, if indicated)",medDose:"Relevant medicine dose(s)",medRoute:"Route(s)",medFrequency:"Frequency",medIndication:"Indication(s)",followAgent:"Preventive treatment / agent",followDose:"Dose and regimen",followAdherence:"Adherence",followAdverse:"Adverse effects / reason stopped"
+,
+missing:"No interpretable findings yet. Enter available laboratory values and generate the assessment.",meta:"Generated",hydration:"Urine volume is below the selected target. Discuss fluid intake distributed throughout the day and repeat 24-hour urine to confirm response.",lowpH:"Urine pH is low. Review dietary pattern, uric-acid stone risk and clinical context; alkali therapy may be considered when indicated, with urine pH monitoring.",highpH:"Urine pH is above the carbonate-apatite/brushite screening level (>6.8). Review calcium-phosphate supersaturation and avoid further empiric alkalinization.",uricHighPH:"Urine pH is above the usual uric-acid dissolution range (>7.2). Avoid further alkalinization without reassessing calcium-phosphate risk.",highPHInfection:"Persistently alkaline urine (>7.0) may support an infection-stone pathway. Review urinalysis, culture and clinical symptoms.",cystinePHtarget:"For cystine stones, the usual urine-pH target is above 7.5. Review the current pH and treatment titration with a specialist.",cystineVolume:"For cystine stones, the adult urine-volume target is above 3 L/day; review fluid strategy and medical contraindications.",hypercal:"Urinary calcium exceeds the selected screening threshold. Review sodium intake, dietary calcium adequacy, collection quality and secondary causes. A thiazide/thiazide-like agent may be considered for selected recurrent calcium-stone formers; monitor BP, electrolytes, glucose and uric acid.",oxalateHighFinding:"Urinary oxalate is elevated by the selected threshold. Review high-oxalate foods, vitamin C supplements, enteric disease/malabsorption and collection validity. Maintain normal dietary calcium with meals; investigate marked/persistent elevation.",lowCitrate:"Urinary citrate is low. Consider dietary contributors and potassium citrate/alkali therapy in appropriate patients. Check potassium and renal function; monitor urine pH, particularly with calcium-phosphate stones.",highUric:"Urinary uric acid is elevated. Review purine intake and gout/metabolic context. Allopurinol is generally considered in selected recurrent calcium oxalate stone formers with hyperuricosuria after dietary measures, or for a separate urate indication; check renal dosing and interactions.",highSodium:"Urinary sodium is high. Counsel sodium reduction; high sodium intake can increase urinary calcium. Reassess on a repeat collection.",serumK:"Serum potassium is elevated. Do not initiate potassium-containing alkali without prompt clinical evaluation and review of renal function/medications.",lowGFR:"eGFR is reduced. Use caution with potassium citrate and other pharmacotherapy; assess chronicity, potassium and specialist input before treatment.",lowBicarb:"Serum bicarbonate is low. Evaluate acid-base status and possible renal tubular or systemic causes before selecting therapy.",highCa:"Serum calcium is outside the illustrative screening interval. Confirm with albumin-corrected or ionized calcium as appropriate and evaluate for causes such as hyperparathyroidism.",drugK:"Medication list contains a potential hyperkalemia interaction (e.g. ACE inhibitor/ARB, potassium-sparing diuretic, trimethoprim, tacrolimus/cyclosporine). Review before potassium citrate; interaction risk depends on patient and dose.",drugLithium:"Lithium is listed. Thiazide therapy can increase lithium concentrations; avoid or closely coordinate monitoring and dose review if considered.",drugAllo:"Azathioprine or mercaptopurine is listed. Allopurinol can markedly increase exposure; specialist dose adjustment/alternative and close monitoring are essential.",drugStone:"A carbonic anhydrase inhibitor or related medicine is listed (e.g. topiramate, acetazolamide, zonisamide). These can alter urine chemistry and increase stone risk; review indication and prevention strategy.",positiveCulture:"A positive urine culture is recorded. Interpret with symptoms, organism, susceptibility, obstruction and systemic status; bacteriuria alone does not establish sepsis.",rareHighRiskPath:"This rare stone type is associated with high recurrence risk and requires specialist metabolic/urological evaluation.",matrixPath:"Matrix stones are rare and may be associated with infection and chronic kidney disease; specialist urological assessment is required.",brushitePath:"Brushite is a calcium-phosphate subtype with high recurrence risk; assess urinary pH, calcium/phosphate burden and underlying causes.",carbonateApatitePath:"Carbonate apatite may be infection-associated; review urine culture and distinguish it from non-infectious calcium-phosphate stones.",cystinePath:"Cystine stones are a high-risk condition. Specialist assessment and a dedicated cystinuria management pathway are required; routine calcium-stone advice is not sufficient.",struvitePath:"Struvite is infection-associated. Assess urine culture, infection and possible obstruction; stone and infection management require urological review.",uricPath:"For uric-acid stones, low urine pH is a major modifiable factor. Consider a composition-specific alkalinization pathway with measured pH follow-up and safety review.",drugStonePath:"For suspected drug-induced stones, review the causative medication and alternatives with the prescriber. Do not stop essential medication without clinical review.",mixedPath:"Mixed-composition stones require interpretation of each clinically relevant component; avoid applying a single-composition pathway without review.",giRisk:"The recorded gastrointestinal condition or surgery may be associated with enteric hyperoxaluria, hypocitraturia or low urine volume. Interpret with urine findings and clinical context.",bilateralRisk:"Bilateral stone involvement is a relevant marker of disease burden and should contribute to overall risk assessment.",multipleRisk:"Multiple stones are a marker of stone burden and should contribute to overall risk assessment.",nephroRisk:"Nephrocalcinosis is reported. Consider specialist metabolic evaluation in the clinical context.",residualRisk:"Residual fragments are reported. Consider their size, location, composition and follow-up plan; they do not have identical implications in every patient.",vitaminCReview:"High-dose vitamin C may increase urinary oxalate in some patients. Confirm dose and indication; do not infer risk from ordinary dietary intake.",calciumSupplementReview:"Review calcium supplement dose, timing and indication. Avoid indiscriminate restriction of normal dietary calcium.",vitaminDReview:"Review vitamin D dose and indication, especially alongside serum calcium and urinary calcium when available.",loopReview:"Loop diuretics may affect calcium handling. Interpret exposure in the context of indication, dose and renal function.",notAdult:"This prototype is intended for adults. Do not use its prompts for patients under 18.",notCa:"This V1 pathway is primarily designed for calcium stones. Use a dedicated pathway for this stone type; the current flags may not apply.",recurrentOnly:"Pharmacotherapy prevention prompts are most relevant after recurrent stones or selected high-risk first episodes; individualize decisions.",noData:"No abnormal screening flag was triggered by the values entered. This does not rule out stone risk or replace full metabolic evaluation.",titleDanger:"Safety alert",titleWarn:"Review / consider",titleInfo:"Clinical context",titleOk:"No flag detected",unknownSex:"Sex is needed to apply the sex-specific calcium screening threshold.",followUrineDue:"A repeat 24-hour urine assessment may be considered approximately 3–6 months after a treatment or lifestyle change, depending on clinical circumstances.",followImagingDue:"Follow-up imaging may be considered initially around 6–12 months in selected patients; individualize by stone burden, intervention and clinical status.",collection:"Consider whether 24-hour urine creatinine and collection duration support a complete collection.",saved:"Patient record saved.",confirmReset:"Clear all entered data and the report?",reportPatient:"Patient code",notEntered:"Not entered",riskHigh:"Overall recurrence-risk assessment: HIGH-RISK FEATURES",riskLow:"No high-risk feature was identified from the entered fields; assessment may be incomplete.",riskIncomplete:"Risk assessment incomplete: enter stone history and relevant clinical information.",medReview:"Medication review: potentially stone-associated medication(s) identified. Review indication and risk; do not stop medication automatically.",giHistory:"Gastrointestinal disease / surgery / malabsorption",none:"None known",ibd:"Inflammatory bowel disease",chronicDiarrhea:"Chronic diarrhea",bariatric:"Bariatric surgery",bowelResection:"Bowel resection",malabsorption:"Fat malabsorption / other malabsorption",other:"Other",unknownStatus:"Unknown",giDetails:"GI history details (optional)",imagingTitle:"Imaging and stone burden",imagingNote:"Record reported imaging findings; do not infer stone composition from imaging alone.",imagingDate:"Imaging date",imagingModality:"Modality",ultrasound:"Ultrasound",ct:"CT",xray:"KUB X-ray",stoneCount:"Number of stones",largestStone:"Largest stone diameter (mm)",stoneLocation:"Location",stoneLocationPh:"e.g. renal pelvis, lower pole, ureter",laterality:"Laterality",right:"Right",left:"Left",bilateral:"Bilateral",nephrocalcinosis:"Nephrocalcinosis reported",residualFragments:"Residual fragments after intervention",followTitle:"Longitudinal follow-up",followNote:"Record planned or completed reassessment. Suggested intervals are prompts, not automatic orders.",treatmentChangeDate:"Date of treatment / lifestyle change",repeatUrineDate:"Repeat 24-hour urine date",followImagingDate:"Follow-up imaging date",followNotes:"Follow-up findings / treatment changes",height:"Height (cm)",weight:"Weight (kg)",bmi:"BMI (kg/m², calculated)",familyHistory:"Family history of kidney stones",yes:"Yes",no:"No",familyDetails:"Family history details (optional)",intervention:"Previous stone-related intervention",interventionDetails:"Intervention details (date / side / outcome)",otherSurgery:"Other surgery",urinePotassium:"Potassium (mmol/day)",urineMagnesium:"Magnesium (mmol/day)",urineProtein:"Total protein (g/day, optional)",specificGravity:"Urine specific gravity",serumCreatinine:"Serum creatinine (select unit)",serumSodium:"Sodium (mmol/L)",serumMagnesium:"Magnesium (mmol/L)",serumPhosphate:"Phosphate (mmol/L)",fastingGlucose:"Fasting glucose (mg/dL)",serumAlbumin:"Albumin (g/dL)",serumPTH:"Intact PTH (pg/mL, if indicated)",highFastingGlucose:"Fasting glucose is in the diabetes range (≥126 mg/dL). In the absence of unequivocal hyperglycemia, confirm according to current diagnostic standards; this is not a stone-specific marker.",prediabetesRange:"Fasting glucose is in the prediabetes range (100–125 mg/dL). Interpret and follow up according to diabetes guidance; this is not a stone-specific marker.",lowUrineMg:"Urinary magnesium is below the EAU attention threshold (<3 mmol/day). This is a supporting finding and does not automatically indicate magnesium supplementation.",priorIntervention:"A previous stone-related intervention is recorded. Consider the number, timing, outcome, residual fragments and recurrence; intervention history alone does not automatically establish high risk.",highSG:"Urine specific gravity is above 1.010. Interpret with 24-hour urine volume and hydration status.",reportName:"Patient name",labRangesTitle:"Local laboratory reference intervals (optional)",labVitaminD:"25-OH vitamin D (ng/mL) — low / high",labIonizedCalcium:"Ionized calcium (mmol/L) — low / high",labChloride:"Chloride (mmol/L) — low / high",labPTH:"Intact PTH (pg/mL) — low / high",labAlbumin:"Albumin (g/dL) — low / high",labGlucose:"Fasting glucose (mg/dL) — low / high",labPhosphate:"Phosphate (mmol/L) — low / high",labMagnesium:"Magnesium (mmol/L) — low / high",labSodium:"Sodium (mmol/L) — low / high",labBicarbonate:"Bicarbonate (mmol/L) — low / high",labUric:"Uric acid (mg/dL) — low / high",labCalcium:"Total calcium (mg/dL) — low / high",labPotassium:"Potassium (mmol/L) — low / high",labCreatinine:"Creatinine (mg/dL after conversion) — low / high",labAgeMax:"Applicable age to (years)",labAgeMin:"Applicable age from (years)",labProfileSex:"Reference profile applies to sex",labRangesNote:"Enter the lower and upper limits exactly as reported by the performing laboratory, using the units shown. Blank limits are not interpreted as normal. These intervals are separate from stone-guideline thresholds and medication safety rules [6].",serumKBorderline:"Serum potassium is 5.0–5.4 mmol/L: review the laboratory interval, hemolysis, renal function and medicines. This is a caution flag, not a diagnosis of hyperkalemia.",labReferenceOut:"A serum result is outside the entered local laboratory reference interval. Confirm units, method, sample quality and clinical context; this is not by itself a diagnosis.",veryHighOxalate:"Urinary oxalate exceeds 1 mmol/day (about 88 mg/day), a level warranting prompt specialist assessment for primary hyperoxaluria after excluding secondary causes; this is not diagnostic.",markedHypercalciuria:"Urinary calcium exceeds 8 mmol/day (about 321 mg/day), a marked elevation requiring confirmation and assessment for secondary causes.",
+ ageMissingHold:"Age is missing. Adult medication decision support is withheld until age is entered.",
+ pregnancyHold:"Pregnancy is recorded or pregnancy status is insufficiently clarified for this patient. Routine medication suggestions are withheld; obtain specialist review.",
+ breastfeedingHold:"Breastfeeding is recorded. Review medication suitability individually; routine medication suggestions are withheld.",
+ pthReview:"Serum calcium is above the screening range. Review albumin-adjusted or ionized calcium and measure intact PTH when clinically indicated; interpret using the local laboratory range.",
+ collectionLow:"Urinary creatinine excretion per kg is below a broad expected adult range. Possible under-collection; repeat or clinically verify before relying on daily excretion thresholds.",
+ collectionHigh:"Urinary creatinine excretion per kg is above a broad expected adult range. Check body composition, over-collection, timing and data entry; do not automatically label the sample invalid.",
+ collectionAdequate:"Urinary creatinine excretion per kg is within a broad expected range for an adult collection; this supports but does not prove collection completeness.",
+ collectionDurationUnknown:"Collection duration is not recorded; verify that this was a complete 24-hour collection before interpreting daily excretion values.",
+ collectionDuration:"Collection duration is not 24 hours. Confirm timing and normalize/interpret the result appropriately before using daily excretion thresholds.",
+ singleKidneyRisk:"Solitary kidney is recorded: classify as a high-risk feature and assess renal function and obstruction carefully.",
+ earlyOnsetRisk:"Stone disease began at a young age (25 years or younger); consider metabolic/genetic causes and specialist assessment.",
+ nephroHighRisk:"Nephrocalcinosis is recorded and contributes to a high-risk profile.",
+ drugStoneRisk:"Drug-induced stone composition is a high-risk feature; review the causative medicine and underlying mechanism."
 },
 fa:{
 subtitle:"ارزیابی متابولیک سنگ کلیه و پشتیبانی تصمیم‌گیری دارودرمانی",print:"چاپ / ذخیره PDF",notice:"نمونه اولیه پشتیبان تصمیم‌گیری بالینی برای استفاده پزشک و داروساز است. این ابزار برخی عوامل خطر را سامان‌دهی کرده و گزینه‌های قابل بررسی را یادآوری می‌کند؛ جایگزین تشخیص، تجویز، راهنماهای به‌روز یا قضاوت بالینی نیست.",
-patient:"مشخصات بیمار",patientId:"شناسه / کد بیمار",date:"تاریخ ارزیابی",age:"سن (سال)",sex:"جنس",female:"زن",male:"مرد",stoneType:"ترکیب سنگ",caox:"کلسیم اگزالات",cap:"کلسیم فسفات",uric:"اسید اوریک",struvite:"استروویت / عفونی",cystine:"سیستین",unknown:"نامشخص / آنالیز نشده",episodes:"تعداد حملات سنگ",first:"اولین حمله",recurrent:"عودکننده (۲ بار یا بیشتر)",history:"سوابق و بیماری‌های همراه",historyPh:"مثلاً نقرس، دیابت، بیماری روده، جراحی چاقی، بیماری مزمن کلیه...",
-meds:"داروها و مکمل‌های مصرفی",medsNote:"نام ژنریک داروها را با کاما جدا کنید؛ داروهای بدون نسخه و مکمل‌ها را نیز وارد کنید.",medList:"فهرست داروها",medsPh:"مثلاً لوزارتان، اسپیرونولاکتون، توپیرامات، مکمل کلسیم...",allergies:"حساسیت دارویی / عوارض قبلی",notes:"یادداشت‌های بالینی تکمیلی",urine:"آزمایش ادرار ۲۴ ساعته",urineNote:"مقادیر مربوط به جمع‌آوری معتبر ۲۴ ساعته را وارد کنید. واحد هر پارامتر مشخص شده است.",volume:"حجم ادرار (لیتر در روز)",ph:"pH ادرار",calcium:"کلسیم (mg/day)",oxalate:"اگزالات (mg/day)",citrate:"سیترات (mg/day)",uricAcid:"اسید اوریک (mg/day)",sodium:"سدیم (mmol/day)",urineCreat:"کراتینین ادرار (mg/day)",serum:"آزمایش‌های ایمنی سرم",serumNote:"محدوده مرجع آزمایشگاه خود را ملاک قرار دهید؛ مقادیر زیر صرفاً برای غربالگری‌اند و معیار تشخیصی قطعی نیستند.",egfr:"eGFR (mL/min/1.73m²)",potassium:"پتاسیم (mmol/L)",serumCalcium:"کلسیم (mg/dL)",serumUric:"اسید اوریک (mg/dL)",bicarb:"بیکربنات (mmol/L)",thresholds:"آستانه‌های غربالگری (قابل ویرایش)",thresholdNote:"مقادیر پیش‌فرض صرفاً برای علامت‌گذاری اولیه در این نمونه انتخاب شده‌اند. تفسیر باید با توجه به جنس، جثه، کیفیت جمع‌آوری، روش آزمایشگاه و راهنماهای محلی انجام شود.",citrateLow:"سیترات پایین (mg/day)",oxalateHigh:"اگزالات بالا (mg/day)",sodiumHigh:"سدیم بالا (mmol/day)",calciumFemale:"کلسیم بالا – زن (mg/day)",calciumMale:"کلسیم بالا – مرد (mg/day)",volumeTarget:"هدف حجم ادرار (لیتر در روز)",analyze:"تهیه گزارش ارزیابی",export:"خروجی داده‌ها (JSON)",reset:"پاک کردن فرم",report:"گزارش ارزیابی",reportDisclaimer:"گزینه‌های دارویی صرفاً یادآور برای بررسی متخصص هستند و نسخه اختصاصی بیمار محسوب نمی‌شوند. ترکیب سنگ را تأیید کنید، یافته‌های غیرطبیعی ادرار را در صورت لزوم تکرار/اعتبارسنجی کنید، موارد منع مصرف و تداخلات را بسنجید و پس از هر تغییر درمانی پاسخ را پایش کنید.",scope:"دامنه، محدودیت‌ها و منابع بالینی",scopeText:"نسخه اول یک نمونه آموزشی متمرکز برای بزرگسالان مبتلا به سنگ، عمدتاً با هدف ارزیابی متابولیک سنگ‌های کلسیمی است. نرم‌افزار اعتبارسنجی بالینی نشده است؛ دوز محاسبه نمی‌کند، عود را پیش‌بینی نمی‌کند، تصاویر را تفسیر نمی‌کند و جایگزین ارزیابی تخصصی نیست. کودکان، بارداری، سیستینوری، سنگ‌های عفونی، هیپراگزالوری اولیه و بیماری پیچیده کلیوی به مسیرهای اختصاصی نیاز دارند.",privacy:"حریم خصوصی: داده‌ها تا زمان خروجی گرفتن فقط در همین مرورگر باقی می‌مانند. در دستگاه‌های مشترک از ورود اطلاعات هویتی مستقیم بیمار خودداری کنید.",
-missing:"هنوز یافته قابل تفسیر وجود ندارد. مقادیر آزمایشگاهی موجود را وارد و گزارش را تولید کنید.",meta:"زمان تولید گزارش",hydration:"حجم ادرار کمتر از هدف انتخاب‌شده است. درباره مصرف مایعات در طول روز و تکرار آزمایش ادرار ۲۴ ساعته برای ارزیابی پاسخ گفت‌وگو شود.",lowpH:"pH ادرار پایین است. الگوی غذایی، خطر سنگ اسیداوریکی و شرایط بالینی بررسی شود؛ در صورت اندیکاسیون می‌توان قلیایی‌سازی را با پایش pH در نظر گرفت.",highpH:"pH ادرار نسبتاً بالا است. خطر سنگ کلسیم فسفات بررسی شود و از قلیایی‌سازی تجربی بدون توجه به ترکیب سنگ و فوق‌اشباع ادرار پرهیز شود.",hypercal:"کلسیم ادرار از آستانه غربالگری انتخاب‌شده بالاتر است. دریافت سدیم، کفایت کلسیم غذایی، کیفیت جمع‌آوری و علل ثانویه بررسی شود. در برخی بیماران منتخب با سنگ کلسیمی عودکننده، تیازید یا داروی شبه‌تیازیدی قابل بررسی است؛ فشارخون، الکترولیت‌ها، قند و اسیداوریک پایش شوند.",oxalateHighFinding:"اگزالات ادرار بر اساس آستانه انتخاب‌شده بالا است. مصرف غذاهای پر اگزالات، مکمل ویتامین C، بیماری یا سوءجذب روده و اعتبار جمع‌آوری بررسی شود. دریافت طبیعی کلسیم همراه غذا حفظ شود؛ افزایش واضح یا پایدار نیازمند بررسی بیشتر است.",lowCitrate:"سیترات ادرار پایین است. عوامل غذایی و بالینی بررسی شوند؛ در بیمار مناسب می‌توان پتاسیم سیترات/قلیایی‌سازی را در نظر گرفت. پتاسیم و عملکرد کلیه بررسی شود؛ به‌ویژه در سنگ کلسیم فسفات، pH ادرار پایش شود.",highUric:"اسیداوریک ادرار بالا است. دریافت پورین، نقرس و وضعیت متابولیک بررسی شود. آلوپورینول معمولاً برای برخی بیماران منتخب با سنگ کلسیم اگزالات عودکننده و هیپراوریکوزوری، پس از اقدامات غذایی، یا برای اندیکاسیون مستقل مربوط به اورات مطرح می‌شود؛ دوز متناسب با کلیه و تداخلات بررسی شود.",highSodium:"سدیم ادرار بالا است. کاهش دریافت سدیم توصیه شود؛ سدیم زیاد می‌تواند دفع کلسیم ادرار را افزایش دهد. پس از مداخله، آزمایش تکرار شود.",serumK:"پتاسیم سرم بالا است. بدون ارزیابی بالینی و بررسی عملکرد کلیه و داروها، پتاسیم سیترات یا سایر درمان‌های حاوی پتاسیم شروع نشود.",lowGFR:"eGFR کاهش یافته است. در مصرف پتاسیم سیترات و سایر داروها احتیاط شود؛ مزمن بودن اختلال، پتاسیم و نیاز به نظر متخصص بررسی شود.",lowBicarb:"بیکربنات سرم پایین است. پیش از انتخاب درمان، وضعیت اسید ـ باز و علل احتمالی کلیوی یا سیستمیک بررسی شود.",highCa:"کلسیم سرم خارج از محدوده غربالگری نمونه است. در صورت لزوم با کلسیم تصحیح‌شده بر اساس آلبومین یا کلسیم یونیزه تأیید و عللی مانند پرکاری پاراتیروئید بررسی شود.",drugK:"در فهرست دارویی، احتمال تداخل افزاینده پتاسیم (مانند ACEI/ARB، دیورتیک نگه‌دارنده پتاسیم، تری‌متوپریم، تاکرولیموس/سیکلوسپورین) وجود دارد. پیش از پتاسیم سیترات بررسی شود؛ خطر به بیمار و دوز وابسته است.",drugLithium:"لیتیوم در فهرست دارویی است. تیازیدها می‌توانند غلظت لیتیوم را افزایش دهند؛ در صورت بررسی این گروه، هماهنگی تخصصی و پایش دقیق ضروری است.",drugAllo:"آزاتیوپرین یا مرکاپتوپورین در فهرست دارویی است. آلوپورینول می‌تواند مواجهه دارویی را به‌شدت افزایش دهد؛ تعدیل تخصصی دوز یا جایگزین و پایش دقیق ضروری است.",drugStone:"مهارکننده کربنیک انهیدراز یا داروی مرتبط (مانند توپیرامات، استازولامید، زونیسامید) در فهرست دارویی است. این داروها می‌توانند شیمی ادرار را تغییر داده و خطر سنگ را افزایش دهند؛ اندیکاسیون و راهبرد پیشگیری بررسی شود.",notAdult:"این نمونه برای بزرگسالان طراحی شده است. از پیام‌های آن برای افراد زیر ۱۸ سال استفاده نکنید.",notCa:"مسیر نسخه اول عمدتاً برای سنگ‌های کلسیمی طراحی شده است. برای این نوع سنگ از مسیر اختصاصی استفاده کنید؛ هشدارهای فعلی ممکن است قابل تعمیم نباشند.",recurrentOnly:"یادآورهای پیشگیری دارویی عمدتاً در سنگ‌های عودکننده یا برخی موارد پرخطرِ حمله اول مطرح‌اند؛ تصمیم باید فردی‌سازی شود.",noData:"با مقادیر واردشده هشدار غربالگری غیرطبیعی فعال نشد. این موضوع خطر سنگ را رد نمی‌کند و جایگزین ارزیابی کامل متابولیک نیست.",titleDanger:"هشدار ایمنی",titleWarn:"نیازمند بررسی / قابل طرح",titleInfo:"زمینه بالینی",titleOk:"هشداری شناسایی نشد",unknownSex:"برای اعمال آستانه اختصاصی کلسیم ادرار، جنس بیمار مشخص شود.",collection:"کامل بودن جمع‌آوری ۲۴ ساعته با توجه به کراتینین ادرار و مدت جمع‌آوری بررسی شود.",saved:"فایل JSON ذخیره شد.",confirmReset:"تمام داده‌های واردشده و گزارش پاک شود؟",reportPatient:"کد بیمار",notEntered:"وارد نشده"
+patient:"مشخصات بیمار",patientId:"شناسه / کد بیمار",patientName:"نام بیمار (اختیاری)",date:"تاریخ ارزیابی",age:"سن (سال)",ageAtFirstStone:"سن هنگام نخستین حمله سنگ (سال، در صورت اطلاع)",sex:"جنس",singleKidney:"کلیه منفرد",pregnancyStatus:"وضعیت بارداری",breastfeedingStatus:"وضعیت شیردهی",statusUnknown:"نامشخص",statusNo:"خیر",statusYes:"بله",notApplicable:"قابل اعمال نیست",female:"زن",male:"مرد",stoneType:"ترکیب سنگ",caox:"کلسیم اگزالات",cap:"کلسیم فسفات (نوع نامشخص)",brushite:"براشیت",carbonateApatite:"کربنات آپاتیت",uric:"اسید اوریک",struvite:"استروویت / عفونی",cystine:"سیستین",drugStoneType:"سنگ دارویی",mixed:"ترکیب مختلط",otherStone:"سایر ترکیبات",unknown:"نامشخص / آنالیز نشده",ammoniumUrate:"اورات آمونیوم",dha:"۲،۸-دی‌هیدروکسی‌آدنین (۲،۸-DHA)",xanthine:"گزانتین",matrixStone:"سنگ ماتریکس",cultureStatus:"وضعیت کشت ادرار",culturePending:"در انتظار پاسخ",cultureNegative:"منفی",culturePositive:"مثبت",cultureDetails:"نام میکروارگانیسم / توضیحات کشت (اختیاری)",episodes:"تعداد حملات سنگ",first:"اولین حمله",recurrent:"عودکننده (۲ بار یا بیشتر)",history:"سوابق و بیماری‌های همراه",historyPh:"مثلاً نقرس، دیابت، بیماری روده، جراحی چاقی، بیماری مزمن کلیه...",
+meds:"داروها و مکمل‌های مصرفی",medsNote:"نام ژنریک داروها را با کاما جدا کنید؛ داروهای بدون نسخه و مکمل‌ها را نیز وارد کنید.",medList:"فهرست داروها",medsPh:"مثلاً لوزارتان، اسپیرونولاکتون، توپیرامات، مکمل کلسیم...",allergies:"حساسیت دارویی / عوارض قبلی",notes:"یادداشت‌های بالینی تکمیلی",urine:"آزمایش ادرار ۲۴ ساعته",urineNote:"مقادیر مربوط به جمع‌آوری معتبر ۲۴ ساعته را وارد کنید. واحد هر پارامتر مشخص شده است.",volume:"حجم ادرار (لیتر در روز)",ph:"pH ادرار",calcium:"کلسیم (mg/day)",oxalate:"اگزالات (mg/day)",citrate:"سیترات (mg/day)",uricAcid:"اسید اوریک (mg/day)",sodium:"سدیم (mmol/day)",urineCreat:"کراتینین ادرار (mg/day)",collectionDuration:"مدت جمع‌آوری نمونه (ساعت)",collectionDurationUnknown:"مدت جمع‌آوری ثبت نشده است؛ پیش از تفسیر مقادیر دفع روزانه، کامل بودن جمع‌آوری ۲۴ ساعته را تأیید کنید.",serum:"آزمایش‌های خون و ارزیابی متابولیک",serumNote:"محدوده مرجع آزمایشگاه خود را ملاک قرار دهید؛ مقادیر زیر صرفاً برای غربالگری‌اند و معیار تشخیصی قطعی نیستند.",egfr:"eGFR (mL/min/1.73m²) [4]",potassium:"پتاسیم (mmol/L)",serumCalcium:"کلسیم (mg/dL)",serumUric:"اسید اوریک (mg/dL)",bicarb:"بیکربنات (mmol/L)",thresholds:"آستانه‌های غربالگری (قابل ویرایش)",thresholdNote:"مقادیر پیش‌فرض صرفاً برای علامت‌گذاری اولیه در این نمونه انتخاب شده‌اند. تفسیر باید با توجه به جنس، جثه، کیفیت جمع‌آوری، روش آزمایشگاه و راهنماهای محلی انجام شود.",citrateLow:"سیترات پایین‌تر از آستانه (mg/day)",oxalateHigh:"اگزالات بالاتر از آستانه (mg/day)",sodiumHigh:"سدیم ادرار بالاتر از آستانه (mmol/day)",calciumFemale:"کلسیم ادرار بالاتر از آستانه – زن (mg/day)",calciumMale:"کلسیم ادرار بالاتر از آستانه – مرد (mg/day)",volumeTarget:"هدف حجم ادرار (لیتر در روز)",analyze:"تهیه گزارش ارزیابی",export:"ذخیره پرونده بیمار",reset:"پاک کردن فرم",report:"گزارش ارزیابی",reportDisclaimer:"گزینه‌های دارویی صرفاً یادآور برای بررسی متخصص هستند و نسخه اختصاصی بیمار محسوب نمی‌شوند. ترکیب سنگ را تأیید کنید، یافته‌های غیرطبیعی ادرار را در صورت لزوم تکرار/اعتبارسنجی کنید، موارد منع مصرف و تداخلات را بسنجید و پس از هر تغییر درمانی پاسخ را پایش کنید.",scope:"دامنه، محدودیت‌ها و منابع بالینی",scopeText:"V2.0 یک ابزار پشتیبان تصمیم‌گیری برای بزرگسالان مبتلا به انواع سنگ کلیه است؛ محدوده‌های مرجع سرمی با تعیین دامنه جنس/سن قابل ثبت‌اند و واحد برخی شاخص‌های سرمی و ادراری قابل انتخاب است. سابقه بالینی، یافته‌های آزمایشگاهی منتخب، مشخصات سنگ و اطلاعات پیگیری را سازمان‌دهی می‌کند. نرم‌افزار اعتبارسنجی بالینی نشده، دوز اختصاصی محاسبه نمی‌کند، عود را پیش‌بینی نمی‌کند و جایگزین ارزیابی تخصصی نیست. کودکان، بارداری، هیپراگزالوری اولیه و بیماری پیچیده کلیوی به مسیرهای اختصاصی نیاز دارند.",privacy:"حریم خصوصی: اطلاعات بالینی فقط در حافظه موقت صفحه پردازش می‌شوند و در حافظه پایدار مرورگر ذخیره یا به سرور ارسال نمی‌شوند. ذخیره پرونده، فایل رمزنگاری‌شده .stn ایجاد می‌کند. پس از پایان کار فرم را پاک کنید یا صفحه را ببندید. از دستگاه مشترک با احتیاط استفاده کنید.",collectionDate1:"تاریخ جمع‌آوری نمونه اول",urinePhosphate:"فسفات (mmol/day، اختیاری)",urineAmmonium:"آمونیوم (mmol/day، اختیاری)",urineCystine:"سیستین (mg/day، در صورت اندیکاسیون)",urineChloride:"کلراید (mmol/day، اختیاری)",urineSulfate:"سولفات (mmol/day، اختیاری)",urineUreaNitrogen:"نیتروژن اوره (g/day، اختیاری)",urineSample2Title:"نمونه دوم ادرار ۲۴ ساعته (نمونه متوالی)",urineSample2Note:"در صورت تناسب بالینی ثبت شود. نتایج جداگانه نگهداری شوند و نمونه‌های ناسازگار به‌طور خودکار میانگین‌گیری نشوند.",collectionDate2:"تاریخ جمع‌آوری نمونه دوم",collectionDuration2:"مدت جمع‌آوری (ساعت)",volume2:"حجم ادرار (L/day)",ph2:"pH ادرار",calcium2:"کلسیم (mg/day)",oxalate2:"اگزالات (mg/day)",citrate2:"سیترات (mg/day)",uricAcid2:"اسیداوریک (mg/day)",sodium2:"سدیم (mmol/day)",urineCreat2:"کراتینین (mg/day)",urinePotassium2:"پتاسیم (mmol/day)",urineMagnesium2:"منیزیم (mmol/day)",urinePhosphate2:"فسفات (mmol/day)",urineAmmonium2:"آمونیوم (mmol/day)",urineCystine2:"سیستین (mg/day)",urineChloride2:"کلراید (mmol/day)",urineSulfate2:"سولفات (mmol/day)",urineUreaNitrogen2:"نیتروژن اوره (g/day)",serumChloride:"کلراید (mmol/L)",serumIonizedCalcium:"کلسیم یونیزه (mmol/L، اختیاری)",vitaminD25:"ویتامین D، 25-OH (ng/mL، در صورت اندیکاسیون)",medDose:"دوز داروهای مرتبط",medRoute:"راه مصرف",medFrequency:"دفعات مصرف",medIndication:"اندیکاسیون مصرف",followAgent:"درمان پیشگیرانه / نام دارو",followDose:"دوز و رژیم درمانی",followAdherence:"پایبندی به درمان",followAdverse:"عوارض دارویی / علت قطع",
+missing:"هنوز یافته قابل تفسیر وجود ندارد. مقادیر آزمایشگاهی موجود را وارد و گزارش را تولید کنید.",meta:"زمان تولید گزارش",hydration:"حجم ادرار کمتر از هدف انتخاب‌شده است. درباره مصرف مایعات در طول روز و تکرار آزمایش ادرار ۲۴ ساعته برای ارزیابی پاسخ گفت‌وگو شود.",lowpH:"pH ادرار پایین است. الگوی غذایی، خطر سنگ اسیداوریکی و شرایط بالینی بررسی شود؛ در صورت اندیکاسیون می‌توان قلیایی‌سازی را با پایش pH در نظر گرفت.",highpH:"pH ادرار نسبتاً بالا است. خطر سنگ کلسیم فسفات بررسی شود و از قلیایی‌سازی تجربی بدون توجه به ترکیب سنگ و فوق‌اشباع ادرار پرهیز شود.",hypercal:"کلسیم ادرار از آستانه غربالگری انتخاب‌شده بالاتر است. دریافت سدیم، کفایت کلسیم غذایی، کیفیت جمع‌آوری و علل ثانویه بررسی شود. در برخی بیماران منتخب با سنگ کلسیمی عودکننده، تیازید یا داروی شبه‌تیازیدی قابل بررسی است؛ فشارخون، الکترولیت‌ها، قند و اسیداوریک پایش شوند.",oxalateHighFinding:"اگزالات ادرار بر اساس آستانه انتخاب‌شده بالا است. مصرف غذاهای پر اگزالات، مکمل ویتامین C، بیماری یا سوءجذب روده و اعتبار جمع‌آوری بررسی شود. دریافت طبیعی کلسیم همراه غذا حفظ شود؛ افزایش واضح یا پایدار نیازمند بررسی بیشتر است.",lowCitrate:"سیترات ادرار پایین است. عوامل غذایی و بالینی بررسی شوند؛ در بیمار مناسب می‌توان پتاسیم سیترات/قلیایی‌سازی را در نظر گرفت. پتاسیم و عملکرد کلیه بررسی شود؛ به‌ویژه در سنگ کلسیم فسفات، pH ادرار پایش شود.",highUric:"اسیداوریک ادرار بالا است. دریافت پورین، نقرس و وضعیت متابولیک بررسی شود. آلوپورینول معمولاً برای برخی بیماران منتخب با سنگ کلسیم اگزالات عودکننده و هیپراوریکوزوری، پس از اقدامات غذایی، یا برای اندیکاسیون مستقل مربوط به اورات مطرح می‌شود؛ دوز متناسب با کلیه و تداخلات بررسی شود.",highSodium:"سدیم ادرار بالا است. کاهش دریافت سدیم توصیه شود؛ سدیم زیاد می‌تواند دفع کلسیم ادرار را افزایش دهد. پس از مداخله، آزمایش تکرار شود.",serumK:"پتاسیم سرم بالا است. بدون ارزیابی بالینی و بررسی عملکرد کلیه و داروها، پتاسیم سیترات یا سایر درمان‌های حاوی پتاسیم شروع نشود.",lowGFR:"eGFR کاهش یافته است. در مصرف پتاسیم سیترات و سایر داروها احتیاط شود؛ مزمن بودن اختلال، پتاسیم و نیاز به نظر متخصص بررسی شود.",lowBicarb:"بیکربنات سرم پایین است. پیش از انتخاب درمان، وضعیت اسید ـ باز و علل احتمالی کلیوی یا سیستمیک بررسی شود.",highCa:"کلسیم سرم خارج از محدوده غربالگری نمونه است. در صورت لزوم با کلسیم تصحیح‌شده بر اساس آلبومین یا کلسیم یونیزه تأیید و عللی مانند پرکاری پاراتیروئید بررسی شود.",drugK:"در فهرست دارویی، احتمال تداخل افزاینده پتاسیم (مانند ACEI/ARB، دیورتیک نگه‌دارنده پتاسیم، تری‌متوپریم، تاکرولیموس/سیکلوسپورین) وجود دارد. پیش از پتاسیم سیترات بررسی شود؛ خطر به بیمار و دوز وابسته است.",drugLithium:"لیتیوم در فهرست دارویی است. تیازیدها می‌توانند غلظت لیتیوم را افزایش دهند؛ در صورت بررسی این گروه، هماهنگی تخصصی و پایش دقیق ضروری است.",drugAllo:"آزاتیوپرین یا مرکاپتوپورین در فهرست دارویی است. آلوپورینول می‌تواند مواجهه دارویی را به‌شدت افزایش دهد؛ تعدیل تخصصی دوز یا جایگزین و پایش دقیق ضروری است.",drugStone:"مهارکننده کربنیک انهیدراز یا داروی مرتبط (مانند توپیرامات، استازولامید، زونیسامید) در فهرست دارویی است. این داروها می‌توانند شیمی ادرار را تغییر داده و خطر سنگ را افزایش دهند؛ اندیکاسیون و راهبرد پیشگیری بررسی شود.",positiveCulture:"کشت ادرار مثبت ثبت شده است. نتیجه با علائم، میکروارگانیسم، حساسیت دارویی، انسداد و وضعیت سیستمیک تفسیر شود؛ باکتریوری به‌تنهایی سپسیس را اثبات نمی‌کند.",rareHighRiskPath:"این نوع سنگ نادر با خطر عود بالا همراه است و به ارزیابی تخصصی متابولیک/اورولوژی نیاز دارد.",matrixPath:"سنگ ماتریکس نادر است و ممکن است با عفونت و بیماری مزمن کلیه همراه باشد؛ ارزیابی تخصصی اورولوژی لازم است.",brushitePath:"براشیت زیرگروهی از کلسیم فسفات با خطر عود بالا است؛ pH ادرار، بار کلسیم/فسفات و علل زمینه‌ای بررسی شوند.",carbonateApatitePath:"کربنات آپاتیت ممکن است با عفونت همراه باشد؛ کشت ادرار بررسی و از سنگ کلسیم فسفات غیرعفونی افتراق داده شود.",cystinePath:"سنگ سیستین وضعیت پرخطر محسوب می‌شود. ارزیابی تخصصی و مسیر اختصاصی سیستینوری لازم است؛ توصیه‌های معمول سنگ کلسیمی کافی نیست.",struvitePath:"استروویت با عفونت مرتبط است. کشت ادرار، عفونت و احتمال انسداد بررسی شود؛ مدیریت سنگ و عفونت نیازمند ارزیابی اورولوژی است.",uricPath:"در سنگ اسیداوریکی، pH پایین ادرار عامل قابل اصلاح مهمی است. مسیر اختصاصی قلیایی‌سازی همراه با پایش pH و بررسی ایمنی در نظر گرفته شود.",drugStonePath:"در احتمال سنگ دارویی، داروی مسبب و جایگزین‌ها با تجویزکننده بررسی شوند. داروی ضروری بدون بررسی بالینی قطع نشود.",mixedPath:"در سنگ مختلط، هر جزء بالینی مهم باید جداگانه تفسیر شود؛ بدون بررسی، یک مسیر تک‌ترکیبی به همه اجزا تعمیم داده نشود.",giRisk:"بیماری یا جراحی گوارشی ثبت‌شده ممکن است با هیپراگزالوری روده‌ای، کاهش سیترات یا کاهش حجم ادرار همراه باشد. یافته‌های ادرار و زمینه بالینی بررسی شوند.",bilateralRisk:"درگیری دوطرفه نشانگر مهمی از بار بیماری است و باید در ارزیابی کلی خطر لحاظ شود.",multipleRisk:"وجود چند سنگ نشانگر بار سنگی بیشتر است و باید در ارزیابی کلی خطر لحاظ شود.",nephroRisk:"نفروکلسی‌نوز گزارش شده است. با توجه به زمینه بالینی، ارزیابی متابولیک تخصصی بررسی شود.",residualRisk:"قطعات باقیمانده گزارش شده‌اند. اندازه، محل، ترکیب و برنامه پیگیری بررسی شود؛ پیامد همه قطعات باقیمانده یکسان نیست.",vitaminCReview:"دوز بالای ویتامین C در برخی بیماران ممکن است اگزالات ادرار را افزایش دهد. دوز و اندیکاسیون بررسی شود؛ از دریافت معمول غذایی نمی‌توان خطر را استنباط کرد.",calciumSupplementReview:"دوز، زمان مصرف و اندیکاسیون مکمل کلسیم بررسی شود. محدودیت بی‌رویه کلسیم طبیعی رژیم غذایی توصیه نمی‌شود.",vitaminDReview:"دوز و اندیکاسیون ویتامین D بررسی شود؛ به‌ویژه در کنار کلسیم سرم و کلسیم ادرار در صورت دسترسی.",loopReview:"دیورتیک‌های لوپ ممکن است بر متابولیسم کلسیم اثر بگذارند. مواجهه دارویی با توجه به اندیکاسیون، دوز و عملکرد کلیه تفسیر شود.",notAdult:"این نمونه برای بزرگسالان طراحی شده است. از پیام‌های آن برای افراد زیر ۱۸ سال استفاده نکنید.",notCa:"مسیر نسخه اول عمدتاً برای سنگ‌های کلسیمی طراحی شده است. برای این نوع سنگ از مسیر اختصاصی استفاده کنید؛ هشدارهای فعلی ممکن است قابل تعمیم نباشند.",recurrentOnly:"یادآورهای پیشگیری دارویی عمدتاً در سنگ‌های عودکننده یا برخی موارد پرخطرِ حمله اول مطرح‌اند؛ تصمیم باید فردی‌سازی شود.",noData:"با مقادیر واردشده هشدار غربالگری غیرطبیعی فعال نشد. این موضوع خطر سنگ را رد نمی‌کند و جایگزین ارزیابی کامل متابولیک نیست.",titleDanger:"هشدار ایمنی",titleWarn:"نیازمند بررسی / قابل طرح",titleInfo:"زمینه بالینی",titleOk:"هشداری شناسایی نشد",unknownSex:"برای اعمال آستانه اختصاصی کلسیم ادرار، جنس بیمار مشخص شود.",followUrineDue:"در برخی بیماران، تکرار آزمایش ادرار ۲۴ ساعته حدود ۳ تا ۶ ماه پس از تغییر درمان یا سبک زندگی قابل بررسی است؛ زمان‌بندی به شرایط بالینی بستگی دارد.",followImagingDue:"در برخی بیماران تصویربرداری پیگیری اولیه حدود ۶ تا ۱۲ ماه قابل بررسی است؛ زمان‌بندی بر اساس بار سنگ، مداخله و وضعیت بالینی فردی‌سازی شود.",collection:"کامل بودن جمع‌آوری ۲۴ ساعته با توجه به کراتینین ادرار و مدت جمع‌آوری بررسی شود.",saved:"پرونده بیمار ذخیره شد.",confirmReset:"تمام داده‌های واردشده و گزارش پاک شود؟",reportPatient:"کد بیمار",notEntered:"وارد نشده",riskHigh:"ارزیابی کلی خطر عود: وجود ویژگی‌های پرخطر",riskLow:"در اطلاعات واردشده ویژگی پرخطر مشخصی یافت نشد؛ ممکن است ارزیابی ناقص باشد.",riskIncomplete:"ارزیابی خطر ناقص است؛ شرح حال ضروری و بررسی‌های در دسترس را تکمیل کنید. این وضعیت به معنای کم‌خطر بودن بیمار نیست.",singleKidneyRisk:"کلیه منفرد ثبت شده است؛ این ویژگی در گروه پرخطر قرار می‌گیرد و عملکرد کلیه و احتمال انسداد باید با دقت بررسی شود.",earlyOnsetRisk:"بیماری سنگ‌ساز در سن پایین (۲۵ سال یا کمتر) شروع شده است؛ علل متابولیک/ژنتیک و ارزیابی تخصصی بررسی شوند.",nephroHighRisk:"نفروکلسی‌نوز ثبت شده و در مشخصات پرخطر بیمار مؤثر است.",drugStoneRisk:"ترکیب سنگ دارویی از ویژگی‌های پرخطر است؛ داروی مسبب و مکانیسم زمینه‌ای بررسی شود.",ageMissingHold:"سن بیمار وارد نشده است. تا ثبت سن، مسیر پشتیبان تصمیم‌گیری دارویی بزرگسالان غیرفعال است.",pregnancyHold:"بارداری ثبت شده یا وضعیت آن برای این بیمار به‌قدر کافی روشن نیست. پیشنهادهای معمول دارویی متوقف و ارزیابی تخصصی لازم است.",breastfeedingHold:"شیردهی ثبت شده است. تناسب داروها باید به‌صورت فردی بررسی شود؛ پیشنهادهای معمول دارویی متوقف می‌شوند.",missingKRenalHold:"برای غربالگری ایمنی پتاسیم سیترات، پتاسیم سرم و eGFR لازم‌اند. یک یا هر دو مقدار موجود نیست؛ قلیایی حاوی پتاسیم پیشنهاد نمی‌شود.",pthReview:"کلسیم سرم بالاتر از محدوده غربالگری است. کلسیم اصلاح‌شده بر اساس آلبومین یا کلسیم یونیزه و در صورت اندیکاسیون PTH سالم بررسی شود؛ تفسیر بر اساس محدوده مرجع آزمایشگاه باشد.",collectionDuration:"مدت جمع‌آوری ۲۴ ساعت نیست. زمان‌بندی نمونه را تأیید و پیش از استفاده از آستانه‌های دفع روزانه، نتیجه را متناسب‌سازی/تفسیر کنید.",collectionAdequate:"دفع کراتینین ادرار به‌ازای هر کیلوگرم در محدوده گسترده مورد انتظار برای جمع‌آوری بزرگسالان است؛ این موضوع از کفایت نمونه حمایت می‌کند اما آن را اثبات نمی‌کند.",collectionLow:"دفع کراتینین ادرار به‌ازای هر کیلوگرم کمتر از محدوده گسترده مورد انتظار بزرگسالان است. احتمال جمع‌آوری ناقص مطرح است؛ پیش از اتکا به آستانه‌های دفع روزانه، نمونه تکرار یا از نظر بالینی بررسی شود.",collectionHigh:"دفع کراتینین ادرار به‌ازای هر کیلوگرم بالاتر از محدوده گسترده مورد انتظار بزرگسالان است. ترکیب بدن، جمع‌آوری بیش از ۲۴ ساعت، زمان‌بندی و ورود داده بررسی شوند؛ نمونه را خودکار نامعتبر تلقی نکنید.",medReview:"بررسی داروها: دارو(های) بالقوه مرتبط با سنگ‌سازی شناسایی شد. اندیکاسیون و خطر بررسی شود؛ دارو خودسرانه قطع نشود.",giHistory:"بیماری گوارشی / جراحی / سوءجذب",none:"مورد شناخته‌شده‌ای ندارد",ibd:"بیماری التهابی روده",chronicDiarrhea:"اسهال مزمن",bariatric:"جراحی چاقی",bowelResection:"برداشت بخشی از روده",malabsorption:"سوءجذب چربی / سایر انواع سوءجذب",other:"سایر",unknownStatus:"نامشخص",giDetails:"توضیحات سوابق گوارشی (اختیاری)",imagingTitle:"تصویربرداری و بار سنگ",imagingNote:"یافته‌های گزارش‌شده تصویربرداری را ثبت کنید؛ ترکیب سنگ را صرفاً از روی تصویر استنباط نکنید.",imagingDate:"تاریخ تصویربرداری",imagingModality:"روش تصویربرداری",ultrasound:"سونوگرافی",ct:"CT اسکن",xray:"رادیوگرافی KUB",stoneCount:"تعداد سنگ‌ها",largestStone:"قطر بزرگ‌ترین سنگ (میلی‌متر)",stoneLocation:"محل سنگ",stoneLocationPh:"مثلاً لگنچه، کالیس تحتانی، حالب",laterality:"سمت درگیری",right:"راست",left:"چپ",bilateral:"دوطرفه",nephrocalcinosis:"گزارش نفروکلسی‌نوز",residualFragments:"وجود قطعات باقیمانده پس از مداخله",followTitle:"پیگیری طولی بیمار",followNote:"ارزیابی مجدد برنامه‌ریزی‌شده یا انجام‌شده را ثبت کنید. فواصل پیشنهادی صرفاً یادآورند و دستور خودکار نیستند.",treatmentChangeDate:"تاریخ تغییر درمان / سبک زندگی",repeatUrineDate:"تاریخ تکرار ادرار ۲۴ ساعته",followImagingDate:"تاریخ تصویربرداری پیگیری",followNotes:"یافته‌های پیگیری / تغییرات درمانی",height:"قد (سانتی‌متر)",weight:"وزن (کیلوگرم)",bmi:"شاخص توده بدنی (محاسبه‌شده)",familyHistory:"سابقه خانوادگی سنگ کلیه",yes:"بله",no:"خیر",familyDetails:"جزئیات سابقه خانوادگی (اختیاری)",intervention:"سابقه مداخله برای سنگ کلیه",interventionDetails:"جزئیات مداخله (تاریخ / سمت / نتیجه)",otherSurgery:"سایر جراحی‌ها",urinePotassium:"پتاسیم (mmol/day)",urineMagnesium:"منیزیم (mmol/day)",urineProtein:"پروتئین کل (g/day، اختیاری)",specificGravity:"وزن مخصوص ادرار",serumCreatinine:"کراتینین سرم (واحد را انتخاب کنید)",serumSodium:"سدیم (mmol/L)",serumMagnesium:"منیزیم (mmol/L)",serumPhosphate:"فسفات (mmol/L)",fastingGlucose:"قند خون ناشتا (mg/dL)",serumAlbumin:"آلبومین (g/dL)",serumPTH:"PTH سالم (pg/mL، در صورت اندیکاسیون)",highFastingGlucose:"قند خون ناشتا در محدوده دیابت (۱۲۶ mg/dL یا بیشتر) است. در نبود هیپرگلیسمی واضح، طبق معیارهای تشخیصی جاری تأیید شود [5]؛ این شاخص اختصاصی سنگ نیست.",prediabetesRange:"قند خون ناشتا در محدوده پیش‌دیابت (۱۰۰ تا ۱۲۵ mg/dL) است. طبق راهنمای دیابت پیگیری شود؛ این شاخص اختصاصی سنگ نیست.",lowUrineMg:"منیزیم ادرار پایین‌تر از آستانه توجه EAU (کمتر از ۳ میلی‌مول در روز) است. این یافته حمایتی است و به‌تنهایی اندیکاسیون مکمل منیزیم نیست.",priorIntervention:"سابقه مداخله برای سنگ ثبت شده است. تعداد، زمان، نتیجه، قطعات باقیمانده و عود بررسی شوند؛ سابقه مداخله به‌تنهایی خطر بالا را اثبات نمی‌کند.",highSG:"وزن مخصوص ادرار بالاتر از ۱٫۰۱۰ است. همراه با حجم ادرار ۲۴ ساعته و وضعیت آب‌رسانی تفسیر شود.",reportName:"نام بیمار",labRangesTitle:"محدوده مرجع آزمایشگاه (اختیاری)",labVitaminD:"ویتامین D، 25-OH (ng/mL) — حد پایین / بالا",labIonizedCalcium:"کلسیم یونیزه (mmol/L) — حد پایین / بالا",labChloride:"کلراید (mmol/L) — حد پایین / بالا",labPTH:"PTH سالم (pg/mL) — حد پایین / بالا",labAlbumin:"آلبومین (g/dL) — حد پایین / بالا",labGlucose:"قند خون ناشتا (mg/dL) — حد پایین / بالا",labPhosphate:"فسفات (mmol/L) — حد پایین / بالا",labMagnesium:"منیزیم (mmol/L) — حد پایین / بالا",labSodium:"سدیم (mmol/L) — حد پایین / بالا",labBicarbonate:"بیکربنات (mmol/L) — حد پایین / بالا",labUric:"اسیداوریک (mg/dL) — حد پایین / بالا",labCalcium:"کلسیم تام (mg/dL) — حد پایین / بالا",labPotassium:"پتاسیم (mmol/L) — حد پایین / بالا",labCreatinine:"کراتینین (mg/dL پس از تبدیل) — حد پایین / بالا",labAgeMax:"حداکثر سن اعتبار محدوده (سال)",labAgeMin:"حداقل سن اعتبار محدوده (سال)",labProfileSex:"محدوده مرجع برای کدام جنس معتبر است؟",labRangesNote:"حد پایین و بالای گزارش‌شده توسط همان آزمایشگاه را دقیقاً با واحدهای درج‌شده وارد کنید. خالی بودن محدوده به معنای طبیعی بودن نتیجه نیست. این محدوده‌ها از آستانه‌های راهنمای سنگ و قواعد ایمنی دارو جدا هستند [6].",serumKBorderline:"پتاسیم سرم ۵ تا ۵٫۴ میلی‌مول در لیتر است؛ محدوده آزمایشگاه، همولیز نمونه، عملکرد کلیه و داروها بررسی شوند. این هشدار به‌تنهایی تشخیص هیپرکالمی نیست.",labReferenceOut:"نتیجه سرمی خارج از محدوده مرجع واردشده آزمایشگاه است. واحد، روش، کیفیت نمونه و زمینه بالینی تأیید شوند؛ این یافته به‌تنهایی تشخیص محسوب نمی‌شود.",veryHighOxalate:"اگزالات ادرار از ۱ میلی‌مول در روز (حدود ۸۸ میلی‌گرم در روز) بیشتر است؛ پس از رد علل ثانویه، ارزیابی تخصصی سریع برای هیپراگزالوری اولیه لازم است. این مقدار به‌تنهایی تشخیصی نیست.",markedHypercalciuria:"کلسیم ادرار از ۸ میلی‌مول در روز (حدود ۳۲۱ میلی‌گرم در روز) بیشتر است؛ افزایش قابل توجهی است که باید تأیید و از نظر علل ثانویه بررسی شود."
 }};
 let lang="en";
 
-function setLang(next){lang=next;document.documentElement.lang=next;document.documentElement.dir=next==="fa"?"rtl":"ltr";$("langBtn").textContent=next==="en"?"فارسی":"English";$("importJsonBtn").textContent=next==="fa"?"ورود JSON":"Import JSON";$("importCsvBtn").textContent=next==="fa"?"ورود CSV آزمایشی":"Import test CSV";if(window.stonePharmRefreshDisplayLanguage)window.stonePharmRefreshDisplayLanguage(next);document.querySelectorAll("[data-i18n]").forEach(el=>{let k=el.dataset.i18n;if(translations[next][k])el.textContent=translations[next][k]});document.querySelectorAll("[data-ph]").forEach(el=>{let k=el.dataset.ph;if(translations[next][k])el.placeholder=translations[next][k]});if($("result").classList.contains("show"))analyze();}
+function setLang(next){lang=next;document.documentElement.lang=next;document.documentElement.dir=next==="fa"?"rtl":"ltr";$("langBtn").textContent=next==="en"?"فارسی":"English";$("importJsonBtn").textContent=next==="fa"?"باز کردن پرونده (.stn)":"Open patient record (.stn)";if(window.stonePharmRefreshDisplayLanguage)window.stonePharmRefreshDisplayLanguage(next);if($("labRefSex")){$("labRefSex").options[0].text=next==="fa"?"همه / بدون تفکیک جنس":"All / not sex-specific";$ ("labRefSex").options[1].text=next==="fa"?"زن":"Female";$ ("labRefSex").options[2].text=next==="fa"?"مرد":"Male";}document.querySelectorAll("[data-i18n]").forEach(el=>{let k=el.dataset.i18n;if(translations[next][k])el.textContent=translations[next][k]});document.querySelectorAll("[data-ph]").forEach(el=>{let k=el.dataset.ph;if(translations[next][k])el.placeholder=translations[next][k]});if($("result").classList.contains("show"))analyze();}
 $("langBtn").addEventListener("click",()=>setLang(lang==="en"?"fa":"en"));
-$("date").value=new Date().toISOString().slice(0,10);
-const val=id=>{let x=$(id).value;return x===""?null:Number(x)};
+ $("date").value=new Date().toISOString().slice(0,10);
+ function updateBMI(){const h=Number($("height").value),w=Number($("weight").value);$("bmi").value=(h>0&&w>0)?(w/((h/100)**2)).toFixed(1):"";}
+ function updateEGFR(){const raw=Number($("serumCreatinine").value),a=Number($("age").value),sx=$("sex").value,unit=$("serumCreatinineUnit")?.value||"mgdl";if(!(raw>0&&a>=18&&sx)){ $("egfr").value="";return;}const scr=unit==="umol"?raw/88.4:raw;const female=sx==="female",k=female?0.7:0.9,alpha=female?-0.241:-0.302,ratio=scr/k;let g=142*Math.pow(Math.min(ratio,1),alpha)*Math.pow(Math.max(ratio,1),-1.2)*Math.pow(0.9938,a);if(female)g*=1.012;$("egfr").value=String(Math.round(g));}
+ ["height","weight"].forEach(id=>$(id).addEventListener("input",updateBMI));["serumCreatinine","age"].forEach(id=>$(id).addEventListener("input",updateEGFR));document.querySelectorAll("[id^=ref_]").forEach(el=>el.addEventListener("change",()=>{if($("result").classList.contains("show"))analyze()}));document.querySelectorAll("select[id$=Unit]").forEach(el=>el.addEventListener("change",()=>{if($("result").classList.contains("show"))analyze()}));$("serumCreatinineUnit").addEventListener("change",updateEGFR);$("sex").addEventListener("change",updateEGFR);
+const val=id=>{let x=$(id).value;if(x==="")return null;let n=Number(x);const isSecond=id.endsWith("2"),base=id.replace(/2$/,""),unitId=base+(isSecond?"2Unit":"Unit");if(["calcium","oxalate","citrate","uricAcid"].includes(base)&&$(unitId)?.value==="mmol") {const factor={calcium:40.078,oxalate:88.02,citrate:192.12,uricAcid:168.11}[base];n*=factor;}return n;};
+function urineNormalizedValue(id){return val(id)}
+const citrateThreshold=()=>$("sex").value==="female"?val("tCitrateF"):($("sex").value==="male"?val("tCitrateM"):null);
+function serumReferenceFlags(){const sx=$("sex").value,age=val("age"),profileSex=$("labRefSex").value||"all",amin=val("labRefAgeMin"),amax=val("labRefAgeMax");if((profileSex!=="all"&&sx!==profileSex)||(amin!==null&&(age===null||age<amin))||(amax!==null&&(age===null||age>amax)))return [];const keys=["serumCreatinine","potassium","serumCalcium","serumUric","bicarb","serumSodium","serumMagnesium","serumPhosphate","fastingGlucose","serumAlbumin","serumPTH","serumChloride","serumIonizedCalcium","vitaminD25"];const out=[];for(const k of keys){const v=k==="serumCreatinine"?((val(k)===null)?null:(($("serumCreatinineUnit").value==="umol")?val(k)/88.4:val(k))):val(k),lo=val("ref_"+k+"_low"),hi=val("ref_"+k+"_high");if(v!==null&&(lo!==null||hi!==null)&&((lo!==null&&v<lo)||(hi!==null&&v>hi)))out.push({key:k,value:v,low:lo,high:hi});}return out;}
+function addSerumReferenceFindings(findings){serumReferenceFlags().forEach(x=>findings.push({level:"info",key:"labReferenceOut",detail:x}));}
 function add(arr,level,key){arr.push({level,key})}
 function analyze(){
  const t=translations[lang],f=[];const sex=$("sex").value,age=val("age"),stone=$("stoneType").value,meds=$("meds").value.toLowerCase();
  if(age!==null&&age<18)add(f,"danger","notAdult");
- if(stone!=="calcium_oxalate"&&stone!=="calcium_phosphate"&&stone!=="unknown")add(f,"warn","notCa");
+ if(age===null)add(f,"warn","ageMissingHold");
+ if(sex==="female"&&age!==null&&age>=12&&age<=55&&$("pregnancyStatus").value==="unknown")add(f,"warn","pregnancyHold");
+ if($("breastfeedingStatus").value==="yes")add(f,"warn","breastfeedingHold");
+ if(stone==="cystine")add(f,"danger","cystinePath");
+ if(["ammonium_urate","dha","xanthine"].includes(stone))add(f,"danger","rareHighRiskPath");
+ if(stone==="matrix")add(f,"warn","matrixPath");
+ if(stone==="brushite")add(f,"danger","brushitePath");
+ if(stone==="carbonate_apatite")add(f,"warn","carbonateApatitePath");
+ if(stone==="struvite")add(f,"warn","struvitePath");
+ if(stone==="uric_acid")add(f,"info","uricPath");
+ if(stone==="drug_induced")add(f,"warn","drugStonePath");
+ if(stone==="mixed")add(f,"info","mixedPath");
  if($("episodes").value==="first")add(f,"info","recurrentOnly");
+ if($("cultureStatus").value==="positive")add(f,"warn","positiveCulture");
  const volume=val("volume"),ph=val("ph"),ca=val("calcium"),ox=val("oxalate"),cit=val("citrate"),ua=val("uricAcid"),na=val("sodium"),k=val("potassium"),egfr=val("egfr"),bicarb=val("bicarb"),sca=val("serumCalcium");
  if(volume!==null&&volume<val("tVolume"))add(f,"warn","hydration");
  if(ph!==null&&ph<5.5)add(f,"warn","lowpH");
- if(ph!==null&&ph>=6.8)add(f,"warn","highpH");
- if(ca!==null){if(!sex)add(f,"info","unknownSex");else if(ca>(sex==="female"?val("tCaF"):val("tCaM")))add(f,"warn","hypercal");}
+ if(ph!==null&&["calcium_phosphate","brushite","carbonate_apatite"].includes(stone)&&ph>6.8)add(f,"warn","highpH");
+ if(ph!==null&&stone==="uric_acid"&&ph>7.2)add(f,"warn","uricHighPH");
+ if(ph!==null&&ph>7.0&&["struvite","carbonate_apatite"].includes(stone))add(f,"warn","highPHInfection");
+ if(stone==="cystine"&&ph!==null&&ph<=7.5)add(f,"info","cystinePHtarget");
+ if(stone==="cystine"&&volume!==null&&volume<3)add(f,"warn","cystineVolume");
+ if(ca!==null&&ca>val("tCa"))add(f,"warn","hypercal");
  if(ox!==null&&ox>val("tOxalate"))add(f,"warn","oxalateHighFinding");
- if(cit!==null&&cit<val("tCitrate"))add(f,"warn","lowCitrate");
- if(ua!==null&&ua>(sex==="female"?750:800))add(f,"warn","highUric");
+ if(ox!==null&&ox>88)add(f,"danger","veryHighOxalate");
+ if(ca!==null&&ca>val("tCaSevere"))add(f,"warn","markedHypercalciuria");
+ if(cit!==null&&citrateThreshold()!==null&&cit<citrateThreshold())add(f,"warn","lowCitrate");
+ if(ua!==null&&sex&&ua>(sex==="female"?672:840))add(f,"warn","highUric");
  if(na!==null&&na>val("tSodium"))add(f,"warn","highSodium");
- if(k!==null&&k>=5)add(f,"danger","serumK");
+ if(k!==null&&k>=5.5)add(f,"danger","serumK");else if(k!==null&&k>=5)add(f,"warn","serumKBorderline");
  if(egfr!==null&&egfr<30)add(f,"danger","lowGFR");
  if(bicarb!==null&&bicarb<22)add(f,"warn","lowBicarb");
- if(sca!==null&&(sca<8.5||sca>10.5))add(f,"warn","highCa");
+ if(sca!==null&&val("ref_serumCalcium_low")!==null&&sca<val("ref_serumCalcium_low")||sca!==null&&val("ref_serumCalcium_high")!==null&&sca>val("ref_serumCalcium_high"))add(f,"warn","highCa");
+ if(sca!==null&&val("ref_serumCalcium_high")!==null&&sca>val("ref_serumCalcium_high")&&val("serumPTH")===null)add(f,"warn","pthReview");
+ addSerumReferenceFindings(f);
+ if($("pregnancyStatus").value==="yes")add(f,"danger","pregnancyHold");
  if(/(lisinopril|enalapril|ramipril|perindopril|losartan|valsartan|candesartan|telmisartan|irbesartan|spironolactone|eplerenone|amiloride|triamterene|trimethoprim|tacrolimus|cyclosporine)/.test(meds))add(f,"danger","drugK");
  if(/lithium/.test(meds))add(f,"danger","drugLithium");
  if(/azathioprine|mercaptopurine|6-mp/.test(meds))add(f,"danger","drugAllo");
  if(/topiramate|acetazolamide|zonisamide/.test(meds))add(f,"warn","drugStone");
- if(val("urineCreat")!==null)add(f,"info","collection");
+ if(/ascorbic acid|vitamin c|ویتامین c|اسکوربیک/.test(meds))add(f,"info","vitaminCReview");
+ if(/calcium supplement|calcium carbonate|calcium citrate|مکمل کلسیم/.test(meds))add(f,"info","calciumSupplementReview");
+ if(/vitamin d|cholecalciferol|ergocalciferol|ویتامین د/.test(meds))add(f,"info","vitaminDReview");
+ if(/furosemide|bumetanide|torsemide|ethacrynic/.test(meds))add(f,"info","loopReview");
+ const gi=$("giHistory").value, count=val("stoneCount"), laterality=$("laterality").value;
+ if(gi!=="none"&&gi!==""&&gi!=="unknown")add(f,"warn","giRisk");
+ if(laterality==="bilateral")add(f,"warn","bilateralRisk");
+ if(count!==null&&count>=2)add(f,"warn","multipleRisk");
+ if($("nephrocalcinosis").checked)add(f,"warn","nephroHighRisk");
+ if($("singleKidney").checked)add(f,"danger","singleKidneyRisk");
+ if(val("ageAtFirstStone")!==null&&val("ageAtFirstStone")<=25)add(f,"warn","earlyOnsetRisk");
+ if(stone==="drug_induced")add(f,"warn","drugStoneRisk");
+ if($("residualFragments").checked)add(f,"info","residualRisk");
+ if($("intervention").value!=="none")add(f,"info","priorIntervention");
+ if($("treatmentChangeDate").value&&!$("repeatUrineDate").value)add(f,"info","followUrineDue");
+ if($("treatmentChangeDate").value&&!$("followImagingDate").value)add(f,"info","followImagingDue");
+ if(val("urineCreat")!==null){
+   const dur=val("collectionDuration"),wt=val("weight"),crkg=(wt&&wt>0&&dur===24)?val("urineCreat")/wt:null;
+   if(dur===null)add(f,"info","collectionDurationUnknown");
+   else if(dur!==24)add(f,"warn","collectionDuration");
+   if(crkg!==null&&sex==="female"){if(crkg<15)add(f,"warn","collectionLow");else if(crkg>20)add(f,"info","collectionHigh");else add(f,"info","collectionAdequate");}
+   else if(crkg!==null&&sex==="male"){if(crkg<18)add(f,"warn","collectionLow");else if(crkg>25)add(f,"info","collectionHigh");else add(f,"info","collectionAdequate");}
+   else add(f,"info","collection");
+ }
+ if(val("urineMagnesium")!==null&&val("urineMagnesium")<3)add(f,"info","lowUrineMg");
+ if(val("fastingGlucose")!==null&&val("fastingGlucose")>=126)add(f,"warn","highFastingGlucose");else if(val("fastingGlucose")!==null&&val("fastingGlucose")>=100)add(f,"info","prediabetesRange");
+ if(val("specificGravity")!==null&&val("specificGravity")>1.010)add(f,"info","highSG");
  if(!f.length)add(f,"ok","noData");
  $("findings").innerHTML="";
- f.forEach(item=>{let div=document.createElement("div");div.className="finding "+item.level;let title=item.level==="danger"?t.titleDanger:item.level==="warn"?t.titleWarn:item.level==="info"?t.titleInfo:t.titleOk;let h=document.createElement("h3");h.textContent=title;let p=document.createElement("p");p.textContent=t[item.key];div.append(h,p);$("findings").append(div)});
- $("reportMeta").textContent=(t.reportPatient+": "+($("patientId").value||t.notEntered)+" · "+t.meta+": "+new Date().toLocaleString(lang==="fa"?"fa-IR":"en-US"));
- $("result").classList.add("show");renderMedicationAdvisor();$("result").scrollIntoView({behavior:"smooth",block:"start"});
+ f.forEach(item=>{let div=document.createElement("div");div.className="finding "+item.level;let title=item.level==="danger"?t.titleDanger:item.level==="warn"?t.titleWarn:item.level==="info"?t.titleInfo:t.titleOk;let h=document.createElement("h3");h.textContent=title;let p=document.createElement("p");p.textContent=t[item.key]+(item.detail?" — "+item.detail.key+": "+item.detail.value+" (reference: "+(item.detail.low??"—")+" to "+(item.detail.high??"—")+")":"");div.append(h,p);$("findings").append(div)});
+ const highRisk=[];
+ if($("episodes").value==="recurrent")highRisk.push("recurrent");
+ if($("familyHistory").value==="yes")highRisk.push("family history");
+ if(["cystine","struvite","uric_acid","ammonium_urate","dha","xanthine","brushite"].includes(stone))highRisk.push("high-risk composition");
+ if(gi!=="none"&&gi!==""&&gi!=="unknown")highRisk.push("GI malabsorption/surgery history");
+ if(laterality==="bilateral")highRisk.push("bilateral stones");
+ if(count!==null&&count>=2)highRisk.push("multiple stones");
+ if(egfr!==null&&egfr<60)highRisk.push("reduced eGFR");
+ if($("residualFragments").checked)highRisk.push("residual fragments");
+ if($("nephrocalcinosis").checked)highRisk.push("nephrocalcinosis");
+ if($("singleKidney").checked)highRisk.push("solitary kidney");
+ if(val("ageAtFirstStone")!==null&&val("ageAtFirstStone")<=25)highRisk.push("early-onset disease");
+ if(stone==="drug_induced")highRisk.push("drug-induced stone");
+ if(egfr!==null&&egfr<30)highRisk.push("severely reduced eGFR");
+ const coreIncomplete=(age===null||stone==="unknown"||$("familyHistory").value==="unknown"||$("episodes").value===""||$("giHistory").value==="unknown");
+ const riskKey=highRisk.length?"riskHigh":(coreIncomplete?"riskIncomplete":"riskLow");
+ const riskDiv=document.createElement("div");riskDiv.className="finding "+(highRisk.length?"danger":"info");
+ const riskH=document.createElement("h3");riskH.textContent=lang==="fa"?"طبقه‌بندی کلی خطر":"Overall risk stratification";
+ const riskP=document.createElement("p");riskP.textContent=t[riskKey]+(highRisk.length?" — "+highRisk.join(", "):"");riskDiv.append(riskH,riskP);$("findings").append(riskDiv);
+ if(/topiramate|acetazolamide|zonisamide|ascorbic acid|vitamin c|calcium supplement|calcium carbonate|calcium citrate|vitamin d|cholecalciferol|ergocalciferol|furosemide|bumetanide|torsemide/.test(meds)){
+  const md=document.createElement("div");md.className="finding warn";const mh=document.createElement("h3");mh.textContent=lang==="fa"?"بررسی داروها":"Medication review";const mp=document.createElement("p");mp.textContent=t.medReview;md.append(mh,mp);$("findings").append(md);
+ }
+ const pName=$("patientName").value.trim();
+ $("reportMeta").textContent=(t.reportPatient+": "+($("patientId").value||t.notEntered)+(pName?" · "+t.reportName+": "+pName:"")+" · "+t.meta+": "+new Date().toLocaleString(lang==="fa"?"fa-IR":"en-US"));
+ $("result").classList.add("show");renderMedicationAdvisor();renderTreatmentPathway();renderUrineComparison();renderEvidenceReferences();$("result").scrollIntoView({behavior:"smooth",block:"start"});
 }
+
+function renderUrineComparison(){
+ const box=$("urineComparison");if(!box)return;box.innerHTML="";
+ const fields=[["volume","volume2","volume"],["ph","ph2","pH"],["calcium","calcium2","calcium"],["oxalate","oxalate2","oxalate"],["citrate","citrate2","citrate"],["uricAcid","uricAcid2","uric acid"],["sodium","sodium2","sodium"],["urineCreat","urineCreat2","creatinine"]];
+ const vals=fields.map(([a,b,n])=>({n,a:val(a),b:val(b)})).filter(x=>Number.isFinite(x.a)&&Number.isFinite(x.b));
+ if(!vals.length){box.textContent=lang==="fa"?"برای مقایسه، مقادیر متناظر را در هر دو نمونه وارد کنید.":"Enter corresponding values in both samples to compare.";return;}
+ const diffs=vals.map(x=>{const pct=x.a===0?null:Math.abs(x.b-x.a)/Math.abs(x.a)*100;return {...x,pct};});
+ const marked=diffs.filter(x=>x.pct!==null&&x.pct>=30);
+ const dur2=parseFloat($("collectionDuration2").value),cr2=parseFloat($("urineCreat2").value),wt=parseFloat($("weight").value),sx=$("sex").value;
+ if($("collectionDuration2").value!==""){
+   const q=document.createElement("p");q.className="small";
+   if(dur2!==24)q.textContent=lang==="fa"?"هشدار نمونه دوم: مدت جمع‌آوری با ۲۴ ساعت برابر نیست؛ مقادیر دفع روزانه با احتیاط تفسیر شوند.":"Sample 2 warning: collection duration is not 24 hours; interpret daily excretion values cautiously.";
+   else if(Number.isFinite(cr2)&&Number.isFinite(wt)&&wt>0&&sx){const ratio=cr2/wt;const low=sx==="female"?15:18,high=sx==="female"?20:25;q.textContent=(ratio<low||ratio>high)?(lang==="fa"?"کراتینین نمونه دوم به‌ازای وزن خارج از محدوده تقریبی مورد انتظار است؛ این فقط علامت غربالگری کیفیت جمع‌آوری است.":"Sample 2 creatinine per kg is outside the approximate expected range; this is only a collection-quality screening flag."):(lang==="fa"?"کراتینین نمونه دوم به‌ازای وزن در محدوده تقریبی مورد انتظار است؛ کفایت نمونه همچنان باید بالینی بررسی شود.":"Sample 2 creatinine per kg is within the approximate expected range; collection completeness still requires clinical review.");}
+   if(q.textContent)box.append(q);
+ }
+ const p=document.createElement("p");p.textContent=lang==="fa"?"مقایسه توصیفی دو نمونه (اختلاف نسبی ≥۳۰٪ فقط برای جلب توجه است و آستانه تشخیصی اعتبارسنجی‌شده نیست):":"Descriptive comparison (≥30% relative difference is an attention flag only, not a validated diagnostic threshold):";box.append(p);
+ const ul=document.createElement("ul");diffs.forEach(x=>{const li=document.createElement("li");li.textContent=`${x.n}: ${x.a} → ${x.b}`+(x.pct===null?"":` (${x.pct.toFixed(0)}%)`)+(x.pct!==null&&x.pct>=30?(lang==="fa"?" — اختلاف قابل توجه؛ تفسیر بالینی لازم است":" — notable difference; clinical interpretation required"):"");ul.append(li)});box.append(ul);
+ if(marked.length){const w=document.createElement("p");w.className="small";w.textContent=lang==="fa"?"نتایج را خودکار میانگین نگیرید؛ کیفیت جمع‌آوری، رژیم، وضعیت بالینی و آزمایشگاه بررسی شود.":"Do not automatically average results; review collection quality, diet, clinical state and laboratory methods.";box.append(w);}
+}
+function renderEvidenceReferences(){
+ const old=$("evidenceReferences");if(old)old.remove();
+ const box=document.createElement("section");box.id="evidenceReferences";box.className="card wide";
+ const h=document.createElement("h2");h.textContent=lang==="fa"?"منابع":"References";box.append(h);
+ const refs=lang==="fa"?[
+ "[1] European Association of Urology. EAU Guidelines on Urolithiasis. 2026. فصل Metabolic Evaluation and Recurrence Prevention. https://uroweb.org/guidelines/urolithiasis/chapter/metabolic-evaluation-and-recurrence-prevention",
+ "[2] American Urological Association. Medical Management of Kidney Stones: AUA Guideline. Part I: Evaluation and Dietary Management. 2026. https://doi.org/10.1097/JU.0000000000005227",
+ "[3] American Urological Association. Medical Management of Kidney Stones: AUA Guideline. Part II: Treatment and Follow-up. 2026. https://doi.org/10.1097/JU.0000000000005228",
+ "[4] National Kidney Foundation. CKD-EPI Creatinine Equation (2021). https://www.kidney.org/ckd-epi-creatinine-equation-2021",
+ "[5] American Diabetes Association. Standards of Care in Diabetes—2026. Diagnosis and Classification of Diabetes. https://doi.org/10.2337/dc26-s002",
+ "[6] Clinical and Laboratory Standards Institute. Defining, Establishing, and Verifying Reference Intervals in the Clinical Laboratory (EP28). Use the performing laboratory’s validated interval; no universal interval is assumed."
+ ]:[
+ "[1] European Association of Urology. EAU Guidelines on Urolithiasis. 2026. Chapter: Metabolic Evaluation and Recurrence Prevention. https://uroweb.org/guidelines/urolithiasis/chapter/metabolic-evaluation-and-recurrence-prevention",
+ "[2] American Urological Association. Medical Management of Kidney Stones: AUA Guideline. Part I: Evaluation and Dietary Management. 2026. https://doi.org/10.1097/JU.0000000000005227",
+ "[3] American Urological Association. Medical Management of Kidney Stones: AUA Guideline. Part II: Treatment and Follow-up. 2026. https://doi.org/10.1097/JU.0000000000005228",
+ "[4] National Kidney Foundation. CKD-EPI Creatinine Equation (2021). https://www.kidney.org/ckd-epi-creatinine-equation-2021",
+ "[5] American Diabetes Association. Standards of Care in Diabetes—2026. Diagnosis and Classification of Diabetes. https://doi.org/10.2337/dc26-s002",
+ "[6] Clinical and Laboratory Standards Institute. Defining, Establishing, and Verifying Reference Intervals in the Clinical Laboratory (EP28). Use the performing laboratory’s validated interval; no universal interval is assumed."
+ ];
+ const ol=document.createElement("ol");refs.forEach(r=>{const li=document.createElement("li");li.textContent=r;ol.append(li)});box.append(ol);
+ const scope=$("scope")?.closest("section");if(scope&&scope.parentNode)scope.parentNode.insertBefore(box,scope);
+ // Add numbered source markers to generated recommendations; references are listed only once at the end.
+ document.querySelectorAll("#findings .finding p, #medicationAdvisor .option p, #treatmentPathway li").forEach((el)=>{
+   if(!/\[\d+\]$/.test(el.textContent.trim()))el.textContent=el.textContent.trim()+" [1,2,3]";
+ });
+}
+
 $("analyze").addEventListener("click",analyze);
-function getData(){let d={application:"StonePharm",version:"1.2",exportedAt:new Date().toISOString(),language:lang,patient:{},urine24h:{},serum:{},thresholds:{},medicines:{}};["patientId","date","age","sex","stoneType","episodes","history"].forEach(k=>d.patient[k]=$(k).value);["volume","ph","calcium","oxalate","citrate","uricAcid","sodium","urineCreat"].forEach(k=>d.urine24h[k]=$(k).value);["egfr","potassium","serumCalcium","serumUric","bicarb"].forEach(k=>d.serum[k]=$(k).value);["tCitrate","tOxalate","tSodium","tCaF","tCaM","tVolume"].forEach(k=>d.thresholds[k]=$(k).value);["meds","allergies","notes"].forEach(k=>d.medicines[k]=$(k).value);return d}
-$("export").addEventListener("click",()=>{let blob=new Blob([JSON.stringify(getData(),null,2)],{type:"application/json"});let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="StonePharm_"+($("patientId").value||"patient")+".json";a.click();URL.revokeObjectURL(a.href);alert(translations[lang].saved)});
-$("reset").addEventListener("click",()=>{if(!confirm(translations[lang].confirmReset))return;document.querySelectorAll("main input,main textarea").forEach(e=>{if(e.id==="date")e.value=new Date().toISOString().slice(0,10);else if(e.id.startsWith("t"))return;else e.value=""});$("sex").value="";$("stoneType").value="calcium_oxalate";$("episodes").value="first";$("result").classList.remove("show");$("findings").innerHTML=""});
+function getData(){let d={application:"StonePharm",version:"2.0",exportedAt:new Date().toISOString(),language:lang,patient:{},imaging:{},followUp:{},urine24h:{},serum:{},thresholds:{},medicines:{}};["patientId","patientName","date","age","ageAtFirstStone","sex","pregnancyStatus","breastfeedingStatus","height","weight","bmi","stoneType","episodes","familyHistory","familyDetails","intervention","interventionDetails","history","giHistory","giDetails","cultureStatus","cultureDetails"].forEach(k=>d.patient[k]=$(k).value);["imagingDate","imagingModality","stoneCount","largestStone","stoneLocation","laterality"].forEach(k=>d.imaging[k]=$(k).value);["nephrocalcinosis","residualFragments","singleKidney"].forEach(k=>d.imaging[k]=$(k).checked);["treatmentChangeDate","repeatUrineDate","followImagingDate","followNotes"].forEach(k=>d.followUp[k]=$(k).value);["volume","ph","calcium","oxalate","citrate","uricAcid","sodium","urineCreat","collectionDuration","collectionDate1","urinePotassium","urineMagnesium","urineProtein","specificGravity","urinePhosphate","urineAmmonium","urineCystine","urineChloride","urineSulfate","urineUreaNitrogen","collectionDate2","collectionDuration2","volume2","ph2","calcium2","oxalate2","citrate2","uricAcid2","sodium2","urineCreat2","urinePotassium2","urineMagnesium2","urinePhosphate2","urineAmmonium2","urineCystine2","urineChloride2","urineSulfate2","urineUreaNitrogen2","calciumUnit","oxalateUnit","citrateUnit","uricAcidUnit","calcium2Unit","oxalate2Unit","citrate2Unit","uricAcid2Unit"].forEach(k=>d.urine24h[k]=$(k).value);["serumCreatinine","serumCreatinineUnit","egfr","potassium","serumCalcium","serumUric","bicarb","serumSodium","serumMagnesium","serumPhosphate","fastingGlucose","serumAlbumin","serumPTH","serumChloride","serumIonizedCalcium","vitaminD25"].forEach(k=>d.serum[k]=$(k).value);["tCitrateF","tCitrateM","tOxalate","tSodium","tCa","tCaSevere","tVolume"].forEach(k=>d.thresholds[k]=$(k).value);["meds","allergies","notes","medDose","medRoute","medFrequency","medIndication"].forEach(k=>d.medicines[k]=$(k).value);
+ d.labReferenceIntervals={profileSex:$("labRefSex").value,ageMin:$("labRefAgeMin").value,ageMax:$("labRefAgeMax").value};document.querySelectorAll("[id^=ref_]").forEach(el=>d.labReferenceIntervals[el.id]=el.value);d.followUp.followAgent=$("followAgent").value;d.followUp.followDose=$("followDose").value;d.followUp.followAdherence=$("followAdherence").value;d.followUp.followAdverse=$("followAdverse").value;return d}
+
+
 
 // StonePharm V1.4: medication advisor and offline import utilities.
 function renderMedicationAdvisor(){
@@ -306,8 +587,10 @@ function renderMedicationAdvisor(){
  const cit=val("citrate"), ph=val("ph"), ca=val("calcium"), ua=val("uricAcid");
  const k=val("potassium"), egfr=val("egfr"), sodium=val("sodium");
  const serumCa=val("serumCalcium"), bicarb=val("bicarb");
- const adult=age===null || age>=18;
- const calciumStone=stone==="calcium_oxalate"||stone==="calcium_phosphate";
+ const pregnancy=$("pregnancyStatus").value, breastfeeding=$("breastfeedingStatus").value;
+ const pregnancyUnclear=(sex==="female"&&age!==null&&age>=12&&age<=55&&pregnancy==="unknown");
+ const adult=age!==null && age>=18 && pregnancy!=="yes" && !pregnancyUnclear && breastfeeding!=="yes";
+ const calciumStone=stone==="calcium_oxalate"||["calcium_phosphate","brushite","carbonate_apatite"].includes(stone);
  const recurrent=episodes==="recurrent";
  const hasKRisk=/(lisinopril|enalapril|ramipril|perindopril|losartan|valsartan|candesartan|telmisartan|irbesartan|spironolactone|eplerenone|amiloride|triamterene|trimethoprim|tacrolimus|cyclosporine|cyclosporin|nsaid|ibuprofen|naproxen)/.test(meds);
  const hasLithium=/lithium/.test(meds);
@@ -318,17 +601,18 @@ function renderMedicationAdvisor(){
  const addOption=(name,why,dose,monitor,level="")=>options.push({name,why,dose,monitor,level});
  if(!adult || !(calciumStone || stone==="uric_acid")){
    addOption(txt("No routine medication pathway generated","مسیر معمول پیشنهاد دارویی تولید نشد"),
-     txt("This advisor is limited to adults with calcium stones. Other stone types and pediatric cases need dedicated pathways.","این مشاور به بزرگسالان مبتلا به سنگ کلسیمی محدود است. سایر انواع سنگ و کودکان به مسیر اختصاصی نیاز دارند."),
+     age===null?txt("Age is missing; adult medication decision support is withheld.","سن وارد نشده است؛ مسیر دارویی بزرگسالان تا زمان ثبت سن متوقف است."):pregnancy==="yes"||pregnancyUnclear?txt("Pregnancy is present or insufficiently clarified; obtain specialist medication review.","بارداری وجود دارد یا وضعیت آن روشن نیست؛ بررسی تخصصی دارو لازم است."):breastfeeding==="yes"?txt("Breastfeeding is recorded; review medicine suitability individually.","شیردهی ثبت شده است؛ تناسب دارو باید فردی بررسی شود."):txt("See the comprehensive stone-specific treatment pathway below. Cystine, infection-related, drug-induced and rare stones require specialist management; pediatric cases are outside scope.","برای مسیر جامع درمان اختصاصی نوع سنگ، بخش الگوریتم درمانی زیر را ببینید. سنگ سیستین، عفونی، دارویی و سنگ‌های نادر به مدیریت تخصصی نیاز دارند؛ کودکان خارج از دامنه‌اند."),
      txt("Not applicable","قابل اعمال نیست"),txt("Refer for specialist assessment.","ارجاع برای ارزیابی تخصصی."));
  } else {
-   const hypercal=ca!==null && $("sex").value && ca>Number($("sex").value==="female"?$("tCaF").value:$("tCaM").value);
-   const persistentUrineAcid=ua!==null && ua>( $("sex").value==="female"?750:800 );
-   const lowCitrate=cit!==null&&cit<Number($("tCitrate").value);
+   const hypercal=ca!==null && ca>val("tCa");
+   const persistentUrineAcid=ua!==null && $("sex").value && ua>($("sex").value==="female"?672:840);
+   const lowCitrate=cit!==null&&citrateThreshold()!==null&&cit<citrateThreshold();
    const uricAcidCalcium=stone==="calcium_oxalate"&&recurrent&&persistentUrineAcid;
    const thiazideEligible=calciumStone&&recurrent&&hypercal;
-   const alkaliIndication=lowCitrate || (stone==="uric_acid" && ph!==null && ph<5.5);
+   const alkaliIndication=(lowCitrate && !["calcium_phosphate","brushite","carbonate_apatite"].includes(stone)) || (stone==="uric_acid" && ph!==null && ph<5.5);
    if(alkaliIndication){
-     const potassiumBlocked=highK||lowGFR||hasKRisk;
+     const missingRenalSafety=(k===null||egfr===null);
+     const potassiumBlocked=highK||lowGFR||hasKRisk||missingRenalSafety;
      if(!potassiumBlocked){
        addOption(txt("Potassium citrate / alkaline citrate","پتاسیم سیترات / سیترات قلیایی"),
          lowCitrate?txt("Low urinary citrate is present. Consider only after confirming collection quality, stone composition and clinical context.","سیترات ادرار پایین است. فقط پس از تأیید کیفیت جمع‌آوری، ترکیب سنگ و شرایط بالینی بررسی شود."):txt("Low urine pH in a uric-acid stone former may support urine alkalinization; titration requires measured urine-pH follow-up.","pH پایین ادرار در بیمار مبتلا به سنگ اسیداوریکی می‌تواند اندیکاسیون قلیایی‌سازی باشد؛ تنظیم درمان نیازمند پایش pH ادرار است."),
@@ -336,11 +620,11 @@ function renderMedicationAdvisor(){
          txt("Check serum potassium, renal function and interacting medicines before and after initiation; monitor urine pH and avoid excessive alkalinization, particularly in calcium-phosphate stone formers.","پیش و پس از شروع، پتاسیم سرم، عملکرد کلیه و داروهای متداخل بررسی شود؛ pH ادرار پایش و از قلیایی‌سازی بیش از حد، به‌ویژه در سنگ کلسیم فسفات، پرهیز شود."));
      } else {
        addOption(txt("Potassium-containing alkali: safety hold","داروی قلیایی حاوی پتاسیم: توقف ایمنی"),
-         txt("A hyperkalemia/renal-function or medication interaction concern was detected. Do not present potassium citrate as a routine option until a clinician has reviewed the risk.","نگرانی از هیپرکالمی، عملکرد کلیه یا تداخل دارویی شناسایی شد. تا بررسی بالینی خطر، پتاسیم سیترات به‌عنوان گزینه معمول مطرح نشود."),
+         missingRenalSafety?txt("Serum potassium and eGFR are missing. These are required to screen safety; do not present potassium citrate as a routine option until reviewed.","پتاسیم سرم و eGFR وارد نشده‌اند. این اطلاعات برای غربالگری ایمنی لازم‌اند؛ تا بررسی آن‌ها پتاسیم سیترات به‌عنوان گزینه معمول مطرح نشود."):txt("A hyperkalemia/renal-function or medication interaction concern was detected. Do not present potassium citrate as a routine option until a clinician has reviewed the risk.","نگرانی از هیپرکالمی، عملکرد کلیه یا تداخل دارویی شناسایی شد. تا بررسی بالینی خطر، پتاسیم سیترات به‌عنوان گزینه معمول مطرح نشود."),
          txt("No dose suggested","دوزی پیشنهاد نمی‌شود"),
          txt("Review potassium, eGFR, volume status and all medicines. This software cannot determine whether use is safe.","پتاسیم، eGFR، وضعیت حجم و همه داروها بررسی شود. این نرم‌افزار قادر به تعیین ایمنی مصرف نیست."),"blocked");
      }
-     const sodiumAlternative=(highK||lowGFR||hasKRisk);
+     const sodiumAlternative=!missingRenalSafety&&(highK||lowGFR||hasKRisk);
      if(sodiumAlternative){
        addOption(txt("Sodium bicarbonate: possible alternative alkali","سدیم بیکربنات: جایگزین احتمالی قلیایی‌سازی"),
          txt("May be considered by the treating clinician when potassium-containing alkali is unsuitable; suitability depends on sodium load and comorbidities.","در صورت نامناسب بودن قلیایی حاوی پتاسیم، پزشک می‌تواند آن را بررسی کند؛ تناسب آن به بار سدیم و بیماری‌های همراه بستگی دارد."),
@@ -390,57 +674,277 @@ function renderMedicationAdvisor(){
  options.forEach(o=>{const d=document.createElement("div");d.className="option "+(o.level||"");const hh=document.createElement("h4");hh.textContent=o.name;d.append(hh);[o.why,o.dose,o.monitor].forEach((v,i)=>{const q=document.createElement("p");q.textContent=(i===0?txt("Rationale: ","منطق بررسی: "):i===1?txt("Guideline reference: ","مرجع راهنما: "):txt("Safety / monitoring: ","ایمنی / پایش: "))+v;d.append(q)});box.append(d)});
  const ref=document.createElement("p");ref.className="small";ref.textContent=source;box.append(ref);
 }
-function fillField(id,value){if($(id)&&value!==undefined&&value!==null)$(id).value=String(value);}
-function populateFromJSON(data){
- if(!data||data.application!=="StonePharm")throw new Error("Not a StonePharm JSON export.");
- const p=data.patient||{},u=data.urine24h||{},s=data.serum||{},t=data.thresholds||{},m=data.medicines||{};
- ["patientId","date","age","sex","stoneType","episodes","history"].forEach(k=>fillField(k,p[k]));
- ["volume","ph","calcium","oxalate","citrate","uricAcid","sodium","urineCreat"].forEach(k=>fillField(k,u[k]));
- ["egfr","potassium","serumCalcium","serumUric","bicarb"].forEach(k=>fillField(k,s[k]));
- ["tCitrate","tOxalate","tSodium","tCaF","tCaM","tVolume"].forEach(k=>fillField(k,t[k]));
- ["meds","allergies","notes"].forEach(k=>fillField(k,m[k]));
-}
-$("importJsonBtn").addEventListener("click",()=>$("jsonFile").click());
-$("importCsvBtn").addEventListener("click",()=>$("csvFile").click());
-$("jsonFile").addEventListener("change",async e=>{
- const file=e.target.files[0];if(!file)return;
- try{const data=JSON.parse(await file.text());populateFromJSON(data);$("result").classList.remove("show");$("findings").innerHTML="";$("medicationAdvisor").innerHTML="";alert(lang==="fa"?"اطلاعات وارد شد؛ برای ارزیابی، دکمه گزارش را بزنید.":"Data imported. Generate assessment when ready.");}
- catch(err){alert((lang==="fa"?"خطا در ورود JSON: ":"JSON import error: ")+err.message);}
- finally{e.target.value="";}
-});
-function parseCSV(text){
- const rows=[];let row=[],field="",quoted=false;
- text=text.replace(/^\uFEFF/,"");
- for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];
-  if(quoted){if(c==='"'&&n==='"'){field+='"';i++;}else if(c==='"')quoted=false;else field+=c;}
-  else if(c==='"')quoted=true;
-  else if(c===","){row.push(field);field="";}
-  else if(c==="\n"){row.push(field);rows.push(row);row=[];field="";}
-  else if(c!=="\r")field+=c;
+function renderTreatmentPathway(){
+ const box=$("treatmentPathway"),fa=lang==="fa",stone=$("stoneType").value;
+ const t=(en,faText)=>fa?faText:en;
+ box.innerHTML="";
+ const title=document.createElement("h3");title.textContent=t("Comprehensive stone-specific management pathway","الگوریتم جامع مدیریت اختصاصی نوع سنگ");box.append(title);
+ const intro=document.createElement("p");intro.className="small";intro.textContent=t("This pathway integrates prevention, medical dissolution where appropriate, cause-directed therapy, safety checks and specialist/surgical escalation. It is a clinician-facing decision aid, not a prescription or a substitute for acute urological assessment.","این مسیر، پیشگیری، انحلال دارویی در موارد مناسب، درمان علت زمینه‌ای، ملاحظات ایمنی و ارجاع تخصصی/مداخله‌ای را یکپارچه می‌کند. این بخش ابزار تصمیم‌یار برای پزشک است، نه نسخه و نه جایگزین ارزیابی اورژانسی اورولوژی.");box.append(intro);
+ const add=(heading,items,kind="")=>{const d=document.createElement("div");d.className="pathway-section "+kind;const h=document.createElement("h4");h.textContent=heading;d.append(h);const ul=document.createElement("ul");items.forEach(item=>{const li=document.createElement("li");li.textContent=item;ul.append(li)});d.append(ul);box.append(d)};
+ add(t("Safety gate — applies to every stone type","دروازه ایمنی — برای همه انواع سنگ"),[
+  t("Fever/rigors or sepsis features with suspected obstruction, anuria, acute kidney injury, obstruction in a solitary functioning kidney, uncontrolled pain or persistent vomiting require urgent emergency/urological assessment. An infected obstructed system needs urgent drainage plus antibiotics; definitive stone clearance is usually staged after stabilization.","تب/لرز یا علائم سپسیس همراه با احتمال انسداد، بی‌ادراری، آسیب حاد کلیه، انسداد در کلیه منفرد، درد کنترل‌نشده یا استفراغ مداوم نیازمند ارزیابی فوری اورژانس/اورولوژی است. سیستم ادراری عفونی و مسدود به تخلیه فوری همراه آنتی‌بیوتیک نیاز دارد؛ پاک‌سازی قطعی سنگ معمولاً پس از پایدارسازی انجام می‌شود."),
+  t("Choice of observation, medical expulsive therapy or a procedure depends on stone size, site, obstruction, anatomy, renal function, symptoms and patient factors. This metabolic module does not select an operation or calculate an expulsion probability.","انتخاب مشاهده، درمان دفع دارویی یا مداخله به اندازه و محل سنگ، انسداد، آناتومی، عملکرد کلیه، علائم و شرایط بیمار وابسته است. این ماژول متابولیک نوع عمل یا احتمال دفع را تعیین نمی‌کند.")
+ ],"urgent");
+ if(val("age")!==null&&val("age")<18){
+  add(t("Pediatric patient — specialist pathway only","بیمار کودک — فقط مسیر تخصصی"),[t("The treatment pathways and prevention targets below are designed for adults and must not be applied to a child. Refer to pediatric urology/nephrology for age- and body-surface-area-adjusted evaluation and treatment.","مسیرهای درمان و اهداف پیشگیری زیر برای بزرگسالان طراحی شده‌اند و نباید برای کودک به کار روند. برای ارزیابی و درمان متناسب با سن و سطح بدن، به اورولوژی/نفرولوژی کودکان ارجاع شود.")],"urgent");
+  const pediatricRef=document.createElement("p");pediatricRef.className="small";pediatricRef.textContent=t("Guideline basis: EAU 2026 and AUA 2026; pediatric evidence and targets require specialist interpretation.","مبنای راهنما: EAU 2026 و AUA 2026؛ شواهد و اهداف کودکان نیازمند تفسیر تخصصی هستند.");box.append(pediatricRef);return;
  }
- if(field.length||row.length){row.push(field);rows.push(row);}
- const headers=(rows.shift()||[]).map(x=>x.trim());
- return rows.filter(r=>r.some(x=>x.trim()!=="")).map(r=>Object.fromEntries(headers.map((h,i)=>[h,(r[i]||"").trim()])));
+ add(t("General recurrence prevention","پیشگیری عمومی از عود"),[
+  t("For most adult stone formers, aim for 24-hour urine output above 2.5 L/day, unless fluid restriction is medically required. Spread fluid intake across the day and compensate for heat/exercise losses.","در بیشتر بزرگسالان مبتلا به سنگ، هدف حجم ادرار ۲۴ ساعته بیش از ۲٫۵ لیتر در روز است، مگر آنکه محدودیت مایعات اندیکاسیون پزشکی داشته باشد. مایعات در طول روز توزیع و اتلاف ناشی از گرما/ورزش جبران شود."),
+  t("Maintain normal dietary calcium (approximately 1,000–1,200 mg/day); do not prescribe routine calcium restriction. Reduce excess sodium (EAU general advice: NaCl about 4–5 g/day maximum) and avoid excessive animal protein.","کلسیم غذایی طبیعی (حدود ۱۰۰۰ تا ۱۲۰۰ میلی‌گرم در روز) حفظ شود؛ محدودیت معمول کلسیم توصیه نشود. سدیم اضافی کاهش یابد (توصیه عمومی EAU: حداکثر حدود ۴ تا ۵ گرم نمک طعام در روز) و از مصرف بیش از حد پروتئین حیوانی پرهیز شود."),
+  t("Repeat 24-hour urine after starting/changing preventive therapy (often 3–6 months per AUA; EAU suggests an earlier first check around 8–12 weeks after pharmacological prevention), then individualize ongoing monitoring. Review adverse effects and imaging recurrence.","پس از شروع/تغییر درمان پیشگیرانه، ادرار ۲۴ ساعته تکرار شود (اغلب ۳ تا ۶ ماه طبق AUA؛ EAU برای نخستین ارزیابی پس از پیشگیری دارویی حدود ۸ تا ۱۲ هفته را مطرح می‌کند)؛ سپس پایش فردی‌سازی شود. عوارض دارویی و عود تصویربرداری نیز بررسی شوند.")
+ ]);
+ const vCa=val("calcium"),vOx=val("oxalate"),vCit=val("citrate"),vUA=val("uricAcid"),vPH=val("ph"),vVol=val("volume"),vK=val("potassium"),vEg=val("egfr"),vNa=val("sodium"),gi=$("giHistory").value,culture=$("cultureStatus").value,meds=$("meds").value.toLowerCase(),recurrent=$("episodes").value==="recurrent";
+ const lowCit=vCit!==null&&citrateThreshold()!==null&&vCit<citrateThreshold(),highOx=vOx!==null&&vOx>val("tOxalate"),highCa=vCa!==null&&$("sex").value&&vCa>val("tCa"),highUA=vUA!==null&&$("sex").value&&vUA>($("sex").value==="female"?672:840),lowPh=vPH!==null&&vPH<5.5,highNa=vNa!==null&&vNa>val("tSodium");
+ const kUnsafe=(vK!==null&&vK>=5)||(vEg!==null&&vEg<30)||/(spironolactone|eplerenone|amiloride|triamterene|lisinopril|enalapril|ramipril|perindopril|losartan|valsartan|candesartan|telmisartan|irbesartan|trimethoprim|tacrolimus|cyclosporine)/.test(meds);
+ const alkaliSafety=t("Before potassium-containing alkali, review serum potassium, eGFR/creatinine, volume status and interacting medicines. If these are abnormal or unavailable, do not assume potassium citrate is safe; consider alternatives only after clinician review.","پیش از قلیایی حاوی پتاسیم، پتاسیم سرم، eGFR/کراتینین، وضعیت حجم و داروهای متداخل بررسی شود. در صورت غیرطبیعی یا نامشخص بودن این موارد، ایمنی پتاسیم سیترات مفروض نیست؛ جایگزین‌ها نیز فقط پس از بررسی پزشک مطرح شوند.");
+ let key=stone;
+ if(stone==="calcium_oxalate"){
+  const items=[t("First-line: increase fluid sufficiently to achieve urine volume >2.5 L/day; maintain normal dietary calcium with meals; reduce excess sodium and animal protein.","خط اول: افزایش مایعات تا دستیابی به حجم ادرار بیش از ۲٫۵ لیتر در روز؛ حفظ کلسیم غذایی طبیعی همراه وعده‌ها؛ کاهش سدیم اضافی و پروتئین حیوانی بیش از حد."),
+   t("If urinary oxalate is above threshold: review high-oxalate foods, high-dose vitamin C and enteric causes. With malabsorption/enteric hyperoxaluria, specialist-directed low-fat/low-oxalate diet and calcium with meals may be appropriate; do not restrict dietary calcium.","اگر اگزالات ادرار بالاتر از آستانه است: غذاهای پر اگزالات، ویتامین C با دوز بالا و علل روده‌ای بررسی شوند. در سوءجذب/هیپراگزالوری انتریک، رژیم کم‌چربی و کم‌اگزالات و کلسیم همراه غذا ممکن است با نظر متخصص مناسب باشد؛ کلسیم غذایی محدود نشود."),
+   t("Very high or persistently unexplained urinary oxalate, early-onset/recurrent disease or nephrocalcinosis should raise suspicion for primary hyperoxaluria. Refer for metabolic/nephrology and genetic assessment; pyridoxine-responsive disease and RNA-interference therapies require specialist diagnosis, eligibility assessment and monitoring.","اگزالات ادرار بسیار بالا یا پایدار با علت نامشخص، شروع زودرس/عود مکرر یا نفروکلسی‌نوز باید شک به هیپراگزالوری اولیه را مطرح کند. ارجاع برای ارزیابی متابولیک/نفرولوژی و ژنتیک لازم است؛ بیماری پاسخ‌دهنده به پیریدوکسین و درمان‌های RNA interference نیازمند تشخیص، بررسی صلاحیت و پایش تخصصی هستند."),
+   t("If recurrent calcium stones with elevated urinary calcium: consider a thiazide/thiazide-like agent after dietary sodium review and secondary-cause assessment. Monitor blood pressure, sodium, potassium, creatinine/eGFR, glucose and uric acid; consider gout and skin-cancer history with hydrochlorothiazide.","در سنگ کلسیمی عودکننده همراه کلسیم ادرار بالا: پس از بررسی سدیم غذایی و علل ثانویه، تیازید/شبه‌تیازید قابل بررسی است. فشارخون، سدیم، پتاسیم، کراتینین/eGFR، قند و اسیداوریک پایش شوند؛ نقرس و سابقه سرطان پوست در مصرف هیدروکلروتیازید لحاظ شود."),
+   t("If hypocitraturia: consider alkali citrate after potassium/renal safety review. Monitor urine pH; avoid over-alkalinization, especially if a calcium-phosphate component is present.","در هیپوسیتراتوری: پس از بررسی ایمنی پتاسیم و کلیه، سیترات قلیایی قابل بررسی است. pH ادرار پایش و از قلیایی‌سازی بیش از حد، به‌ویژه در وجود جزء کلسیم فسفات، پرهیز شود."),
+   t("If recurrent calcium-oxalate stones with hyperuricosuria: allopurinol may be considered in selected patients after dietary and secondary-cause review. Check renal function, allergy, thiopurine interactions and local pharmacogenetic guidance; do not use solely for low urine pH.","در سنگ کلسیم اگزالات عودکننده همراه هیپراوریکوزوری: پس از بررسی رژیم و علل ثانویه، آلوپورینول در بیماران منتخب قابل بررسی است. عملکرد کلیه، حساسیت، تداخل با تیوپورین‌ها و راهنمای فارماکوژنتیک محلی بررسی شود؛ صرفاً به دلیل pH پایین ادرار استفاده نشود.")];
+  if(highCa)items.push(t("Entered urinary calcium is above the configured threshold: evaluate sodium intake, collection validity and secondary causes before deciding on thiazide therapy.","کلسیم ادرار واردشده بالاتر از آستانه تنظیم‌شده است: پیش از تصمیم درباره تیازید، سدیم دریافتی، اعتبار جمع‌آوری و علل ثانویه ارزیابی شوند."));
+  if(highOx)items.push(t("Entered urinary oxalate is above threshold; investigate enteric disease, supplements and dietary sources.","اگزالات ادرار واردشده بالاتر از آستانه است؛ بیماری روده‌ای، مکمل‌ها و منابع غذایی بررسی شوند."));
+  if(lowCit)items.push(t("Entered urinary citrate is below threshold; consider citrate replacement only after safety review.","سیترات ادرار واردشده پایین‌تر از آستانه است؛ جایگزینی سیترات فقط پس از بررسی ایمنی مطرح شود."));
+  add(t("Calcium oxalate — targeted treatment","کلسیم اگزالات — درمان هدفمند"),items);
+ } else if(["calcium_phosphate","brushite","carbonate_apatite"].includes(stone)){
+  const items=[t("Investigate the cause before treatment: primary hyperparathyroidism (serum calcium/PTH when indicated), distal renal tubular acidosis (bicarbonate, potassium and urine pH), and infection, particularly with carbonate apatite.","پیش از درمان، علت بررسی شود: هیپرپاراتیروئیدی اولیه (کلسیم سرم/PTH در صورت اندیکاسیون)، اسیدوز توبولی کلیوی دیستال (بیکربنات، پتاسیم و pH ادرار) و عفونت، به‌ویژه در کربنات آپاتیت."),
+   t("Avoid empiric urine alkalinization: high urine pH promotes calcium-phosphate crystallization. If distal RTA is confirmed, alkali may still be required to correct systemic acidosis and hypocitraturia, with close urine-pH and calcium-phosphate risk monitoring.","از قلیایی‌سازی تجربی ادرار پرهیز شود: pH بالای ادرار تشکیل کلسیم فسفات را تسهیل می‌کند. اگر RTA دیستال تأیید شود، با وجود pH ادرار بالا ممکن است قلیا برای اصلاح اسیدوز سیستمیک و هیپوسیتراتوری لازم باشد؛ پایش دقیق pH و خطر کلسیم فسفات ضروری است."),
+   t("If significant hypercalciuria persists after underlying causes are addressed, a thiazide/thiazide-like agent may be considered by the treating clinician. Monitor BP, electrolytes, renal function, glucose and uric acid.","اگر پس از رسیدگی به علل زمینه‌ای، هیپرکلسیوری قابل توجه باقی بماند، پزشک می‌تواند تیازید/شبه‌تیازید را بررسی کند. فشارخون، الکترولیت‌ها، عملکرد کلیه، قند و اسیداوریک پایش شوند."),
+   t("For carbonate-apatite stones with infection evidence, follow the infection-stone pathway rather than treating as uncomplicated metabolic calcium-phosphate disease.","در سنگ کربنات آپاتیت همراه شواهد عفونت، مسیر سنگ عفونی دنبال شود و مانند بیماری متابولیک ساده کلسیم فسفات درمان نشود."),
+   ...(stone==="brushite"?[t("Brushite is a high-recurrence-risk subtype; it typically crystallizes around urine pH 6.5–6.8 and may be associated with marked urinary calcium/phosphate. Review stone burden and metabolic drivers.","براشیت زیرگروهی با خطر عود بالا است؛ معمولاً در pH حدود ۶٫۵ تا ۶٫۸ و در ارتباط با کلسیم/فسفات ادرار بالا متبلور می‌شود. بار سنگی و عوامل متابولیک بررسی شوند.")]:[]),
+   ...(stone==="carbonate_apatite"?[t("Carbonate apatite may be infection-associated and can crystallize at urine pH above about 6.8; obtain/review urine culture when clinically indicated.","کربنات آپاتیت ممکن است با عفونت همراه باشد و در pH بالاتر از حدود ۶٫۸ متبلور شود؛ در صورت اندیکاسیون بالینی کشت ادرار انجام/بررسی شود.")]:[])];
+  if(lowCit)items.push(t("Low citrate may warrant alkali in selected cases (especially confirmed RTA), but this is not an automatic potassium-citrate trigger; weigh serum potassium, eGFR and urine pH.","سیترات پایین در موارد منتخب (به‌ویژه RTA تأییدشده) ممکن است نیازمند قلیا باشد؛ اما این یافته به‌تنهایی شروع خودکار پتاسیم سیترات را توجیه نمی‌کند؛ پتاسیم سرم، eGFR و pH ادرار سنجیده شوند."));
+  add(t("Calcium phosphate — cause-first pathway","کلسیم فسفات — مسیر مبتنی بر علت"),items,"caution");
+ } else if(stone==="uric_acid"){
+  add(t("Uric acid — dissolution and prevention","اسیداوریک — انحلال و پیشگیری"),[
+   t("Urine alkalinization is the central treatment. Potassium citrate is commonly used when potassium and renal function permit; sodium bicarbonate may be considered when potassium alkali is unsuitable, after assessing sodium load, blood pressure and fluid status.","قلیایی‌سازی ادرار درمان محوری است. در صورت مناسب بودن پتاسیم و عملکرد کلیه، معمولاً پتاسیم سیترات استفاده می‌شود؛ اگر قلیای پتاسیمی مناسب نباشد، سدیم بیکربنات پس از ارزیابی بار سدیم، فشارخون و وضعیت حجم قابل بررسی است."),
+   t("For oral chemolysis of suspected/pure uric-acid stones, specialist-supervised titration often targets urine pH around 7.0–7.2 (guideline figure range 6.5–7.2). Use repeated fresh-urine pH measurements across the day; avoid excessive alkalinization because calcium-phosphate stones may form.","برای انحلال خوراکی سنگ خالص/محتمل اسیداوریکی، تنظیم درمان تحت نظر متخصص معمولاً pH حدود ۷٫۰ تا ۷٫۲ را هدف می‌گیرد (دامنه شکل راهنمای EAU حدود ۶٫۵ تا ۷٫۲). pH ادرار تازه در چند نوبت روز اندازه‌گیری شود؛ از قلیایی‌سازی بیش از حد به دلیل خطر سنگ کلسیم فسفات پرهیز شود."),
+   t("For prevention, use a lower individualized pH target than active dissolution and reassess urine chemistry. Allopurinol is an adjunct for documented hyperuricosuria/gout or another valid urate indication; it does not replace alkalinization when urine is persistently acidic.","برای پیشگیری، هدف pH پایین‌تر و فردی‌سازی‌شده نسبت به انحلال فعال انتخاب و شیمی ادرار مجدداً ارزیابی شود. آلوپورینول درمان کمکی در هیپراوریکوزوری مستند/نقرس یا اندیکاسیون معتبر دیگر است؛ در pH اسیدی پایدار جایگزین قلیایی‌سازی نیست."),
+   t("Large burden, obstruction, infection, impaired renal function or failure of chemolysis requires urological assessment for procedural management.","بار سنگی زیاد، انسداد، عفونت، اختلال عملکرد کلیه یا عدم پاسخ به انحلال دارویی نیازمند ارزیابی اورولوژی برای درمان مداخله‌ای است.")],"caution");
+  if(lowPh)add(t("Current finding","یافته فعلی"),[t("Entered urine pH is below 5.5, which supports an acidic urinary environment; confirm with repeated fresh samples and assess metabolic contributors.","pH ادرار واردشده کمتر از ۵٫۵ است و محیط اسیدی ادرار را مطرح می‌کند؛ با نمونه‌های تازه و تکراری تأیید و عوامل متابولیک بررسی شوند.")]);
+ } else if(stone==="struvite"){
+  add(t("Struvite / infection stones — infection control and clearance","استروویت / سنگ عفونی — کنترل عفونت و پاک‌سازی سنگ"),[
+   t("Obtain urine culture and susceptibility testing; if clinically septic, do not delay urgent antibiotics and drainage while waiting for results. Select antimicrobial therapy according to culture, severity, renal function and local resistance patterns.","کشت ادرار و آنتی‌بیوگرام انجام شود؛ در سپسیس بالینی، شروع آنتی‌بیوتیک و تخلیه فوری برای انتظار نتیجه به تأخیر نیفتد. آنتی‌بیوتیک بر اساس کشت، شدت بیماری، عملکرد کلیه و الگوی مقاومت محلی انتخاب شود."),
+   t("Complete surgical removal of infected stone material as far as feasible is a central goal; residual infected fragments can sustain bacteriuria and regrowth. Obstructed infected systems require urgent drainage (ureteral stent or nephrostomy) before definitive stone treatment.","پاک‌سازی جراحی کامل مواد سنگی عفونی تا حد امکان هدف محوری است؛ قطعات عفونی باقیمانده می‌توانند باکتریوری و رشد مجدد را تداوم دهند. سیستم عفونی و مسدود پیش از درمان قطعی سنگ به تخلیه فوری (استنت حالب یا نفروستومی) نیاز دارد."),
+   t("Treat persistent bacteriuria with culture-directed antibiotics. Consider acetohydroxamic acid only in selected persistent urease-positive infection when standard surgical/infectious approaches are insufficient, under specialist supervision and where available.","باکتریوری پایدار با آنتی‌بیوتیک مبتنی بر کشت درمان شود. استوهیدروکسامیک اسید فقط در موارد منتخب عفونت پایدارِ اوره‌آز مثبت، زمانی که روش‌های استاندارد جراحی/عفونی کافی نیستند، با نظارت متخصص و در صورت دسترسی مطرح است."),
+   t("After stone clearance and infection control, reassess for coexisting metabolic abnormalities, especially in mixed stones. Do not use routine alkalinization or empiric acidification as a substitute for source control.","پس از پاک‌سازی سنگ و کنترل عفونت، ناهنجاری‌های متابولیک همراه، به‌ویژه در سنگ مختلط، دوباره ارزیابی شوند. قلیایی‌سازی معمول یا اسیدی‌سازی تجربی جایگزین کنترل منبع عفونت نیست.")],"urgent");
+  if(culture==="positive")add(t("Recorded culture result","نتیجه کشت ثبت‌شده"),[t("A positive urine culture is recorded. Interpret with symptoms, organism, susceptibility, obstruction and systemic status; bacteriuria alone does not define sepsis.","کشت ادرار مثبت ثبت شده است. نتیجه با علائم، میکروارگانیسم، حساسیت دارویی، انسداد و وضعیت سیستمیک تفسیر شود؛ باکتریوری به‌تنهایی معادل سپسیس نیست.")],"urgent");
+  else if(culture==="pending"||culture==="unknown")add(t("Culture information needed","نیاز به اطلاعات کشت"),[t("Urine culture is pending or unavailable. Obtain/review culture before selecting definitive antimicrobial therapy when clinically safe.","کشت ادرار در انتظار پاسخ یا در دسترس نیست. در صورت ایمن بودن از نظر بالینی، پیش از انتخاب درمان ضد میکروبی قطعی کشت انجام/بررسی شود.")],"caution");
+ } else if(stone==="cystine"){
+  add(t("Cystine — specialist long-term prevention","سیستین — پیشگیری بلندمدت تخصصی"),[
+   t("All cystine stone formers are high risk and should have specialist follow-up. Target 24-hour urine volume >3 L/day in adults, with fluid intake distributed throughout the day and night as tolerated.","همه بیماران مبتلا به سنگ سیستین پرخطرند و باید پیگیری تخصصی داشته باشند. هدف حجم ادرار ۲۴ ساعته بیش از ۳ لیتر در روز در بزرگسالان است؛ دریافت مایعات تا حد تحمل در روز و شب توزیع شود."),
+   t("Restrict sodium (EAU advises avoiding sodium intake >2 g/day, approximately 5 g salt/day). Consider moderate animal-protein/methionine intake without causing malnutrition.","سدیم محدود شود (EAU توصیه می‌کند دریافت سدیم از ۲ گرم در روز، معادل حدود ۵ گرم نمک، بیشتر نشود). دریافت پروتئین حیوانی/متیونین متعادل باشد و به سوءتغذیه منجر نشود."),
+   t("Alkalinize urine with potassium citrate when safe, targeting pH >7.5; use home pH monitoring and avoid excessive alkalinization or calcium-phosphate co-precipitation. Reassess potassium and renal function.","در صورت ایمنی، ادرار با پتاسیم سیترات قلیایی و pH بالاتر از ۷٫۵ هدف‌گذاری شود؛ پایش خانگی pH انجام و از قلیایی‌سازی بیش از حد یا رسوب همزمان کلسیم فسفات پرهیز شود. پتاسیم و عملکرد کلیه مجدداً بررسی شوند."),
+   t("If cystine excretion is ≥3 mmol/day or stones recur despite hydration/alkalinization, a thiol-binding agent (tiopronin or penicillamine) may be considered by a specialist. Monitor urine protein/proteinuria, renal function and drug-specific adverse effects.","اگر دفع سیستین حداقل ۳ میلی‌مول در روز باشد یا با وجود آب‌رسانی/قلیایی‌سازی سنگ عود کند، داروی تیول‌بایندر (تیوپرونین یا پنی‌سیلامین) با نظر متخصص قابل بررسی است. پروتئین ادرار/پروتئینوری، عملکرد کلیه و عوارض اختصاصی دارو پایش شوند."),
+   t("Consider screening siblings/first-degree relatives where cystinuria is confirmed, according to specialist advice.","در صورت تأیید سیستینوری، غربالگری خواهر/برادرها و بستگان درجه اول طبق نظر متخصص بررسی شود.")],"specialist");
+ } else if(stone==="drug_induced"){
+  add(t("Drug-induced stones — identify and modify the cause","سنگ دارویی — شناسایی و اصلاح علت"),[
+   t("Determine whether the drug/metabolite crystallizes directly (e.g. selected antivirals, sulfonamides, triamterene, ceftriaxone) or causes lithogenic urine changes (e.g. topiramate, acetazolamide, zonisamide, high-dose vitamin C, calcium/vitamin D, laxatives/orlistat). Confirm the exact agent and exposure.","مشخص شود دارو/متابولیت مستقیماً متبلور می‌شود (مانند برخی ضدویروس‌ها، سولفونامیدها، تریامترن، سفتریاکسون) یا شیمی ادرار را سنگ‌ساز می‌کند (مانند توپیرامات، استازولامید، زونیسامید، ویتامین C با دوز بالا، کلسیم/ویتامین D، ملین‌ها/اورلیستات). دارو و میزان مواجهه دقیق تأیید شود."),
+   t("Review necessity, dose, renal adjustment and alternatives with the prescribing clinician. Do not stop an essential medicine abruptly. Increase hydration where appropriate and treat the resulting metabolic phenotype rather than applying a generic regimen.","ضرورت مصرف، دوز، تعدیل کلیوی و جایگزین‌ها با پزشک تجویزکننده بررسی شود. داروی ضروری ناگهانی قطع نشود. در صورت تناسب، آب‌رسانی افزایش یابد و فنوتیپ متابولیک ایجادشده درمان شود، نه اینکه رژیم عمومی برای همه به کار رود."),
+   t("For carbonic-anhydrase inhibitors, assess urine pH, citrate and calcium-phosphate risk; alkali therapy is not automatically appropriate because urine pH may already be high.","در مهارکننده‌های کربنیک انهیدراز، pH ادرار، سیترات و خطر کلسیم فسفات بررسی شوند؛ قلیا درمانی خودکار مناسب نیست، زیرا pH ادرار ممکن است از قبل بالا باشد.")],"caution");
+ } else if(stone==="mixed"){
+  add(t("Mixed composition — component-based management","سنگ مختلط — مدیریت بر اساس اجزای سنگ"),[
+   t("Use the quantitative composition if available. Address the dominant metabolic component(s), but prioritize any infection-associated component (struvite/carbonate apatite) and assess for obstruction.","در صورت وجود، درصد اجزای سنگ استفاده شود. اجزای متابولیک غالب درمان شوند، اما جزء عفونی (استروویت/کربنات آپاتیت) و احتمال انسداد در اولویت قرار گیرد."),
+   t("Do not apply a single pH target or drug to all components. Balance alkali therapy against calcium-phosphate risk; treat hypercalciuria, hypocitraturia, hyperoxaluria or hyperuricosuria only when demonstrated and clinically relevant.","یک هدف pH یا داروی واحد به همه اجزا تعمیم داده نشود. قلیایی‌سازی در برابر خطر کلسیم فسفات سنجیده شود؛ هیپرکلسیوری، هیپوسیتراتوری، هیپراگزالوری یا هیپراوریکوزوری فقط در صورت اثبات و اهمیت بالینی درمان شوند."),
+   t("After infection control or stone clearance, complete metabolic reassessment and follow-up are important.","پس از کنترل عفونت یا پاک‌سازی سنگ، ارزیابی متابولیک کامل و پیگیری اهمیت دارد.")]);
+ } else if(stone==="ammonium_urate"){
+  add(t("Ammonium urate — investigate infection and systemic contributors","اورات آمونیوم — بررسی عفونت و عوامل زمینه‌ای سیستمیک"),[
+   t("This rare composition is associated with urinary infection, malnutrition, malabsorption/IBD or ileostomy, laxative abuse, hypophosphatemia and hypokalemia. Obtain urine culture and assess nutritional, electrolyte and gastrointestinal causes.","این ترکیب نادر با عفونت ادراری، سوءتغذیه، سوءجذب/IBD یا ایلئوستومی، سوءمصرف ملین، هیپوفسفاتمی و هیپوکالمی همراه است. کشت ادرار و علل تغذیه‌ای، الکترولیتی و گوارشی بررسی شوند."),
+   t("Treat infection when present and correct underlying metabolic/nutritional abnormalities. Specialist-directed prevention is required; do not assume the uric-acid pathway is interchangeable with ammonium-urate management.","در صورت وجود، عفونت درمان و اختلالات متابولیک/تغذیه‌ای زمینه‌ای اصلاح شوند. پیشگیری باید تخصصی باشد؛ مسیر اسیداوریک را معادل مدیریت اورات آمونیوم فرض نکنید.")],"specialist");
+ } else if(stone==="dha"){
+  add(t("2,8-Dihydroxyadenine — metabolic specialist pathway","۲،۸-دی‌هیدروکسی‌آدنین — مسیر تخصصی متابولیک"),[
+   t("Suspect adenine phosphoribosyltransferase (APRT) deficiency; confirm with appropriate specialized testing. This is a rare, high-recurrence condition and may be mistaken for uric-acid stones.","کمبود آنزیم آدنین فسفوریبوزیل‌ترانسفراز (APRT) مطرح است؛ با آزمون‌های تخصصی مناسب تأیید شود. این بیماری نادر و با خطر عود بالا است و ممکن است با سنگ اسیداوریکی اشتباه شود."),
+   t("Allopurinol or febuxostat may be disease-specific therapy under nephrology/metabolic specialist supervision, with renal-function and biochemical monitoring. Do not initiate empirically for an unconfirmed stone type.","آلوپورینول یا فبوکسوستات ممکن است درمان اختصاصی بیماری باشند، اما فقط زیر نظر متخصص نفرولوژی/متابولیک و با پایش عملکرد کلیه و شاخص‌های بیوشیمیایی استفاده شوند. برای نوع سنگ تأییدنشده به‌صورت تجربی شروع نشوند.")],"specialist");
+ } else if(stone==="xanthine"){
+  add(t("Xanthine — rare specialist pathway","گزانتین — مسیر تخصصی سنگ نادر"),[
+   t("Investigate hereditary xanthinuria, purine metabolism and exposure to xanthine-oxidase inhibitors. Seek metabolic/nephrology expertise; distinguish from uric-acid stones before considering urate-lowering therapy.","گزانتینوری ارثی، متابولیسم پورین و مواجهه با مهارکننده‌های گزانتین اکسیداز بررسی شوند. نظر متخصص متابولیک/نفرولوژی اخذ و پیش از درمان کاهنده اورات، از سنگ اسیداوریکی افتراق داده شود."),
+   t("Maintain high urine dilution and consider purine moderation under specialist/dietitian guidance. There is no established routine drug regimen for xanthine stones.","رقیق‌سازی مناسب ادرار حفظ و تعدیل پورین با راهنمایی متخصص/کارشناس تغذیه بررسی شود. رژیم دارویی معمول و تثبیت‌شده‌ای برای سنگ گزانتین وجود ندارد.")],"specialist");
+ } else if(stone==="matrix"){
+  add(t("Matrix stones — infection and procedural assessment","سنگ ماتریکس — ارزیابی عفونت و مداخله"),[
+   t("Consider recurrent UTI, chronic kidney disease, dialysis and prior stone surgery. Confirm diagnosis because matrix stones may be poorly conspicuous on conventional imaging.","عفونت ادراری عودکننده، بیماری مزمن کلیه، دیالیز و جراحی قبلی سنگ بررسی شوند. تشخیص تأیید شود، زیرا سنگ ماتریکس ممکن است در تصویربرداری معمول به‌خوبی دیده نشود."),
+   t("Urological assessment for endourological removal and infection control is central. No standardized metabolic drug-prevention regimen is established.","ارزیابی اورولوژی برای برداشت اندویورولوژیک و کنترل عفونت محوری است. رژیم دارویی متابولیک استانداردی برای پیشگیری از عود تثبیت نشده است.")],"specialist");
+ } else {
+  add(t("Other / unknown composition — avoid unsupported assumptions","سایر / ترکیب نامشخص — پرهیز از فرض‌های بدون پشتوانه"),[
+   t("Obtain stone analysis when material is available and review imaging characteristics (including CT attenuation when appropriate), history, urinalysis and culture if infection is suspected.","در صورت دسترسی به نمونه، آنالیز سنگ انجام و ویژگی‌های تصویربرداری (از جمله دانسیته CT در صورت تناسب)، شرح حال، آزمایش ادرار و در صورت شک به عفونت کشت بررسی شود."),
+   t("Until composition is clarified, use general prevention and correct demonstrated metabolic abnormalities; do not select dissolution or composition-specific medication empirically.","تا روشن شدن ترکیب، پیشگیری عمومی و اصلاح ناهنجاری‌های متابولیک اثبات‌شده انجام شود؛ انحلال یا داروی اختصاصی ترکیب به‌صورت تجربی انتخاب نشود.")],"specialist");
+ }
+ if(culture==="positive"&&!(["struvite","ammonium_urate","matrix"].includes(stone))){
+  add(t("Positive urine culture — assess infection in context","کشت ادرار مثبت — ارزیابی عفونت در بستر بالینی"),[t("Review symptoms, organism and susceptibility, stone composition and obstruction. Use culture-directed antimicrobial therapy when clinically indicated. Fever/systemic illness with obstruction is an emergency; do not treat this as routine metabolic prevention.","علائم، میکروارگانیسم و حساسیت دارویی، ترکیب سنگ و انسداد بررسی شوند. در صورت اندیکاسیون بالینی، درمان ضد میکروبی بر اساس کشت انتخاب شود. تب/بیماری سیستمیک همراه انسداد اورژانسی است و نباید مانند پیشگیری متابولیک معمول مدیریت شود.")],"urgent");
+ }
+ // Patient-specific safety reminders, kept separate from treatment eligibility.
+ if(kUnsafe)add(t("Potassium / renal safety flag","هشدار ایمنی پتاسیم / کلیه"),[alkaliSafety],"urgent");
+ if(highNa)add(t("Urinary sodium above configured threshold","سدیم ادرار بالاتر از آستانه تنظیم‌شده"),[t("Review dietary sodium and collection validity. Sodium reduction can lower urinary calcium in calcium-stone formers; avoid a blanket restriction without considering clinical context.","سدیم غذایی و اعتبار جمع‌آوری بررسی شود. کاهش سدیم می‌تواند کلسیم ادرار را در سنگ‌سازان کلسیمی کاهش دهد؛ محدودیت کلی بدون توجه به شرایط بالینی اعمال نشود.")]);
+ const foot=document.createElement("p");foot.className="small";foot.textContent=t("Guideline basis: EAU Guidelines on Urolithiasis 2026; AUA Medical Management of Kidney Stones 2026 Parts I–II. Some rare-stone recommendations are based on lower-level evidence and specialist practice. Local approvals, resistance patterns and product labeling take precedence.","مبنای راهنما: EAU Guidelines on Urolithiasis 2026 و AUA Medical Management of Kidney Stones 2026، بخش‌های I و II. برخی توصیه‌های سنگ‌های نادر بر شواهد سطح پایین‌تر و تجربه تخصصی متکی‌اند. مجوزهای محلی، الگوی مقاومت میکروبی و اطلاعات فرآورده در اولویت هستند.");box.append(foot);
 }
-const csvMap={patientId:"case_id",age:"patient_age",sex:"sex",stoneType:"stone_type",episodes:"episodes",volume:"volume_L_day",ph:"urine_pH",calcium:"urine_calcium_mg_day",oxalate:"urine_oxalate_mg_day",citrate:"urine_citrate_mg_day",uricAcid:"urine_uric_acid_mg_day",sodium:"urine_sodium_mmol_day",urineCreat:"urine_creatinine_mg_day",egfr:"eGFR",potassium:"serum_potassium_mmol_L",serumCalcium:"serum_calcium_mg_dL",serumUric:"serum_uric_acid_mg_dL",bicarb:"bicarbonate_mmol_L",meds:"medicines"};
-let importedCSV=[];
-$("csvFile").addEventListener("change",async e=>{
- const file=e.target.files[0];if(!file)return;
+
+// StonePharm V2.0 — encrypted, portable patient records (.stn).
+// Patient data is never written to browser storage. The passphrase exists only in this page's memory.
+let sessionPassphrase = null;
+let patientDataDirty = false;
+let downloadNamesThisSession = new Set();
+const STN_MAX_BYTES = 20 * 1024 * 1024;
+const STN_KDF_ITERATIONS = 310000;
+const STN_AAD = new TextEncoder().encode("StonePharm|STN|2");
+const $allPatientControls = () => Array.from(document.querySelectorAll("main input:not([type=file]),main select,main textarea"));
+const initialControlDefaults = new Map($allPatientControls().map(el => [el.id, {
+ value: el.value, checked: el.checked, selected: Array.from(el.options||[]).map(o=>o.defaultSelected)
+}]));
+function setDirty(v=true){patientDataDirty=!!v;}
+document.querySelector("main").addEventListener("input",()=>setDirty(true));
+document.querySelector("main").addEventListener("change",()=>setDirty(true));
+window.addEventListener("beforeunload",e=>{if(patientDataDirty){e.preventDefault();e.returnValue="";}});
+function clearPatientForm(){
+ for(const el of $allPatientControls()){
+  const d=initialControlDefaults.get(el.id);
+  if(el.type==="checkbox"||el.type==="radio")el.checked=d?!!d.checked:false;
+  else if(el.tagName==="SELECT"){
+   if(d&&Array.from(el.options).some(o=>o.value===d.value))el.value=d.value;
+   else el.selectedIndex=0;
+  } else if(el.type!=="file") el.value=d?d.value:"";
+ }
+ if($("date"))$("date").value=new Date().toISOString().slice(0,10);
+ $("result").classList.remove("show");
+ ["findings","medicationAdvisor","treatmentPathway"].forEach(id=>{if($(id))$(id).replaceChildren();});
+ if(typeof updateBMI==="function")updateBMI();
+ if(typeof updateEGFR==="function")updateEGFR();
+ setDirty(false);
+}
+$("reset").addEventListener("click",()=>{if(!confirm(translations[lang].confirmReset))return;clearPatientForm();});
+
+function b64(bytes){let bin="";for(let i=0;i<bytes.length;i+=0x8000)bin+=String.fromCharCode(...bytes.subarray(i,i+0x8000));return btoa(bin);}
+function unb64(str){if(typeof str!=="string"||str.length>STN_MAX_BYTES*2)throw new Error("Invalid encrypted file encoding.");const bin=atob(str);const out=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)out[i]=bin.charCodeAt(i);return out;}
+function randomBytes(n){const a=new Uint8Array(n);crypto.getRandomValues(a);return a;}
+function requireCrypto(){if(!window.isSecureContext||!crypto?.subtle)throw new Error(lang==="fa"?"رمزنگاری امن در این محیط در دسترس نیست. برنامه را از طریق HTTPS باز کنید.":"Secure encryption is unavailable. Open the application over HTTPS.");}
+async function deriveWrappingKey(passphrase,salt){
+ const material=await crypto.subtle.importKey("raw",new TextEncoder().encode(passphrase.normalize("NFC")),"PBKDF2",false,["deriveKey"]);
+ return crypto.subtle.deriveKey({name:"PBKDF2",salt,iterations:STN_KDF_ITERATIONS,hash:"SHA-256"},material,{name:"AES-GCM",length:256},false,["encrypt","decrypt"]);
+}
+async function encryptRecord(record,passphrase){
+ requireCrypto();
+ const salt=randomBytes(16),dataIv=randomBytes(12),wrapIv=randomBytes(12);
+ const wrappingKey=await deriveWrappingKey(passphrase,salt);
+ const dataKey=await crypto.subtle.generateKey({name:"AES-GCM",length:256},true,["encrypt","decrypt"]);
+ const rawKey=new Uint8Array(await crypto.subtle.exportKey("raw",dataKey));
  try{
-  importedCSV=parseCSV(await file.text());
-  if(!importedCSV.length)throw new Error("No data rows found.");
-  const idx=prompt(lang==="fa"?"شماره ردیف موردنظر را وارد کنید (از 1 تا "+importedCSV.length+")":"Enter case row number (1–"+importedCSV.length+")","1");
-  if(idx===null)return;
-  const n=Number(idx);if(!Number.isInteger(n)||n<1||n>importedCSV.length)throw new Error("Invalid row number.");
-  const row=importedCSV[n-1];
-  Object.entries(csvMap).forEach(([target,source])=>fillField(target,row[source]));
-  if(!$("date").value)$("date").value=new Date().toISOString().slice(0,10);
-  $("result").classList.remove("show");$("findings").innerHTML="";$("medicationAdvisor").innerHTML="";
-  alert(lang==="fa"?"پرونده آزمایشی وارد شد؛ ارزیابی به‌صورت خودکار اجرا نشد.":"Test case imported. Assessment was not run automatically.");
- }catch(err){alert((lang==="fa"?"خطا در ورود CSV: ":"CSV import error: ")+err.message);}
- finally{e.target.value="";}
+  const plaintext=new TextEncoder().encode(JSON.stringify(record));
+  if(plaintext.length>STN_MAX_BYTES)throw new Error(lang==="fa"?"حجم اطلاعات پرونده بیش از حد مجاز است.":"The patient record exceeds the maximum permitted size.");
+  const ciphertext=await crypto.subtle.encrypt({name:"AES-GCM",iv:dataIv,additionalData:STN_AAD,tagLength:128},dataKey,plaintext);
+  const wrapped=await crypto.subtle.encrypt({name:"AES-GCM",iv:wrapIv,additionalData:new TextEncoder().encode("StonePharm|STN|2|KEY"),tagLength:128},wrappingKey,rawKey);
+  return {format:"StonePharm-STN",formatVersion:2,algorithm:"AES-256-GCM",kdf:{name:"PBKDF2-HMAC-SHA-256",iterations:STN_KDF_ITERATIONS,salt:b64(salt)},keyProtection:{algorithm:"AES-256-GCM",iv:b64(wrapIv),wrappedKey:b64(new Uint8Array(wrapped))},payload:{iv:b64(dataIv),ciphertext:b64(new Uint8Array(ciphertext))}};
+ } finally {rawKey.fill(0);}
+}
+function validateRecordShape(data){
+ if(!data||typeof data!=="object"||Array.isArray(data)||data.application!=="StonePharm")throw new Error(lang==="fa"?"ساختار پرونده معتبر نیست.":"Invalid patient record structure.");
+ for(const group of ["patient","imaging","followUp","urine24h","serum","thresholds","medicines","labReferenceIntervals"]){if(data[group]!==undefined&&(!data[group]||typeof data[group]!=="object"||Array.isArray(data[group])))throw new Error("Invalid record section: "+group);}
+ const walk=(v,depth=0)=>{if(depth>8)throw new Error("Record nesting is too deep.");if(v===null||["string","number","boolean"].includes(typeof v)){if(typeof v==="number"&&!Number.isFinite(v))throw new Error("Invalid numeric value.");if(typeof v==="string"&&v.length>100000)throw new Error("A text field is too long.");return;}if(Array.isArray(v)){if(v.length>5000)throw new Error("Too many values in record.");v.forEach(x=>walk(x,depth+1));return;}if(typeof v==="object"){const keys=Object.keys(v);if(keys.length>1000)throw new Error("Too many fields in record.");keys.forEach(k=>walk(v[k],depth+1));return;}throw new Error("Unsupported data type in record.");};
+ walk(data);
+ for(const k of ["nephrocalcinosis","residualFragments","singleKidney"]){if(data.imaging&&data.imaging[k]!==undefined&&typeof data.imaging[k]!=="boolean")throw new Error("Invalid Boolean value: "+k);}
+}
+async function decryptRecord(envelope,passphrase){
+ requireCrypto();
+ if(!envelope||envelope.format!=="StonePharm-STN"||envelope.formatVersion!==2||envelope.algorithm!=="AES-256-GCM")throw new Error(lang==="fa"?"نسخه یا قالب فایل پشتیبانی نمی‌شود.":"Unsupported encrypted file format or version.");
+ const k=envelope.kdf||{},kp=envelope.keyProtection||{},pl=envelope.payload||{};
+ if(k.name!=="PBKDF2-HMAC-SHA-256"||k.iterations!==STN_KDF_ITERATIONS||kp.algorithm!=="AES-256-GCM")throw new Error("Unsupported encryption parameters.");
+ const salt=unb64(k.salt),wrapIv=unb64(kp.iv),wrapped=unb64(kp.wrappedKey),dataIv=unb64(pl.iv),cipher=unb64(pl.ciphertext);
+ if(salt.length!==16||wrapIv.length!==12||dataIv.length!==12||wrapped.length!==48||cipher.length<16)throw new Error("Invalid encrypted file structure.");
+ const wrappingKey=await deriveWrappingKey(passphrase,salt);
+ let rawKey;
+ try{
+  rawKey=new Uint8Array(await crypto.subtle.decrypt({name:"AES-GCM",iv:wrapIv,additionalData:new TextEncoder().encode("StonePharm|STN|2|KEY"),tagLength:128},wrappingKey,wrapped));
+  if(rawKey.length!==32)throw new Error("Invalid protected key.");
+  const dataKey=await crypto.subtle.importKey("raw",rawKey,{name:"AES-GCM"},false,["decrypt"]);
+  const clear=await crypto.subtle.decrypt({name:"AES-GCM",iv:dataIv,additionalData:STN_AAD,tagLength:128},dataKey,cipher);
+  const parsed=JSON.parse(new TextDecoder("utf-8",{fatal:true}).decode(clear));
+  validateRecordShape(parsed);return parsed;
+ } catch(e){throw new Error(lang==="fa"?"رمز نادرست است یا فایل آسیب‌دیده/دستکاری شده است.":"Incorrect password, or the file is damaged or has been modified.");}
+ finally {if(rawKey)rawKey.fill(0);}
+}
+function showPasswordDialog(confirmMode){
+ return new Promise(resolve=>{
+  const fa=lang==="fa";
+  const overlay=document.getElementById("passwordOverlay");
+  const title=document.getElementById("passwordTitle"),warning=document.getElementById("passwordWarning"),label=document.getElementById("passwordLabel"),confirmWrap=document.getElementById("passwordConfirmWrap"),confirmLabel=document.getElementById("passwordConfirmLabel"),err=document.getElementById("passwordError"),p1=document.getElementById("passwordInput"),p2=document.getElementById("passwordConfirm");
+  title.textContent=fa?"ایجاد یا ورود مجدد رمز عبور پرونده‌ها":"Set or re-enter your patient-record password";
+  warning.textContent=fa?"اگر قبلاً پرونده رمزنگاری‌شده دارید، همان رمز قبلی را وارد کنید؛ اگر برای نخستین بار پرونده ذخیره می‌کنید، یک رمز ایجاد کنید. رمز را به خاطر بسپارید و در محل امن نگهداری کنید. از همین رمز برای تمام پرونده‌های خود استفاده کنید. رمز قابل بازیابی نیست و برنامه امکان تغییر رمز پرونده‌های موجود را ندارد. در صورت فراموشی، دسترسی به پرونده‌های رمزنگاری‌شده را از دست خواهید داد. از فایل‌های .stn نسخه پشتیبان امن تهیه کنید.":"If you already have encrypted records, enter the same password you used previously. If this is your first patient record, create a password. Remember it and keep it safe. Use the same password for all your records. It cannot be recovered, and the application does not provide a way to change the password protecting existing records. If forgotten, access to those records will be permanently lost. Keep secure backups of your .stn files.";
+  label.textContent=fa?"رمز عبور":"Password";confirmLabel.textContent=fa?"تکرار رمز عبور":"Confirm password";confirmWrap.hidden=!confirmMode;err.textContent="";p1.value="";p2.value="";p1.autocomplete="off";p2.autocomplete="off";
+  document.getElementById("passwordCancel").textContent=fa?"انصراف":"Cancel";document.getElementById("passwordSubmit").textContent=fa?"تأیید و ادامه":"Confirm and continue";
+  overlay.hidden=false;p1.focus();
+  const finish=value=>{overlay.hidden=true;p1.value="";p2.value="";document.getElementById("passwordForm").onsubmit=null;document.getElementById("passwordCancel").onclick=null;resolve(value);};
+  document.getElementById("passwordCancel").onclick=()=>finish(null);
+  document.getElementById("passwordForm").onsubmit=e=>{e.preventDefault();const a=p1.value,b=p2.value;if(!a){err.textContent=fa?"رمز عبور را وارد کنید.":"Enter a password.";return;}if(confirmMode&&a!==b){err.textContent=fa?"دو رمز واردشده یکسان نیستند.":"The passwords do not match.";p2.focus();return;}finish(a.normalize("NFC"));};
+ });
+}
+function safeCaseFilename(){
+ const raw=$("patientId").value.trim();if(!raw)throw new Error(lang==="fa"?"برای ذخیره پرونده، شماره پرونده بیمار را وارد کنید.":"Enter the patient's medical record number before saving.");
+ const safe=raw.normalize("NFKC").replace(/[\\/:*?"<>|\u0000-\u001F]/g,"_").replace(/\s+/g,"_").replace(/^\.+|\.+$/g,"").slice(0,100);
+ if(!safe)throw new Error("Invalid patient record number.");return safe+".stn";
+}
+async function downloadSTN(envelope,filename){
+ const blob=new Blob([JSON.stringify(envelope)],{type:"application/vnd.stonepharm.encrypted-record+json"});
+ const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
+}
+$("export").addEventListener("click",async()=>{
+ try{
+  const filename=safeCaseFilename();
+  if(downloadNamesThisSession.has(filename)&&!confirm(lang==="fa"?"در این نشست قبلاً فایلی با این شماره پرونده ذخیره کرده‌اید. اگر فایل قبلی وجود دارد، از بازنویسی ناخواسته آن جلوگیری کنید. ادامه می‌دهید؟":"A file with this case number was already exported in this session. Avoid unintentionally overwriting an existing file. Continue?"))return;
+  if(!sessionPassphrase){const entered=await showPasswordDialog(true);if(entered===null)return;sessionPassphrase=entered;}
+  const envelope=await encryptRecord(getData(),sessionPassphrase);
+  await downloadSTN(envelope,filename);downloadNamesThisSession.add(filename);setDirty(false);
+  alert(lang==="fa"?"پرونده با موفقیت و به‌صورت رمزنگاری‌شده ذخیره شد. فایل .stn را در محل امن نگهداری و پشتیبان‌گیری کنید.":"The encrypted patient record was saved successfully. Keep the .stn file in a secure location and maintain a backup.");
+ }catch(err){alert((lang==="fa"?"ذخیره پرونده انجام نشد: ":"Patient record was not saved: ")+err.message);}
 });
 
+function fillField(id,value){
+ const el=$(id);if(!el||value===undefined||value===null)return;
+ if(el.type==="checkbox"||el.type==="radio"){if(typeof value!=="boolean")throw new Error("Invalid Boolean field: "+id);el.checked=value;return;}
+ if(!["string","number"].includes(typeof value))throw new Error("Invalid field type: "+id);
+ const str=String(value);
+ if(el.tagName==="SELECT"&&!Array.from(el.options).some(o=>o.value===str))throw new Error("Invalid selection value: "+id);
+ if(el.type==="number"&&str!==""){const n=Number(str);if(!Number.isFinite(n)||(el.min!==""&&n<Number(el.min))||(el.max!==""&&n>Number(el.max)))throw new Error("Invalid numeric range: "+id);}
+ if(el.type==="date"&&str!==""){if(!/^\d{4}-\d{2}-\d{2}$/.test(str))throw new Error("Invalid date: "+id);const dt=new Date(str+"T00:00:00Z");if(Number.isNaN(dt.getTime())||dt.toISOString().slice(0,10)!==str)throw new Error("Invalid date: "+id);}
+ el.value=str;
+}
+function populateFromJSON(data){
+ validateRecordShape(data);
+ const p=data.patient||{},u=data.urine24h||{},s=data.serum||{},t=data.thresholds||{},m=data.medicines||{};
+ if(t.tCitrateF==null&&t.tCitrate!=null)t.tCitrateF=365;if(t.tCitrateM==null&&t.tCitrate!=null)t.tCitrateM=327;if(t.tCa==null)t.tCa=200;if(t.tCaSevere==null)t.tCaSevere=321;
+ ["patientId","patientName","date","age","ageAtFirstStone","sex","pregnancyStatus","breastfeedingStatus","height","weight","bmi","stoneType","episodes","familyHistory","familyDetails","intervention","interventionDetails","history","giHistory","giDetails","cultureStatus","cultureDetails"].forEach(k=>fillField(k,p[k]));
+ const im=data.imaging||{},fu=data.followUp||{};["imagingDate","imagingModality","stoneCount","largestStone","stoneLocation","laterality"].forEach(k=>fillField(k,im[k]));["nephrocalcinosis","residualFragments","singleKidney"].forEach(k=>fillField(k,im[k]));
+ ["treatmentChangeDate","repeatUrineDate","followImagingDate","followNotes"].forEach(k=>fillField(k,fu[k]));
+ ["volume","ph","calcium","oxalate","citrate","uricAcid","sodium","urineCreat","collectionDuration","collectionDate1","urinePotassium","urineMagnesium","urineProtein","specificGravity","urinePhosphate","urineAmmonium","urineCystine","urineChloride","urineSulfate","urineUreaNitrogen","collectionDate2","collectionDuration2","volume2","ph2","calcium2","oxalate2","citrate2","uricAcid2","sodium2","urineCreat2","urinePotassium2","urineMagnesium2","urinePhosphate2","urineAmmonium2","urineCystine2","urineChloride2","urineSulfate2","urineUreaNitrogen2","calciumUnit","oxalateUnit","citrateUnit","uricAcidUnit","calcium2Unit","oxalate2Unit","citrate2Unit","uricAcid2Unit"].forEach(k=>fillField(k,u[k]));
+ ["serumCreatinine","serumCreatinineUnit","egfr","potassium","serumCalcium","serumUric","bicarb","serumSodium","serumMagnesium","serumPhosphate","fastingGlucose","serumAlbumin","serumPTH","serumChloride","serumIonizedCalcium","vitaminD25"].forEach(k=>fillField(k,s[k]));
+ ["tCitrateF","tCitrateM","tOxalate","tSodium","tCa","tCaSevere","tVolume"].forEach(k=>fillField(k,t[k]));
+ Object.entries(data.labReferenceIntervals||{}).forEach(([k,v])=>{if(k==="profileSex")fillField("labRefSex",v);else if(k==="ageMin")fillField("labRefAgeMin",v);else if(k==="ageMax")fillField("labRefAgeMax",v);else if(/^ref_[A-Za-z0-9_]+$/.test(k))fillField(k,v);});
+ ["meds","allergies","notes","medDose","medRoute","medFrequency","medIndication"].forEach(k=>fillField(k,m[k]));["followAgent","followDose","followAdherence","followAdverse"].forEach(k=>fillField(k,fu[k]));
+ updateEGFR();
+}
+function snapshotControls(){return $allPatientControls().map(el=>({id:el.id,value:el.value,checked:el.checked,selected:el.tagName==="SELECT"?Array.from(el.options).map(o=>o.selected):null}));}
+function restoreControls(snap){for(const x of snap){const el=$(x.id);if(!el)continue;if(el.type==="checkbox"||el.type==="radio")el.checked=x.checked;else if(el.tagName==="SELECT")Array.from(el.options).forEach((o,i)=>o.selected=!!x.selected[i]);else el.value=x.value;}}
+$("importJsonBtn").addEventListener("click",()=>$("stnFile").click());
+$("stnFile").addEventListener("change",async e=>{
+ const file=e.target.files&&e.target.files[0];if(!file)return;
+ if(patientDataDirty&&!confirm(lang==="fa"?"اطلاعات فعلی ذخیره نشده‌اند. با باز کردن پرونده جدید، این اطلاعات جایگزین می‌شوند. ادامه می‌دهید؟":"Current patient data have not been saved. Opening another record will replace them. Continue?")){e.target.value="";return;}
+ const backup=snapshotControls();
+ const outputBackup={resultClass:$("result").className,findings:Array.from($("findings").childNodes).map(n=>n.cloneNode(true)),medication:Array.from($("medicationAdvisor").childNodes).map(n=>n.cloneNode(true)),pathway:Array.from($("treatmentPathway").childNodes).map(n=>n.cloneNode(true))};
+ try{
+  if(file.size>STN_MAX_BYTES)throw new Error(lang==="fa"?"حجم فایل بیش از حد مجاز است.":"The file exceeds the maximum permitted size.");
+  if(!file.name.toLowerCase().endsWith(".stn"))throw new Error(lang==="fa"?"فقط پرونده رمزنگاری‌شده با پسوند .stn پذیرفته می‌شود.":"Only encrypted .stn patient records are accepted.");
+  const text=await file.text();if(text.length>STN_MAX_BYTES)throw new Error("Invalid file size.");const envelope=JSON.parse(text);
+  let candidatePassphrase=sessionPassphrase;
+  if(!candidatePassphrase){candidatePassphrase=await showPasswordDialog(false);if(candidatePassphrase===null)return;}
+  const record=await decryptRecord(envelope,candidatePassphrase);
+  sessionPassphrase=candidatePassphrase;
+  clearPatientForm();populateFromJSON(record);
+  $("result").classList.remove("show");["findings","medicationAdvisor","treatmentPathway"].forEach(id=>{if($(id))$(id).replaceChildren();});setDirty(false);
+  alert(lang==="fa"?"پرونده بیمار با موفقیت باز شد.":"Patient record opened successfully.");
+ }catch(err){sessionPassphrase=null;restoreControls(backup);$("result").className=outputBackup.resultClass;$("findings").replaceChildren(...outputBackup.findings);$("medicationAdvisor").replaceChildren(...outputBackup.medication);$("treatmentPathway").replaceChildren(...outputBackup.pathway);alert((lang==="fa"?"باز کردن پرونده ناموفق بود: ":"Unable to open patient record: ")+err.message);}
+ finally{e.target.value="";}
+});
+window.addEventListener("pagehide",()=>{sessionPassphrase=null;clearPatientForm();});
 
 // V1.3 persistent display preferences; storage is optional for offline/private browsing.
 (function(){
@@ -465,9 +969,34 @@ $("csvFile").addEventListener("change",async e=>{
 })();
 </script>
 
-<div class="credit-footer"><div>Developed by Ehsan Aboutaleb</div>
-<div>Pharm.D., PhD in Pharmaceutics</div>
-<div>Faculty of Pharmacy, Guilan University of Medical Sciences</div>
-<div><a href="https://linkedin.com/in/eaboutaleb" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/EhsanAboutaleb" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
+
+<div id="passwordOverlay" hidden>
+ <div class="password-dialog" role="dialog" aria-modal="true" aria-labelledby="passwordTitle">
+  <h2 id="passwordTitle">Patient record password</h2>
+  <p class="warning" id="passwordWarning"></p>
+  <form id="passwordForm">
+   <label id="passwordLabel" for="passwordInput">Password</label><input id="passwordInput" type="password" required autocomplete="off">
+   <div id="passwordConfirmWrap"><label id="passwordConfirmLabel" for="passwordConfirm">Confirm password</label><input id="passwordConfirm" type="password" autocomplete="off"></div>
+   <div id="passwordError" class="error" aria-live="polite"></div>
+   <div class="password-actions"><button type="button" class="secondary" id="passwordCancel">Cancel</button><button type="submit" class="primary" id="passwordSubmit">Continue</button></div>
+  </form>
+ </div>
+</div>
+<footer class="credit-footer" aria-label="Project credits">
+ <div class="credit-grid">
+  <section class="credit-box" aria-label="Developer">
+   <div class="credit-name">Ehsan Aboutaleb</div>
+   <div>Pharm.D., PhD in Pharmaceutics</div>
+   <div>Faculty of Pharmacy, GUMS</div>
+   <div class="credit-links"><a href="https://github.com/EhsanAboutaleb" target="_blank" rel="noopener noreferrer">GitHub</a><span aria-hidden="true">·</span><a href="https://linkedin.com/in/eaboutaleb" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+  </section>
+  <section class="credit-box" aria-label="Urology collaborator">
+   <div class="credit-name">Ali Hamidi Madani</div>
+   <div>MD</div>
+   <div>Professor of Urology</div>
+   <div>Department of Urology, GUMS</div>
+  </section>
+ </div>
+</footer>
 </body>
 </html>
